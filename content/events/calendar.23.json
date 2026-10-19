@@ -1,0 +1,48 @@
+{
+  "id": "calendar.23",
+  "title": "整理代表成果",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["课程、项目和实践记录较多，需要选出能够详细说明的代表成果。"],
+  "choices": [
+    {
+      "label": "围绕一个问题整理代表作",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你围绕一个问题整理代表作。",
+      "effects": {
+        "materials": 10,
+        "expression": 4
+      },
+      "flags": ["direction.clear", "portfolio.focus"],
+      "days": 1
+    },
+    {
+      "label": "回查每项成果的记录",
+      "hint": "补齐申请材料，补充准确材料",
+      "text": "你回查每项成果的记录。材料真实性 +3。",
+      "effects": {
+        "materials": 12,
+        "integrity": 3
+      },
+      "flags": ["evidence.checked"],
+      "days": 0
+    },
+    {
+      "label": "先查几条不同的发展路径",
+      "hint": "准备后续安排，增加实践经验",
+      "text": "你先查几条不同的发展路径。",
+      "effects": {
+        "backup": 10,
+        "practice": 2
+      },
+      "flags": ["paths.open"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 23,
+  "when": {
+    "from": 23,
+    "to": 23
+  }
+}

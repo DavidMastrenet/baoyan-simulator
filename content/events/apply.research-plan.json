@@ -1,0 +1,48 @@
+{
+  "id": "apply.research-plan",
+  "title": "修改研究计划",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["研究计划提出了目标，但还缺少研究对象、数据来源和具体步骤。"],
+  "choices": [
+    {
+      "label": "缩到一个能获得记录的问题",
+      "hint": "练习研究方法，补齐申请材料",
+      "text": "你缩到一个能获得记录的问题。",
+      "effects": {
+        "research": 5,
+        "materials": 6
+      },
+      "flags": ["direction.clear"],
+      "days": 1
+    },
+    {
+      "label": "先说明已有工作与下一步的联系",
+      "hint": "练习表达，补齐申请材料",
+      "text": "你先说明已有工作与下一步的联系。",
+      "effects": {
+        "expression": 4,
+        "materials": 7
+      },
+      "flags": ["portfolio.focus"],
+      "days": 1
+    },
+    {
+      "label": "列出不确定点和验证办法",
+      "hint": "练习研究方法，准备后续安排，补齐申请材料",
+      "text": "你列出不确定点和验证办法。",
+      "effects": {
+        "research": 5,
+        "backup": 3,
+        "materials": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 27,
+    "to": 43
+  },
+  "weight": 5
+}

@@ -1,0 +1,47 @@
+{
+  "id": "burnout.follow-up",
+  "title": "调整工作量之后",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["你已经取消了一项任务，需要决定后续继续承担多少工作。"],
+  "choices": [
+    {
+      "label": "把恢复后的节奏保留下来",
+      "hint": "缓解压力，恢复精力",
+      "text": "你把恢复后的节奏保留下来。",
+      "effects": {
+        "energy": 8,
+        "stress": -6
+      },
+      "flags": ["recovery.kept"],
+      "days": 2
+    },
+    {
+      "label": "重新分配一项长期合作",
+      "hint": "缓解压力，恢复精力，增进合作",
+      "text": "你重新分配一项长期合作。",
+      "effects": {
+        "energy": 5,
+        "network": 4,
+        "stress": -4
+      },
+      "flags": ["team.handoff"],
+      "days": 2
+    },
+    {
+      "label": "只恢复最重要的一条重点",
+      "hint": "缓解压力，加强课程基础，练习研究方法",
+      "text": "你只恢复最重要的一条重点。",
+      "effects": {
+        "study": 4,
+        "research": 3,
+        "energy": 4,
+        "stress": -3
+      },
+      "flags": ["direction.clear"],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "chain": true
+}

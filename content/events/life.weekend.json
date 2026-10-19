@@ -1,0 +1,48 @@
+{
+  "id": "life.weekend",
+  "title": "空闲周末",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["这个周末没有紧急任务，可以学习、社交或休息。"],
+  "choices": [
+    {
+      "label": "出去走走，正常吃一顿饭",
+      "hint": "缓解压力，恢复精力",
+      "text": "你出去走走，正常吃一顿饭。",
+      "effects": {
+        "energy": 12,
+        "stress": -9
+      },
+      "days": 2
+    },
+    {
+      "label": "约朋友一起做顿简单的饭",
+      "hint": "缓解压力，增进合作，恢复精力",
+      "text": "你约朋友一起做顿简单的饭。",
+      "effects": {
+        "network": 5,
+        "energy": 6,
+        "stress": -6
+      },
+      "flags": ["friend.kept"],
+      "days": 1
+    },
+    {
+      "label": "安静整理书桌和文件",
+      "hint": "缓解压力，补齐申请材料，恢复精力",
+      "text": "你安静整理书桌和文件。",
+      "effects": {
+        "materials": 4,
+        "energy": 7,
+        "stress": -4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 0,
+    "to": 47
+  },
+  "weight": 5
+}

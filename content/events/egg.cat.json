@@ -1,0 +1,36 @@
+{
+  "id": "egg.cat",
+  "title": "文件被猫弄乱",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["你放在长椅上的资料被校园猫弄乱，需要重新整理。"],
+  "choices": [
+    {
+      "label": "等它自己换个位置",
+      "hint": "缓解压力，恢复精力",
+      "text": "你等它自己换个位置。",
+      "effects": {
+        "stress": -7,
+        "energy": 4
+      },
+      "days": 1
+    },
+    {
+      "label": "把旁边的空纸袋放平",
+      "hint": "缓解压力，增加实践经验",
+      "text": "你把旁边的空纸袋放平。",
+      "effects": {
+        "practice": 2,
+        "stress": -5
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

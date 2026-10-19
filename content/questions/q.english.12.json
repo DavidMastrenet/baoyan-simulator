@@ -1,0 +1,23 @@
+{
+  "id": "q.english.12",
+  "kind": "英语",
+  "title": "Explain a result",
+  "text": "Does a better test score always mean a better model?",
+  "options": [
+    {
+      "text": "No. I would also examine the data, uncertainty and the needs of the task.",
+      "score": 4,
+      "response": "回答说明了关键条件和处理方法。"
+    },
+    {
+      "text": "Yes. One higher score proves that the model is always better.",
+      "score": 0,
+      "response": "这一说法忽略了关键条件，需要重新分析。"
+    },
+    {
+      "text": "I would repeat the test but use the same data only.",
+      "score": 2,
+      "response": "提到了部分处理方式，但解释还不完整。"
+    }
+  ]
+}

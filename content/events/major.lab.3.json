@@ -1,0 +1,46 @@
+{
+  "id": "major.lab.3",
+  "title": "比较推导和实验",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["实验趋势只在部分条件下符合推导，需要检查假设和测量过程。"],
+  "choices": [
+    {
+      "label": "逐项核对假设与实验条件",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你逐项核对假设与实验条件。",
+      "effects": {
+        "study": 5,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "缩小条件范围做验证",
+      "hint": "练习研究方法，积累项目经验",
+      "text": "你缩小条件范围做验证。",
+      "effects": {
+        "research": 5,
+        "craft": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "把不一致写成研究问题",
+      "hint": "练习研究方法，练习表达",
+      "text": "你把不一致写成研究问题。",
+      "effects": {
+        "research": 4,
+        "expression": 4
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 11,
+    "to": 35,
+    "majors": ["理工实验类"]
+  },
+  "weight": 12
+}

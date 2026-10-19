@@ -1,0 +1,36 @@
+{
+  "id": "egg.test-data",
+  "title": "演示数据填写错误",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["演示数据中混入了一条个人待办，需要在展示前改正。"],
+  "choices": [
+    {
+      "label": "先去吃饭，再回来清理数据",
+      "hint": "恢复精力，补齐申请材料",
+      "text": "你先去吃饭，再回来清理数据。",
+      "effects": {
+        "energy": 7,
+        "materials": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "把提醒换成规范样例，留在便签上",
+      "hint": "缓解压力，积累项目经验",
+      "text": "你把提醒换成规范样例，留在便签上。",
+      "effects": {
+        "craft": 2,
+        "stress": -4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 14,
+    "to": 47
+  },
+  "weight": 1
+}

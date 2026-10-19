@@ -1,0 +1,46 @@
+{
+  "id": "major.biz.1",
+  "title": "修改调查问卷",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["问卷回收率偏低，部分受访者对题目含义理解不同。"],
+  "choices": [
+    {
+      "label": "先做小范围访谈与预测试",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你先做小范围访谈与预测试。",
+      "effects": {
+        "practice": 5,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "删掉与研究问题无关的题",
+      "hint": "练习研究方法，练习表达",
+      "text": "你删掉与研究问题无关的题。",
+      "effects": {
+        "research": 5,
+        "expression": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "检查样本来源与未回应者",
+      "hint": "练习研究方法，加强课程基础",
+      "text": "你检查样本来源与未回应者。",
+      "effects": {
+        "research": 5,
+        "study": 3
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5,
+    "to": 35,
+    "majors": ["经管类"]
+  },
+  "weight": 12
+}

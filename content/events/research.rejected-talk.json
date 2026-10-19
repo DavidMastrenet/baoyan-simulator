@@ -1,0 +1,48 @@
+{
+  "id": "research.rejected-talk",
+  "title": "交流申请被拒",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["交流申请未通过，通知没有提供具体原因。"],
+  "choices": [
+    {
+      "label": "请老师帮忙看问题是否讲清",
+      "hint": "练习表达，练习研究方法，增进合作",
+      "text": "你请老师帮忙看问题是否讲清。",
+      "effects": {
+        "expression": 4,
+        "research": 3,
+        "network": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "寻找更匹配的交流场景",
+      "hint": "缓解压力，练习研究方法，准备后续安排",
+      "text": "你寻找更匹配的交流场景。",
+      "effects": {
+        "research": 3,
+        "backup": 4,
+        "stress": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "暂时放下通知，完成下一项实验",
+      "hint": "缓解压力，练习研究方法，恢复精力",
+      "text": "你暂时放下通知，完成下一项实验。",
+      "effects": {
+        "research": 4,
+        "energy": 3,
+        "stress": -4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 12,
+    "to": 38
+  },
+  "weight": 5
+}

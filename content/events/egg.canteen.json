@@ -1,0 +1,36 @@
+{
+  "id": "egg.canteen",
+  "title": "食堂临时优惠",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["食堂推出了你常买套餐的优惠，今天的午餐支出减少了。"],
+  "choices": [
+    {
+      "label": "今天照旧，慢慢吃完",
+      "hint": "缓解压力，恢复精力",
+      "text": "你今天照旧，慢慢吃完。",
+      "effects": {
+        "energy": 7,
+        "stress": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "换一道菜，给今天一点变化",
+      "hint": "缓解压力，恢复精力",
+      "text": "你换一道菜，给今天一点变化。",
+      "effects": {
+        "energy": 5,
+        "stress": -5
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

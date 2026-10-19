@@ -1,0 +1,46 @@
+{
+  "id": "major.cross.1",
+  "title": "补充专业基础",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["跨专业讨论涉及未学过的基础概念，需要安排补课。"],
+  "choices": [
+    {
+      "label": "围绕当前问题补一条完整知识线",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你围绕当前问题补一条完整知识线。",
+      "effects": {
+        "study": 6,
+        "research": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "找双方各一位同学共同讨论",
+      "hint": "增进合作，练习表达",
+      "text": "你找双方各一位同学共同讨论。",
+      "effects": {
+        "network": 5,
+        "expression": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "缩小问题，明确现阶段能做到的部分",
+      "hint": "缓解压力，练习研究方法",
+      "text": "你缩小问题，明确现阶段能做到的部分。",
+      "effects": {
+        "research": 4,
+        "stress": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5,
+    "to": 35,
+    "majors": ["交叉学科"]
+  },
+  "weight": 12
+}

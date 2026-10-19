@@ -1,0 +1,48 @@
+{
+  "id": "calendar.17",
+  "title": "跨专业阅读",
+  "category": "科研",
+  "scene": "课题组",
+  "body": ["你读到一篇其他专业的文章，其中涉及尚未学过的概念和研究方法。"],
+  "choices": [
+    {
+      "label": "把关键概念逐一查清",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你把关键概念逐一查清。",
+      "effects": {
+        "research": 5,
+        "practice": 2
+      },
+      "flags": ["cross.interest"],
+      "days": 2
+    },
+    {
+      "label": "找老师讨论一个具体问题",
+      "hint": "练习研究方法，增进合作，练习表达",
+      "text": "你找老师讨论一个具体问题。",
+      "effects": {
+        "research": 3,
+        "network": 4,
+        "expression": 2
+      },
+      "flags": ["direction.clear"],
+      "days": 1
+    },
+    {
+      "label": "先把本专业的一条线做深",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你先把本专业的一条线做深。",
+      "effects": {
+        "study": 4,
+        "research": 3
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 17,
+  "when": {
+    "from": 17,
+    "to": 17
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "career.public-project",
+  "title": "参加社区长期项目",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["社区希望有人长期组织活动，需要了解职责和持续投入的时间。"],
+  "choices": [
+    {
+      "label": "参与一个明确周期，了解实际职责",
+      "hint": "增加实践经验，准备后续安排，增进合作",
+      "text": "你参与一个明确周期，了解实际职责。",
+      "effects": {
+        "practice": 6,
+        "backup": 7,
+        "network": 3
+      },
+      "flags": ["public.service"],
+      "days": 1
+    },
+    {
+      "label": "把方法与工具交给现有团队",
+      "hint": "积累项目经验，增进合作，准备后续安排",
+      "text": "你把方法与工具交给现有团队。",
+      "effects": {
+        "craft": 4,
+        "network": 4,
+        "backup": 5
+      },
+      "flags": ["team.handoff"],
+      "days": 1
+    },
+    {
+      "label": "保留联系，集中完成当前申请",
+      "hint": "缓解压力，增进合作，补齐申请材料",
+      "text": "你保留联系，集中完成当前申请。",
+      "effects": {
+        "network": 3,
+        "materials": 4,
+        "stress": -2
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 24,
+    "min": {
+      "practice": 30
+    }
+  },
+  "weight": 5
+}

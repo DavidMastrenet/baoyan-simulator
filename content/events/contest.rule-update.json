@@ -1,0 +1,47 @@
+{
+  "id": "contest.rule-update",
+  "title": "比赛规则变更",
+  "category": "竞赛",
+  "scene": "竞赛事件",
+  "body": ["组织方调整了提交要求，你们需要检查现有作品并修改材料。"],
+  "choices": [
+    {
+      "label": "核对差异，按新要求调整",
+      "hint": "补齐申请材料，积累项目经验",
+      "text": "你核对差异，按新要求调整。",
+      "effects": {
+        "materials": 7,
+        "craft": 3
+      },
+      "flags": ["policy.read"],
+      "days": 1
+    },
+    {
+      "label": "向组织方提出一个具体确认问题",
+      "hint": "练习表达，增进合作，补齐申请材料",
+      "text": "你向组织方提出一个具体确认问题。",
+      "effects": {
+        "expression": 4,
+        "network": 2,
+        "materials": 4
+      },
+      "days": 1
+    },
+    {
+      "label": "缩减可选内容，先完成必交项",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你缩减可选内容，先完成必交项。",
+      "effects": {
+        "materials": 5,
+        "stress": -3
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5,
+    "to": 34
+  },
+  "weight": 5
+}

@@ -1,0 +1,35 @@
+{
+  "id": "rare.late-contact",
+  "title": "确认后又收到其他组联系",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["你已经确认待录取，另一个研究组随后询问你是否还有申请意向。"],
+  "when": {
+    "from": 44,
+    "to": 47,
+    "flags": ["admission.accepted"]
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "说明已经完成录取确认",
+      "text": "你告知对方当前状态，继续已确认的项目安排。",
+      "hint": "缓解压力",
+      "effects": {
+        "stress": -2
+      },
+      "days": 0
+    },
+    {
+      "label": "感谢联系并结束沟通",
+      "text": "你结束了这条联系，没有更改已确认的录取。",
+      "hint": "练习表达",
+      "effects": {
+        "expression": 1
+      },
+      "days": 1
+    }
+  ]
+}

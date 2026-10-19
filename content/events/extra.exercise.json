@@ -1,0 +1,46 @@
+{
+  "id": "extra.exercise",
+  "title": "安排晚间运动",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["晚上的运动场开放，今天还没有安排锻炼和休息。"],
+  "choices": [
+    {
+      "label": "走几圈再回去",
+      "hint": "缓解压力，恢复精力",
+      "text": "你走几圈再回去。",
+      "effects": {
+        "energy": 10,
+        "stress": -7
+      },
+      "days": 2
+    },
+    {
+      "label": "约同伴固定一周两次",
+      "hint": "缓解压力，增进合作，恢复精力",
+      "text": "你约同伴固定一周两次。",
+      "effects": {
+        "network": 4,
+        "energy": 7,
+        "stress": -5
+      },
+      "days": 1
+    },
+    {
+      "label": "今天先回去，给休息留具体时段",
+      "hint": "缓解压力，恢复精力",
+      "text": "你今天先回去，给休息留具体时段。",
+      "effects": {
+        "energy": 6,
+        "stress": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

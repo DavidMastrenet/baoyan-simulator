@@ -1,0 +1,36 @@
+{
+  "id": "rare.social-1",
+  "title": "申请方向临时没有名额",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["此前联系的方向最后没有分到名额，其他研究组仍有申请机会。"],
+  "when": {
+    "from": 24,
+    "to": 42
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "确认正式通知后调整项目组合",
+      "text": "你按实际要求处理了问题。",
+      "hint": "消耗精力，准备后续安排",
+      "effects": {
+        "backup": 3,
+        "energy": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "先确认信息再调整安排",
+      "text": "你核对通知内容，并重新安排当前任务。",
+      "hint": "消耗精力，准备后续安排",
+      "effects": {
+        "backup": 2,
+        "energy": -1
+      },
+      "days": 0
+    }
+  ]
+}

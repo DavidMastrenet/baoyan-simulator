@@ -1,0 +1,36 @@
+{
+  "id": "rare.consulting-scam",
+  "title": "机构承诺保证名校录取",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["一名销售声称付款后可以保证录取，但没有提供具体项目授权和服务明细。"],
+  "when": {
+    "from": 20,
+    "to": 39
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "不接受保证，查阅项目通知",
+      "text": "你继续按公开条件准备申请。",
+      "hint": "补齐申请材料，准备后续安排",
+      "effects": {
+        "materials": 2,
+        "backup": 1
+      },
+      "days": 0
+    },
+    {
+      "label": "只核对实际服务和付款条款",
+      "text": "你发现承诺与条款不一致，没有继续付款。",
+      "hint": "消耗精力，练习表达",
+      "effects": {
+        "energy": -2,
+        "expression": 1
+      },
+      "days": 1
+    }
+  ]
+}

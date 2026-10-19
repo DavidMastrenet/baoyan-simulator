@@ -1,0 +1,49 @@
+{
+  "id": "calendar.41",
+  "title": "选择硕士或直博",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["老师询问你是否考虑直博，需要比较培养年限、研究要求和调整条件。"],
+  "choices": [
+    {
+      "label": "围绕长期问题判断是否适合",
+      "hint": "练习研究方法，准备后续安排",
+      "text": "你围绕长期问题判断是否适合。",
+      "effects": {
+        "research": 5,
+        "backup": 4
+      },
+      "flags": ["doctor.considered"],
+      "days": 1
+    },
+    {
+      "label": "先选择硕士阶段继续探索",
+      "hint": "缓解压力，准备后续安排",
+      "text": "你先选择硕士阶段继续探索。",
+      "effects": {
+        "backup": 7,
+        "stress": -3
+      },
+      "flags": ["masters.preferred"],
+      "days": 0
+    },
+    {
+      "label": "把工作方式与生活条件一起问清",
+      "hint": "增进合作，增加实践经验，准备后续安排",
+      "text": "你把工作方式与生活条件一起问清。",
+      "effects": {
+        "network": 3,
+        "practice": 3,
+        "backup": 5
+      },
+      "flags": ["mentor.checked", "cost.considered"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 41,
+  "when": {
+    "from": 41,
+    "to": 41
+  }
+}

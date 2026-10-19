@@ -1,0 +1,114 @@
+{
+  "id": "paper.final",
+  "title": "投稿前检查",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["稿件进入最终提交阶段，需要检查单位、作者、引用和附件版本。"],
+  "choices": [
+    {
+      "label": "完成最后的逐项检查",
+      "hint": "研究方法影响成功率",
+      "text": "你完成最后的逐项检查。",
+      "effects": {
+        "materials": 6,
+        "energy": -4
+      },
+      "check": {
+        "stat": "research",
+        "difficulty": 64,
+        "success": {
+          "text": "本次任务完成。新增成果：一项经同行评审接收的研究。",
+          "effects": {
+            "research": 4,
+            "stress": -6
+          },
+          "flags": ["paper.accepted"],
+          "award": {
+            "id": "paper-accepted",
+            "title": "一项经同行评审接收的研究",
+            "kind": "科研",
+            "level": 3,
+            "recognized": true
+          }
+        },
+        "failure": {
+          "text": "本次任务未完成。新增成果：完成一份研究报告。",
+          "effects": {
+            "research": 4,
+            "backup": 3
+          },
+          "flags": ["paper.rejected"],
+          "award": {
+            "id": "research-report",
+            "title": "完成一份研究报告",
+            "kind": "科研",
+            "level": 1,
+            "recognized": false
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "请合作者交叉检查，再提交",
+      "hint": "研究方法影响成功率",
+      "text": "你请合作者交叉检查，再提交。",
+      "effects": {
+        "network": 4,
+        "materials": 5
+      },
+      "check": {
+        "stat": "research",
+        "difficulty": 67,
+        "success": {
+          "text": "本次任务完成。新增成果：一项经同行评审接收的研究。",
+          "effects": {
+            "research": 3
+          },
+          "flags": ["paper.accepted"],
+          "award": {
+            "id": "paper-accepted",
+            "title": "一项经同行评审接收的研究",
+            "kind": "科研",
+            "level": 3,
+            "recognized": true
+          }
+        },
+        "failure": {
+          "text": "本次任务未完成。新增成果：完成一份研究报告。",
+          "effects": {
+            "research": 3
+          },
+          "flags": ["paper.rejected"],
+          "award": {
+            "id": "research-report",
+            "title": "完成一份研究报告",
+            "kind": "科研",
+            "level": 1,
+            "recognized": false
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "把工作先整理成可展示的研究档案",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你把工作先整理成可展示的研究档案。新增成果：完成一份研究报告。",
+      "effects": {
+        "materials": 12,
+        "expression": 3
+      },
+      "award": {
+        "id": "research-report",
+        "title": "完成一份研究报告",
+        "kind": "科研",
+        "level": 1,
+        "recognized": false
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

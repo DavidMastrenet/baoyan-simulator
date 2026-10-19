@@ -1,0 +1,45 @@
+{
+  "id": "rare.exam-phone",
+  "title": "手机没有放在指定位置",
+  "category": "学业",
+  "scene": "低概率事件",
+  "body": ["小测开始前，你发现手机仍在包里。监考老师刚提醒所有人按规定存放通讯设备。"],
+  "when": {
+    "from": 1,
+    "to": 31
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "立即按要求存放",
+      "text": "你在考试开始前按要求存放了手机。",
+      "hint": "消耗精力",
+      "effects": {
+        "energy": -1
+      },
+      "days": 0
+    },
+    {
+      "label": "向监考说明情况再存放",
+      "text": "监考确认后让你正常参加考试。",
+      "hint": "练习表达",
+      "effects": {
+        "expression": 1
+      },
+      "days": 1
+    },
+    {
+      "label": "不处理，继续留在身边",
+      "text": "监考检查发现了未按要求存放的设备，学校按考试规定处理。",
+      "hint": "材料可信度下降，增加压力",
+      "effects": {
+        "stress": 12,
+        "integrity": -35
+      },
+      "flags": ["exam.violation"],
+      "days": 0
+    }
+  ]
+}

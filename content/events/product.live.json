@@ -1,0 +1,110 @@
+{
+  "id": "product.live",
+  "title": "现场网络故障",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["现场使用人数增加后网络不稳定，排队流程已经受到影响。"],
+  "choices": [
+    {
+      "label": "启用准备好的备用流程",
+      "hint": "项目能力影响成功率",
+      "text": "你启用准备好的备用流程。",
+      "effects": {
+        "energy": -6,
+        "practice": 4
+      },
+      "check": {
+        "stat": "craft",
+        "difficulty": 55,
+        "success": {
+          "text": "本次任务完成。新增成果：一次完整的现场系统交付。之后会有相关的后续事件。",
+          "effects": {
+            "craft": 4
+          },
+          "schedule": [
+            {
+              "id": "product.handoff",
+              "after": 3
+            }
+          ],
+          "award": {
+            "id": "production",
+            "title": "一次完整的现场系统交付",
+            "kind": "项目",
+            "level": 3,
+            "recognized": false
+          }
+        },
+        "failure": {
+          "text": "本次任务未完成。新增成果：一件被持续使用的小工具。之后会有相关的后续事件。",
+          "effects": {
+            "craft": 3
+          },
+          "schedule": [
+            {
+              "id": "product.handoff",
+              "after": 3
+            }
+          ],
+          "award": {
+            "id": "useful-tool",
+            "title": "一件被持续使用的小工具",
+            "kind": "项目",
+            "level": 2,
+            "recognized": false
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "先拆分队列，安排人工接续",
+      "hint": "消耗精力，增加实践经验，增进合作",
+      "text": "你先拆分队列，安排人工接续。新增成果：一次有交代的现场交付。之后会有相关的后续事件。",
+      "effects": {
+        "practice": 6,
+        "network": 3,
+        "energy": -6
+      },
+      "schedule": [
+        {
+          "id": "product.handoff",
+          "after": 3
+        }
+      ],
+      "award": {
+        "id": "field-delivery",
+        "title": "一次有交代的现场交付",
+        "kind": "实践",
+        "level": 2,
+        "recognized": false
+      },
+      "days": 1
+    },
+    {
+      "label": "降低功能范围，保住核心任务",
+      "hint": "缓解压力，积累项目经验",
+      "text": "你降低功能范围，保住核心任务。新增成果：一件被持续使用的小工具。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 4,
+        "stress": -2
+      },
+      "schedule": [
+        {
+          "id": "product.handoff",
+          "after": 3
+        }
+      ],
+      "award": {
+        "id": "useful-tool",
+        "title": "一件被持续使用的小工具",
+        "kind": "项目",
+        "level": 2,
+        "recognized": false
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

@@ -1,0 +1,46 @@
+{
+  "id": "major.cross.3",
+  "title": "准备跨专业答辩",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["听众分别关注技术方法和应用情况，需要分别说明。"],
+  "choices": [
+    {
+      "label": "从共同问题出发，再分别说明记录",
+      "hint": "练习表达，练习研究方法",
+      "text": "你从共同问题出发，再分别说明记录。",
+      "effects": {
+        "expression": 6,
+        "research": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "用一个案例连接两类知识",
+      "hint": "增加实践经验，练习表达",
+      "text": "你用一个案例连接两类知识。",
+      "effects": {
+        "practice": 4,
+        "expression": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "请不同背景的同伴分别检查",
+      "hint": "增进合作，补齐申请材料",
+      "text": "你请不同背景的同伴分别检查。",
+      "effects": {
+        "network": 5,
+        "materials": 4
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 11,
+    "to": 35,
+    "majors": ["交叉学科"]
+  },
+  "weight": 12
+}

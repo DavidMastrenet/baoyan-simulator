@@ -1,0 +1,57 @@
+{
+  "id": "calendar.25",
+  "title": "讨论作者顺序",
+  "category": "科研",
+  "scene": "课题组",
+  "body": ["项目进入写作阶段，团队需要按设计、实验和分析工作确定署名顺序。"],
+  "choices": [
+    {
+      "label": "把实际贡献逐项摊开讨论",
+      "hint": "增进合作，练习研究方法，补充准确材料",
+      "text": "你把实际贡献逐项摊开讨论。材料真实性 +3。",
+      "effects": {
+        "network": 4,
+        "research": 3,
+        "integrity": 3
+      },
+      "flags": ["credit.clear"],
+      "days": 1
+    },
+    {
+      "label": "争取核心工作，再谈署名",
+      "hint": "消耗精力，练习研究方法，增加压力",
+      "text": "你争取核心工作，再谈署名。",
+      "effects": {
+        "research": 6,
+        "energy": -8,
+        "stress": 3
+      },
+      "flags": ["credit.substantial"],
+      "days": 1
+    },
+    {
+      "label": "按更显眼的方式描述贡献",
+      "hint": "材料可信度下降，补齐申请材料，增加压力",
+      "text": "你按更显眼的方式描述贡献。之后会有相关的后续事件。材料真实性 -18。",
+      "effects": {
+        "materials": 5,
+        "integrity": -18,
+        "stress": 4
+      },
+      "flags": ["record.inflated"],
+      "schedule": [
+        {
+          "id": "record.audit",
+          "after": 2
+        }
+      ],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "calendar": 25,
+  "when": {
+    "from": 25,
+    "to": 25
+  }
+}

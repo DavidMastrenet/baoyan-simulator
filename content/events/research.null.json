@@ -1,0 +1,49 @@
+{
+  "id": "research.null",
+  "title": "实验没有明显改进",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["新方法与原方案结果接近，需要检查差异和实验设置。"],
+  "choices": [
+    {
+      "label": "记录不支持的结果，重审假设",
+      "hint": "练习研究方法，补充准确材料",
+      "text": "你记录不支持的结果，重审假设。材料真实性 +2。",
+      "effects": {
+        "research": 5,
+        "integrity": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "检查测量与实验是否足以区分差异",
+      "hint": "消耗精力，练习研究方法，积累项目经验",
+      "text": "你检查测量与实验是否足以区分差异。",
+      "effects": {
+        "research": 5,
+        "craft": 2,
+        "energy": -4
+      },
+      "days": 2
+    },
+    {
+      "label": "整理阶段结论，暂时转换任务",
+      "hint": "缓解压力，练习研究方法，恢复精力",
+      "text": "你整理阶段结论，暂时转换任务。",
+      "effects": {
+        "research": 3,
+        "energy": 5,
+        "stress": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 8,
+    "min": {
+      "research": 25
+    }
+  },
+  "weight": 5
+}

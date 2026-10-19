@@ -1,0 +1,50 @@
+{
+  "id": "calendar.29",
+  "title": "讨论城市和预算",
+  "category": "生活",
+  "scene": "校园",
+  "body": ["家人希望了解读研城市、学制和费用，你需要结合方向和预算做比较。"],
+  "choices": [
+    {
+      "label": "把研究方向和生活成本一起算",
+      "hint": "缓解压力，准备后续安排，补齐申请材料",
+      "text": "你把研究方向和生活成本一起算。",
+      "effects": {
+        "backup": 8,
+        "materials": 4,
+        "stress": -4
+      },
+      "flags": ["cost.considered"],
+      "days": 0
+    },
+    {
+      "label": "坦诚说明想走远一点的理由",
+      "hint": "缓解压力，练习表达，增进合作",
+      "text": "你坦诚说明想走远一点的理由。",
+      "effects": {
+        "expression": 4,
+        "network": 3,
+        "stress": -4
+      },
+      "flags": ["family.talk"],
+      "days": 1
+    },
+    {
+      "label": "认真考虑离家近的项目",
+      "hint": "缓解压力，准备后续安排",
+      "text": "你认真考虑离家近的项目。",
+      "effects": {
+        "backup": 5,
+        "stress": -5
+      },
+      "flags": ["home.preferred"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "calendar": 29,
+  "when": {
+    "from": 29,
+    "to": 29
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "id": "new.project.03",
+  "title": "数据库备份缺失",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["项目没有近期备份，迁移之前需要重新准备。"],
+  "when": {
+    "from": 4,
+    "to": 42
+  },
+  "weight": 13,
+  "once": true,
+  "choices": [
+    {
+      "label": "安排备份和恢复演练",
+      "hint": "按项目能力判断结果，还可能出现额外情况",
+      "text": "你安排备份和恢复演练。",
+      "effects": {
+        "energy": -4
+      },
+      "check": {
+        "stat": "craft",
+        "difficulty": 56,
+        "success": {
+          "text": "备份能够恢复，迁移顺利。",
+          "effects": {
+            "craft": 5,
+            "stress": -2
+          },
+          "flags": ["new.project.03.done", "new.project.experience"],
+          "schedule": [
+            {
+              "id": "new.project.03.follow",
+              "after": 3
+            }
+          ]
+        },
+        "failure": {
+          "text": "恢复演练失败，迁移需要延期。",
+          "effects": {
+            "energy": -4,
+            "stress": 4
+          },
+          "flags": ["new.project.03.setback"],
+          "schedule": [
+            {
+              "id": "new.project.03.follow",
+              "after": 2
+            }
+          ]
+        }
+      },
+      "outcomes": [
+        {
+          "weight": 2,
+          "text": "此前的维护说明能解决部分问题，修改时间减少。",
+          "effects": {
+            "network": 2,
+            "energy": 3
+          }
+        },
+        {
+          "weight": 5,
+          "text": "所需时间与预计相近，没有额外调整。"
+        },
+        {
+          "weight": 2,
+          "text": "一个相关模块也需要修改，工作量增加。",
+          "effects": {
+            "energy": -3,
+            "stress": 2
+          }
+        },
+        {
+          "weight": 1,
+          "when": {
+            "min": {
+              "network": 50
+            }
+          },
+          "text": "此前认识的同学协助处理了问题。",
+          "effects": {
+            "craft": 2,
+            "stress": -2
+          }
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "暂缓迁移并保存现有文件",
+      "hint": "结果确定",
+      "text": "你暂缓迁移并保存现有文件，完成了当前能确定的部分。",
+      "effects": {
+        "craft": 2,
+        "energy": -1
+      },
+      "days": 1
+    },
+    {
+      "label": "和维护成员一起处理问题",
+      "hint": "沟通结果有差异",
+      "text": "你和维护成员一起处理问题。",
+      "effects": {
+        "network": 2,
+        "energy": -2
+      },
+      "check": {
+        "stat": "expression",
+        "difficulty": 52,
+        "success": {
+          "text": "分工得到确认，任务进展改善。",
+          "effects": {
+            "craft": 3,
+            "stress": -2
+          },
+          "flags": ["new.project.experience"]
+        },
+        "failure": {
+          "text": "大家理解不同，需要重新确认要求。",
+          "effects": {
+            "stress": 3,
+            "energy": -2
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "暂缓处理，先完成已有安排",
+      "hint": "本次机会暂不继续",
+      "text": "你没有继续增加任务，保留了休息和现有工作时间。",
+      "effects": {
+        "energy": 5,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "使用之前同类任务的经验",
+      "when": {
+        "flags": ["new.project.experience"]
+      },
+      "hint": "需要同类经历",
+      "text": "你按之前整理的方法完成了主要步骤。",
+      "effects": {
+        "craft": 3,
+        "energy": -2,
+        "stress": -1
+      },
+      "days": 1
+    }
+  ],
+  "variants": [
+    {
+      "when": {
+        "max": {
+          "energy": 30
+        }
+      },
+      "text": "当前精力偏低，继续赶工会降低完成任务的机会。"
+    },
+    {
+      "when": {
+        "flags": ["new.project.experience"]
+      },
+      "text": "你已处理过同类任务，可以使用之前的方法。"
+    }
+  ]
+}

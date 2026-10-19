@@ -1,0 +1,49 @@
+{
+  "id": "calendar.11",
+  "title": "大一学习总结",
+  "category": "生活",
+  "scene": "校园",
+  "body": ["大一即将结束。你需要整理课程和项目记录，再决定下学期的重点。"],
+  "choices": [
+    {
+      "label": "保留课程和一个长期项目",
+      "hint": "缓解压力，加强课程基础，练习研究方法",
+      "text": "你保留课程和一个长期项目。",
+      "effects": {
+        "study": 3,
+        "research": 3,
+        "stress": -4
+      },
+      "flags": ["direction.clear"],
+      "days": 1
+    },
+    {
+      "label": "整理可展示的作品和记录",
+      "hint": "积累项目经验，补齐申请材料",
+      "text": "你整理可展示的作品和记录。",
+      "effects": {
+        "craft": 3,
+        "materials": 8
+      },
+      "flags": ["archive.started"],
+      "days": 1
+    },
+    {
+      "label": "联系几位一起做事的人",
+      "hint": "缓解压力，增进合作",
+      "text": "你联系几位一起做事的人。",
+      "effects": {
+        "network": 6,
+        "stress": -4
+      },
+      "flags": ["friend.kept"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "calendar": 11,
+  "when": {
+    "from": 11,
+    "to": 11
+  }
+}

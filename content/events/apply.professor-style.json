@@ -1,0 +1,48 @@
+{
+  "id": "apply.professor-style",
+  "title": "了解研究组日常",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["在读学生对同一研究组的评价不同，需要进一步了解任务和指导方式。"],
+  "choices": [
+    {
+      "label": "追问具体反馈频率与任务安排",
+      "hint": "准备后续安排，增加实践经验",
+      "text": "你追问具体反馈频率与任务安排。",
+      "effects": {
+        "backup": 6,
+        "practice": 3
+      },
+      "flags": ["mentor.checked"],
+      "days": 1
+    },
+    {
+      "label": "对照自己此前合作中的体验",
+      "hint": "练习研究方法，准备后续安排",
+      "text": "你对照自己此前合作中的体验。",
+      "effects": {
+        "research": 3,
+        "backup": 5
+      },
+      "flags": ["decision.fit"],
+      "days": 1
+    },
+    {
+      "label": "再向不同年级了解一段完整经历",
+      "hint": "增进合作，练习表达",
+      "text": "你再向不同年级了解一段完整经历。",
+      "effects": {
+        "network": 5,
+        "expression": 2
+      },
+      "flags": ["mentor.checked"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 35,
+    "to": 46
+  },
+  "weight": 5
+}

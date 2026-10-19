@@ -1,0 +1,50 @@
+{
+  "id": "calendar.09",
+  "title": "暑假时间分配",
+  "category": "生活",
+  "scene": "校园",
+  "body": ["考试、返乡和暑期项目时间接近。你只能选取其中几项重点安排。"],
+  "choices": [
+    {
+      "label": "留下两周，把一个问题做完",
+      "hint": "消耗精力，练习研究方法，积累项目经验",
+      "text": "你留下两周，把一个问题做完。",
+      "effects": {
+        "research": 4,
+        "craft": 2,
+        "energy": -5
+      },
+      "flags": ["summer.focus"],
+      "days": 1
+    },
+    {
+      "label": "安排一段实践与一段休息",
+      "hint": "缓解压力，增加实践经验，恢复精力",
+      "text": "你安排一段实践与一段休息。",
+      "effects": {
+        "practice": 4,
+        "energy": 7,
+        "stress": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "做暑期兼职，攒下结余",
+      "hint": "消耗精力，获得750元，增加实践经验",
+      "text": "你做暑期兼职，攒下结余。余额 +750。",
+      "effects": {
+        "money": 750,
+        "practice": 2,
+        "energy": -8
+      },
+      "flags": ["work.experience"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 9,
+  "when": {
+    "from": 9,
+    "to": 9
+  }
+}

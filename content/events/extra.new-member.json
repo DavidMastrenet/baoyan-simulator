@@ -1,0 +1,45 @@
+{
+  "id": "extra.new-member",
+  "title": "回答新人提问",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["新人询问某个流程的原因，你需要检查最初的设计说明。"],
+  "choices": [
+    {
+      "label": "一起回查原因，不急着用惯例回答",
+      "hint": "练习研究方法，增进合作",
+      "text": "你一起回查原因，不急着用惯例回答。",
+      "effects": {
+        "research": 4,
+        "network": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "用小例子验证这一步的作用",
+      "hint": "积累项目经验，加强课程基础",
+      "text": "你用小例子验证这一步的作用。",
+      "effects": {
+        "craft": 4,
+        "study": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "把未确认的部分写进说明",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你把未确认的部分写进说明。",
+      "effects": {
+        "materials": 4,
+        "expression": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

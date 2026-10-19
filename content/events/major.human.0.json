@@ -1,0 +1,46 @@
+{
+  "id": "major.human.0",
+  "title": "比较冲突材料",
+  "category": "学业",
+  "scene": "学业事件",
+  "body": ["两份材料对同一事件的描述不同，来源和写作目的也不同。"],
+  "choices": [
+    {
+      "label": "核对材料出处、时间与语境",
+      "hint": "练习研究方法，加强课程基础",
+      "text": "你核对材料出处、时间与语境。",
+      "effects": {
+        "research": 6,
+        "study": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "把分歧保留在分析里",
+      "hint": "练习表达，练习研究方法",
+      "text": "你把分歧保留在分析里。",
+      "effects": {
+        "expression": 4,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "寻找能够独立核对的第三类材料",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你寻找能够独立核对的第三类材料。",
+      "effects": {
+        "research": 5,
+        "practice": 2
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 2,
+    "to": 35,
+    "majors": ["人文社科类"]
+  },
+  "weight": 12
+}

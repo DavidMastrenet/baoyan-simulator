@@ -1,0 +1,37 @@
+{
+  "id": "rare.offer-spam",
+  "title": "重要邮件进了垃圾箱",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["一封项目补充通知进入垃圾邮件目录，你在处理其他材料时才发现。"],
+  "when": {
+    "from": 32,
+    "to": 46,
+    "applicationStatus": ["interview", "formalInterview", "offer"]
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "立即按通知核对待办",
+      "text": "你补充了提醒方式，并及时处理了当前要求。",
+      "hint": "消耗精力，补齐申请材料",
+      "effects": {
+        "energy": -3,
+        "materials": 2
+      },
+      "days": 0
+    },
+    {
+      "label": "确认系统状态后回复项目方",
+      "text": "你以系统中的有效通知为准完成回复。",
+      "hint": "缓解压力，练习表达",
+      "effects": {
+        "expression": 1,
+        "stress": -1
+      },
+      "days": 1
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "rare.offer-uncertain",
+  "title": "前期通知仍有附加条件",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["项目的通过通知要求同时满足资格、导师确认和最终名额安排，当前还缺一项。"],
+  "when": {
+    "from": 35,
+    "to": 43
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "确认条件并保留其他申请",
+      "text": "你明确了当前状态，没有停止其他准备。",
+      "hint": "消耗精力，补齐申请材料，准备后续安排",
+      "effects": {
+        "materials": 3,
+        "backup": 3,
+        "energy": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "直接向项目方询问未确定部分",
+      "text": "项目方说明了尚未完成的步骤。",
+      "hint": "缓解压力，练习表达",
+      "effects": {
+        "expression": 2,
+        "stress": -1
+      },
+      "days": 1
+    }
+  ]
+}

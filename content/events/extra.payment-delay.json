@@ -1,0 +1,46 @@
+{
+  "id": "extra.payment-delay",
+  "title": "报销到账延迟",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["报销还在审核，当前预算中不能使用这笔预期收入。"],
+  "choices": [
+    {
+      "label": "核对缺项，记录预计进度",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你核对缺项，记录预计进度。",
+      "effects": {
+        "materials": 4,
+        "stress": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "把非必要支出推迟一段时间",
+      "hint": "获得180元，准备后续安排",
+      "text": "你把非必要支出推迟一段时间。余额 +180。",
+      "effects": {
+        "money": 180,
+        "backup": 2
+      },
+      "days": 0
+    },
+    {
+      "label": "安排一项短期勤工任务",
+      "hint": "消耗精力，获得360元，增加实践经验",
+      "text": "你安排一项短期勤工任务。余额 +360。",
+      "effects": {
+        "money": 360,
+        "practice": 2,
+        "energy": -5
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

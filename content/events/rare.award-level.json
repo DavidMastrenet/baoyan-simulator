@@ -1,0 +1,47 @@
+{
+  "id": "rare.award-level",
+  "title": "奖项级别填写有误",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["材料中准备申报的奖项级别与证书不一致，需要在公示前确认。"],
+  "when": {
+    "from": 24,
+    "to": 40
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "按证书更正级别",
+      "text": "你更正了申报条目，按实际级别参与计算。",
+      "hint": "消耗精力，补齐申请材料",
+      "effects": {
+        "materials": 2,
+        "energy": -2
+      },
+      "days": 0
+    },
+    {
+      "label": "联系组织方补充正式说明",
+      "text": "组织方说明了奖项名称和级别，你据此提交。",
+      "hint": "消耗精力，补齐申请材料",
+      "effects": {
+        "materials": 3,
+        "energy": -4
+      },
+      "days": 0
+    },
+    {
+      "label": "明知不符仍按较高级别提交",
+      "text": "材料出现不实申报，后续检查和异议会带来风险。",
+      "hint": "材料可信度下降，增加压力",
+      "effects": {
+        "integrity": -30,
+        "stress": 5
+      },
+      "flags": ["record.risk"],
+      "days": 0
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "egg.empty-room",
+  "title": "走错活动教室",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["你误入了另一场活动，距离原定活动开始还有时间。"],
+  "choices": [
+    {
+      "label": "安静离开，提前检查真正的场地",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你安静离开，提前检查真正的场地。",
+      "effects": {
+        "materials": 2,
+        "stress": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "会后向同学讲起这段插曲",
+      "hint": "缓解压力，增进合作",
+      "text": "你会后向同学讲起这段插曲。",
+      "effects": {
+        "network": 3,
+        "stress": -5
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

@@ -1,0 +1,46 @@
+{
+  "id": "major.human.3",
+  "title": "修改论文结构",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["草稿摘录较多，但还没有提出明确观点和论证关系。"],
+  "choices": [
+    {
+      "label": "给每节写一句可以讨论的主张",
+      "hint": "练习表达，练习研究方法",
+      "text": "你给每节写一句可以讨论的主张。",
+      "effects": {
+        "expression": 5,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "画出论点与记录的对应关系",
+      "hint": "练习研究方法，加强课程基础",
+      "text": "你画出论点与记录的对应关系。",
+      "effects": {
+        "research": 5,
+        "study": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "请同学只读结构与结论",
+      "hint": "增进合作，练习表达",
+      "text": "你请同学只读结构与结论。",
+      "effects": {
+        "network": 4,
+        "expression": 4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 11,
+    "to": 35,
+    "majors": ["人文社科类"]
+  },
+  "weight": 12
+}

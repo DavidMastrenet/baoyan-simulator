@@ -1,0 +1,47 @@
+{
+  "id": "apply.rumor",
+  "title": "确认招生消息",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["群里转发了一张停止招生的截图，没有完整出处和发布日期。"],
+  "choices": [
+    {
+      "label": "回到项目公告与正式联系渠道",
+      "hint": "缓解压力，补齐申请材料，准备后续安排",
+      "text": "你回到项目公告与正式联系渠道。",
+      "effects": {
+        "materials": 5,
+        "backup": 3,
+        "stress": -4
+      },
+      "days": 0
+    },
+    {
+      "label": "保留现有安排，同时查明来源",
+      "hint": "缓解压力，加强课程基础，恢复精力",
+      "text": "你保留现有安排，同时查明来源。",
+      "effects": {
+        "study": 3,
+        "energy": 4,
+        "stress": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "提醒同伴区分消息与已确认事项",
+      "hint": "增进合作，练习表达",
+      "text": "你提醒同伴区分消息与已确认事项。",
+      "effects": {
+        "network": 4,
+        "expression": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 29,
+    "to": 46
+  },
+  "weight": 5
+}

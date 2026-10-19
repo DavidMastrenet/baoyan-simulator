@@ -1,0 +1,48 @@
+{
+  "id": "apply.sudden-question",
+  "title": "解释转专业原因",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["老师询问你为何申请其他方向，以及已经完成哪些基础准备。"],
+  "choices": [
+    {
+      "label": "从一次真实困惑讲起",
+      "hint": "练习表达，练习研究方法",
+      "text": "你从一次真实困惑讲起。",
+      "effects": {
+        "expression": 5,
+        "research": 3
+      },
+      "flags": ["cross.explained"],
+      "days": 2
+    },
+    {
+      "label": "承认需要补的基础，说明已有准备",
+      "hint": "加强课程基础，练习表达",
+      "text": "你承认需要补的基础，说明已有准备。",
+      "effects": {
+        "study": 4,
+        "expression": 4
+      },
+      "flags": ["cross.explained"],
+      "days": 2
+    },
+    {
+      "label": "先比较当前与新方向的工作方式",
+      "hint": "准备后续安排，练习研究方法",
+      "text": "你先比较当前与新方向的工作方式。",
+      "effects": {
+        "backup": 6,
+        "research": 3
+      },
+      "flags": ["direction.clear"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 29,
+    "flags": ["cross.interest"]
+  },
+  "weight": 5
+}

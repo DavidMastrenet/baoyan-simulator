@@ -1,0 +1,45 @@
+{
+  "id": "extra.small-talk",
+  "title": "小型分享会",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["分享会听众较少，现场允许直接提问和讨论。"],
+  "choices": [
+    {
+      "label": "围绕问题展开小范围讨论",
+      "hint": "练习表达，练习研究方法",
+      "text": "你围绕问题展开小范围讨论。",
+      "effects": {
+        "expression": 5,
+        "research": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "请大家实际体验一个小例子",
+      "hint": "增加实践经验，积累项目经验",
+      "text": "你请大家实际体验一个小例子。",
+      "effects": {
+        "practice": 4,
+        "craft": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "会后逐一听一条反馈",
+      "hint": "增进合作，练习表达",
+      "text": "你会后逐一听一条反馈。",
+      "effects": {
+        "network": 5,
+        "expression": 2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

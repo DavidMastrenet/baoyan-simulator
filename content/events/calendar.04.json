@@ -1,0 +1,47 @@
+{
+  "id": "calendar.04",
+  "title": "大一期末复习",
+  "category": "学业",
+  "scene": "教务通知",
+  "body": ["本学期期末考试即将开始。部分章节已经掌握，其他内容还需要复习。"],
+  "choices": [
+    {
+      "label": "按知识联系重新串一次",
+      "hint": "消耗精力，加强课程基础",
+      "text": "你按知识联系重新串一次。",
+      "effects": {
+        "study": 6,
+        "energy": -6
+      },
+      "days": 1
+    },
+    {
+      "label": "和同学互相出题",
+      "hint": "加强课程基础，练习表达，增进合作",
+      "text": "你和同学互相出题。",
+      "effects": {
+        "study": 4,
+        "expression": 3,
+        "network": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "保证睡眠，只复习核心内容",
+      "hint": "缓解压力，加强课程基础，恢复精力",
+      "text": "你保证睡眠，只复习核心内容。",
+      "effects": {
+        "study": 2,
+        "energy": 10,
+        "stress": -7
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 4,
+  "when": {
+    "from": 4,
+    "to": 4
+  }
+}

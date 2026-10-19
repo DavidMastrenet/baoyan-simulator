@@ -1,0 +1,46 @@
+{
+  "id": "major.biz.2",
+  "title": "检查业务假设",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["模型简化了审批和信息延迟，需要确认这些条件是否影响实际使用。"],
+  "choices": [
+    {
+      "label": "先观察完整业务流程",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你先观察完整业务流程。",
+      "effects": {
+        "practice": 6,
+        "research": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "做情景分析，比较不同条件",
+      "hint": "加强课程基础，积累项目经验",
+      "text": "你做情景分析，比较不同条件。",
+      "effects": {
+        "study": 4,
+        "craft": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "向使用者解释适用范围",
+      "hint": "练习表达，增加实践经验",
+      "text": "你向使用者解释适用范围。",
+      "effects": {
+        "expression": 5,
+        "practice": 3
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 8,
+    "to": 35,
+    "majors": ["经管类"]
+  },
+  "weight": 12
+}

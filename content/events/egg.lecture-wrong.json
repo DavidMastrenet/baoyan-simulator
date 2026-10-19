@@ -1,0 +1,36 @@
+{
+  "id": "egg.lecture-wrong",
+  "title": "临时旁听讲座",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["等待活动时听到一段其他方向的讲座，其中一个例子与当前项目相关。"],
+  "choices": [
+    {
+      "label": "记下问题，之后再查",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你记下问题，之后再查。",
+      "effects": {
+        "research": 3,
+        "practice": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "和旁边的人交换理解",
+      "hint": "增进合作，练习表达",
+      "text": "你和旁边的人交换理解。",
+      "effects": {
+        "network": 3,
+        "expression": 2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

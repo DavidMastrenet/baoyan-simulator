@@ -1,0 +1,23 @@
+{
+  "id": "q.english.1",
+  "kind": "英语",
+  "title": "A result that changed",
+  "text": "Tell us about a result that did not support your initial idea.",
+  "options": [
+    {
+      "text": "Our results always supported our ideas.",
+      "score": 0,
+      "response": "这个回答回避了问题，也没有展示处理不确定性的能力。"
+    },
+    {
+      "text": "We had a problem, and I asked my supervisor for help.",
+      "score": 2,
+      "response": "求助很正常，仍需要说明你如何理解和处理了问题。"
+    },
+    {
+      "text": "The first result disappeared after we fixed the data split. We reported the correction and redesigned the experiment.",
+      "score": 4,
+      "response": "你把变化、行动与认识连起来了，研究经历因此可信。"
+    }
+  ]
+}

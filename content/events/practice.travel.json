@@ -1,0 +1,50 @@
+{
+  "id": "practice.travel",
+  "title": "实践通勤过长",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["活动结束后回校较晚，原计划的复习时间和精力都受到影响。"],
+  "choices": [
+    {
+      "label": "调整频率，保留高质量的参与",
+      "hint": "缓解压力，增加实践经验，恢复精力",
+      "text": "你调整频率，保留高质量的参与。",
+      "effects": {
+        "practice": 4,
+        "energy": 8,
+        "stress": -4
+      },
+      "days": 2
+    },
+    {
+      "label": "与团队轮流到场，统一交接记录",
+      "hint": "增进合作，增加实践经验，恢复精力",
+      "text": "你与团队轮流到场，统一交接记录。",
+      "effects": {
+        "network": 5,
+        "practice": 3,
+        "energy": 4
+      },
+      "flags": ["team.handoff"],
+      "days": 1
+    },
+    {
+      "label": "继续原有频率，优先完成承诺",
+      "hint": "消耗精力，增加实践经验，增加压力",
+      "text": "你继续原有频率，优先完成承诺。",
+      "effects": {
+        "practice": 7,
+        "energy": -9,
+        "stress": 4
+      },
+      "flags": ["practice.long"],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 8,
+    "flags": ["practice.started"]
+  },
+  "weight": 5
+}

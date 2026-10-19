@@ -1,0 +1,36 @@
+{
+  "id": "egg.semicolon",
+  "title": "发现符号错误",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["程序报错由一个全角符号引起，修正后需要重新运行。"],
+  "choices": [
+    {
+      "label": "记进排查清单",
+      "hint": "缓解压力，积累项目经验",
+      "text": "你记进排查清单。",
+      "effects": {
+        "craft": 3,
+        "stress": -5
+      },
+      "days": 1
+    },
+    {
+      "label": "把排查过程分享给同伴",
+      "hint": "缓解压力，增进合作",
+      "text": "你把排查过程分享给同伴。",
+      "effects": {
+        "network": 3,
+        "stress": -5
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

@@ -1,0 +1,36 @@
+{
+  "id": "egg.charger",
+  "title": "借用充电线",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["同学借用了你的充电线，其他人也正在等待使用。"],
+  "choices": [
+    {
+      "label": "顺手确认大家都用上了",
+      "hint": "缓解压力，增进合作",
+      "text": "你顺手确认大家都用上了。",
+      "effects": {
+        "network": 3,
+        "stress": -4
+      },
+      "days": 0
+    },
+    {
+      "label": "收好线，把备用电源记进清单",
+      "hint": "补齐申请材料，恢复精力",
+      "text": "你收好线，把备用电源记进清单。",
+      "effects": {
+        "materials": 2,
+        "energy": 4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

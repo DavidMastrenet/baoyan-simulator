@@ -1,0 +1,67 @@
+{
+  "id": "practice.long-term",
+  "title": "承担固定实践",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["实践单位希望你持续参加，需要确认每周投入和持续周期。"],
+  "choices": [
+    {
+      "label": "明确周期，持续承担",
+      "hint": "消耗精力，增加实践经验，练习研究方法",
+      "text": "你明确周期，持续承担。新增成果：一段持续的教学与社会实践。",
+      "effects": {
+        "practice": 7,
+        "energy": -6,
+        "research": 3
+      },
+      "flags": ["practice.long"],
+      "award": {
+        "id": "sustained-practice",
+        "title": "一段持续的教学与社会实践",
+        "kind": "实践",
+        "level": 3,
+        "recognized": false
+      },
+      "days": 2
+    },
+    {
+      "label": "与团队轮换，保证交接",
+      "hint": "增进合作，增加实践经验",
+      "text": "你与团队轮换，保证交接。新增成果：一段持续的教学与社会实践。",
+      "effects": {
+        "network": 6,
+        "practice": 5
+      },
+      "flags": ["practice.long", "team.handoff"],
+      "award": {
+        "id": "sustained-practice",
+        "title": "一段持续的教学与社会实践",
+        "kind": "实践",
+        "level": 3,
+        "recognized": false
+      },
+      "days": 1
+    },
+    {
+      "label": "完成当前周期，不再延长",
+      "hint": "缓解压力，恢复精力，补齐申请材料",
+      "text": "你完成当前周期，不再延长。新增成果：一次完整周期的实践。",
+      "effects": {
+        "energy": 8,
+        "stress": -5,
+        "materials": 5
+      },
+      "flags": ["team.handoff"],
+      "award": {
+        "id": "practice-cycle",
+        "title": "一次完整周期的实践",
+        "kind": "实践",
+        "level": 2,
+        "recognized": false
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "chain": true
+}

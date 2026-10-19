@@ -1,0 +1,23 @@
+{
+  "id": "q.english.6",
+  "kind": "英语",
+  "title": "Describe a limitation",
+  "text": "What is one limitation of your project?",
+  "options": [
+    {
+      "text": "The sample is small. I would test it on a larger and more varied sample.",
+      "score": 4,
+      "response": "回答说明了关键条件和处理方法。"
+    },
+    {
+      "text": "There is no limitation because the result is good.",
+      "score": 0,
+      "response": "这一说法忽略了关键条件，需要重新分析。"
+    },
+    {
+      "text": "I would collect more data, but I have not decided which data.",
+      "score": 2,
+      "response": "提到了部分处理方式，但解释还不完整。"
+    }
+  ]
+}

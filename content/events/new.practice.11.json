@@ -1,0 +1,158 @@
+{
+  "id": "new.practice.11",
+  "title": "实践成果展示",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["学校要求展示实践成果，但只能使用有限篇幅。"],
+  "when": {
+    "from": 4,
+    "to": 39
+  },
+  "weight": 13,
+  "once": true,
+  "choices": [
+    {
+      "label": "选择一项问题说明处理过程",
+      "hint": "按实践经验判断结果，还可能出现额外情况",
+      "text": "你选择一项问题说明处理过程。",
+      "effects": {
+        "energy": -4
+      },
+      "check": {
+        "stat": "practice",
+        "difficulty": 44,
+        "success": {
+          "text": "展示获得了具体反馈。",
+          "effects": {
+            "practice": 5,
+            "stress": -2
+          },
+          "flags": ["new.practice.11.done", "new.practice.experience"]
+        },
+        "failure": {
+          "text": "内容过多，主要工作没有讲清楚。",
+          "effects": {
+            "energy": -4,
+            "stress": 4
+          },
+          "flags": ["new.practice.11.setback"]
+        }
+      },
+      "outcomes": [
+        {
+          "weight": 2,
+          "text": "合作单位提供了所需材料，准备时间减少。",
+          "effects": {
+            "network": 2,
+            "energy": 3
+          }
+        },
+        {
+          "weight": 5,
+          "text": "所需时间与预计相近，没有额外调整。"
+        },
+        {
+          "weight": 2,
+          "text": "现场还有一项准备工作需要补做。",
+          "effects": {
+            "energy": -3,
+            "stress": 2
+          }
+        },
+        {
+          "weight": 1,
+          "when": {
+            "min": {
+              "network": 50
+            }
+          },
+          "text": "此前认识的同学协助处理了问题。",
+          "effects": {
+            "practice": 2,
+            "stress": -2
+          }
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "展示已确认的活动记录",
+      "hint": "结果确定",
+      "text": "你展示已确认的活动记录，完成了当前能确定的部分。",
+      "effects": {
+        "practice": 2,
+        "energy": -1
+      },
+      "days": 1
+    },
+    {
+      "label": "与现场负责人重新安排",
+      "hint": "沟通结果有差异",
+      "text": "你与现场负责人重新安排。",
+      "effects": {
+        "network": 2,
+        "energy": -2
+      },
+      "check": {
+        "stat": "expression",
+        "difficulty": 40,
+        "success": {
+          "text": "分工得到确认，任务进展改善。",
+          "effects": {
+            "practice": 3,
+            "stress": -2
+          },
+          "flags": ["new.practice.experience"]
+        },
+        "failure": {
+          "text": "大家理解不同，需要重新确认要求。",
+          "effects": {
+            "stress": 3,
+            "energy": -2
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "暂缓处理，先完成已有安排",
+      "hint": "本次机会暂不继续",
+      "text": "你没有继续增加任务，保留了休息和现有工作时间。",
+      "effects": {
+        "energy": 5,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "使用之前同类任务的经验",
+      "when": {
+        "flags": ["new.practice.experience"]
+      },
+      "hint": "需要同类经历",
+      "text": "你按之前整理的方法完成了主要步骤。",
+      "effects": {
+        "practice": 3,
+        "energy": -2,
+        "stress": -1
+      },
+      "days": 1
+    }
+  ],
+  "variants": [
+    {
+      "when": {
+        "max": {
+          "energy": 30
+        }
+      },
+      "text": "当前精力偏低，继续赶工会降低完成任务的机会。"
+    },
+    {
+      "when": {
+        "flags": ["new.practice.experience"]
+      },
+      "text": "你已处理过同类任务，可以使用之前的方法。"
+    }
+  ]
+}

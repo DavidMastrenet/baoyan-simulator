@@ -1,0 +1,46 @@
+{
+  "id": "extra.group-pressure",
+  "title": "解释团队出勤",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["队友认为你参加活动太少，之前约定的考试周安排没有统一确认。"],
+  "choices": [
+    {
+      "label": "说明已承诺的范围与时间",
+      "hint": "缓解压力，练习表达，增进合作",
+      "text": "你说明已承诺的范围与时间。",
+      "effects": {
+        "expression": 4,
+        "network": 2,
+        "stress": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "集中完成一项关键交接",
+      "hint": "增进合作，补齐申请材料",
+      "text": "你集中完成一项关键交接。",
+      "effects": {
+        "network": 4,
+        "materials": 4
+      },
+      "days": 0
+    },
+    {
+      "label": "与负责人单独协调后续分工",
+      "hint": "增进合作，恢复精力",
+      "text": "你与负责人单独协调后续分工。",
+      "effects": {
+        "network": 5,
+        "energy": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

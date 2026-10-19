@@ -1,0 +1,48 @@
+{
+  "id": "life.family-visit",
+  "title": "家人来电",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["家人希望与你商量一件事，你原定的工作尚未完成。"],
+  "choices": [
+    {
+      "label": "认真聊一会儿，再调整安排",
+      "hint": "缓解压力，增进合作",
+      "text": "你认真聊一会儿，再调整安排。",
+      "effects": {
+        "stress": -7,
+        "network": 3
+      },
+      "flags": ["family.talk"],
+      "days": 0
+    },
+    {
+      "label": "说明眼前任务，约一个能好好聊的时间",
+      "hint": "缓解压力，练习表达，恢复精力",
+      "text": "你说明眼前任务，约一个能好好聊的时间。",
+      "effects": {
+        "expression": 3,
+        "energy": 4,
+        "stress": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "先处理家里急需商量的部分",
+      "hint": "消耗精力，增加实践经验，增进合作",
+      "text": "你先处理家里急需商量的部分。",
+      "effects": {
+        "practice": 3,
+        "network": 4,
+        "energy": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 0,
+    "to": 47
+  },
+  "weight": 5
+}

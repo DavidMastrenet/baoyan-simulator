@@ -1,0 +1,36 @@
+{
+  "id": "rare.social-0",
+  "title": "面试被追问简历中最小的一项",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["老师没有问代表成果，反而要求你解释简历角落里的一项工具使用。"],
+  "when": {
+    "from": 24,
+    "to": 42
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "如实说明自己实际使用的部分",
+      "text": "你按实际要求处理了问题。",
+      "hint": "消耗精力，练习表达",
+      "effects": {
+        "expression": 3,
+        "energy": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "先确认信息再调整安排",
+      "text": "你核对通知内容，并重新安排当前任务。",
+      "hint": "消耗精力，准备后续安排",
+      "effects": {
+        "backup": 2,
+        "energy": -1
+      },
+      "days": 0
+    }
+  ]
+}

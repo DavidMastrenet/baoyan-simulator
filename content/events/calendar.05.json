@@ -1,0 +1,54 @@
+{
+  "id": "calendar.05",
+  "title": "寒假安排",
+  "category": "生活",
+  "scene": "校园",
+  "body": ["家人想了解你的学习和生活情况。寒假还有时间完成一项个人计划。"],
+  "choices": [
+    {
+      "label": "把真实的近况说一说",
+      "hint": "缓解压力，增进合作",
+      "text": "你把真实的近况说一说。",
+      "effects": {
+        "stress": -8,
+        "network": 2
+      },
+      "flags": ["family.talk"],
+      "days": 0
+    },
+    {
+      "label": "做一个小而完整的作品",
+      "hint": "消耗精力，积累项目经验",
+      "text": "你做一个小而完整的作品。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 6,
+        "energy": -5
+      },
+      "flags": ["product.started"],
+      "schedule": [
+        {
+          "id": "product.first-user",
+          "after": 2
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "去看看另一学科的入门读物",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你去看看另一学科的入门读物。",
+      "effects": {
+        "research": 3,
+        "practice": 2
+      },
+      "flags": ["cross.interest"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 5,
+  "when": {
+    "from": 5,
+    "to": 5
+  }
+}

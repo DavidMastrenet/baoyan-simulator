@@ -1,0 +1,36 @@
+{
+  "id": "egg.umbrella",
+  "title": "同学归还雨伞",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["之前借伞的同学来归还物品，可以顺便交流近况。"],
+  "choices": [
+    {
+      "label": "回复一句收到，问问近况",
+      "hint": "缓解压力，增进合作",
+      "text": "你回复一句收到，问问近况。",
+      "effects": {
+        "network": 4,
+        "stress": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "把伞留在门口，下一次仍能借",
+      "hint": "缓解压力，恢复精力",
+      "text": "你把伞留在门口，下一次仍能借。",
+      "effects": {
+        "energy": 4,
+        "stress": -4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

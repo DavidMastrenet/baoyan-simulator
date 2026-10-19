@@ -1,0 +1,49 @@
+{
+  "id": "calendar.43",
+  "title": "校内推荐结果",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["学校公布推荐结果。你需要继续完成录取流程，或调整后续准备方向。"],
+  "choices": [
+    {
+      "label": "逐项核对申请状态与待办",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你逐项核对申请状态与待办。",
+      "effects": {
+        "materials": 8,
+        "stress": -3
+      },
+      "flags": ["application.tracker"],
+      "days": 0
+    },
+    {
+      "label": "正式启动统考或就业准备",
+      "hint": "准备后续安排，加强课程基础",
+      "text": "你正式启动统考或就业准备。后续准备方向：考研。",
+      "effects": {
+        "backup": 14,
+        "study": 2
+      },
+      "path": "exam",
+      "days": 1
+    },
+    {
+      "label": "找信任的人把近况说清楚",
+      "hint": "缓解压力，增进合作，恢复精力",
+      "text": "你找信任的人把近况说清楚。",
+      "effects": {
+        "network": 4,
+        "energy": 8,
+        "stress": -8
+      },
+      "flags": ["friend.kept"],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 43,
+  "when": {
+    "from": 43,
+    "to": 43
+  }
+}

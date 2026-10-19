@@ -1,0 +1,61 @@
+{
+  "id": "calendar.07",
+  "title": "参加研究项目",
+  "category": "科研",
+  "scene": "课题组",
+  "body": ["老师提供了一个入门课题和两篇阅读材料，需要持续投入时间。"],
+  "choices": [
+    {
+      "label": "先复现，再约一次讨论",
+      "hint": "消耗精力，练习研究方法",
+      "text": "你先复现，再约一次讨论。之后会有相关的后续事件。",
+      "effects": {
+        "research": 5,
+        "energy": -5
+      },
+      "flags": ["lab.joined"],
+      "schedule": [
+        {
+          "id": "lab.anomaly",
+          "after": 3
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "做一个可演示的小原型",
+      "hint": "消耗精力，积累项目经验",
+      "text": "你做一个可演示的小原型。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 5,
+        "energy": -4
+      },
+      "flags": ["product.started"],
+      "schedule": [
+        {
+          "id": "product.first-user",
+          "after": 2
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "先旁听讨论，把课程补稳",
+      "hint": "加强课程基础，增进合作，练习研究方法",
+      "text": "你先旁听讨论，把课程补稳。",
+      "effects": {
+        "study": 4,
+        "network": 2,
+        "research": 1
+      },
+      "flags": ["lab.observer"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 7,
+  "when": {
+    "from": 7,
+    "to": 7
+  }
+}

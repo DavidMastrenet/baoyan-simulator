@@ -1,0 +1,61 @@
+{
+  "id": "calendar.08",
+  "title": "比赛与实践冲突",
+  "category": "竞赛",
+  "scene": "校园",
+  "body": ["比赛小组和社区实践在同一个周末开展活动，你需要做出选择。"],
+  "choices": [
+    {
+      "label": "参加比赛，先约定分工",
+      "hint": "消耗精力，积累项目经验，增进合作",
+      "text": "你参加比赛，先约定分工。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 3,
+        "network": 3,
+        "energy": -4
+      },
+      "flags": ["contest.joined"],
+      "schedule": [
+        {
+          "id": "contest.scope",
+          "after": 2
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "去做一次现场实践",
+      "hint": "消耗精力，增加实践经验，练习表达",
+      "text": "你去做一次现场实践。之后会有相关的后续事件。",
+      "effects": {
+        "practice": 5,
+        "expression": 2,
+        "energy": -4
+      },
+      "flags": ["practice.started"],
+      "schedule": [
+        {
+          "id": "practice.first-session",
+          "after": 2
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "把周末留给核心课程",
+      "hint": "缓解压力，加强课程基础",
+      "text": "你把周末留给核心课程。",
+      "effects": {
+        "study": 5,
+        "stress": -4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 8,
+  "when": {
+    "from": 8,
+    "to": 8
+  }
+}

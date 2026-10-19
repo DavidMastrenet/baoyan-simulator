@@ -1,0 +1,49 @@
+{
+  "id": "calendar.33",
+  "title": "办理排名证明",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["项目分别要求学业排名或综合排名，需要按通知办理对应证明。"],
+  "choices": [
+    {
+      "label": "按每个项目的要求分别核对",
+      "hint": "补齐申请材料，补充准确材料",
+      "text": "你按每个项目的要求分别核对。材料真实性 +3。",
+      "effects": {
+        "materials": 12,
+        "integrity": 3
+      },
+      "flags": ["rank.proof"],
+      "days": 0
+    },
+    {
+      "label": "集中预约，把同类材料一并办好",
+      "hint": "缓解压力，补齐申请材料，恢复精力",
+      "text": "你集中预约，把同类材料一并办好。",
+      "effects": {
+        "materials": 10,
+        "energy": 5,
+        "stress": -3
+      },
+      "flags": ["application.tracker"],
+      "days": 1
+    },
+    {
+      "label": "先完成已具备条件的投递",
+      "hint": "补齐申请材料，准备后续安排，练习表达",
+      "text": "你先完成已具备条件的投递。",
+      "effects": {
+        "materials": 8,
+        "backup": 4,
+        "expression": 2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 33,
+  "when": {
+    "from": 33,
+    "to": 33
+  }
+}

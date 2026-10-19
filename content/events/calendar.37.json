@@ -1,0 +1,48 @@
+{
+  "id": "calendar.37",
+  "title": "了解导师要求",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["研究组介绍了方向，在读学生补充了组会、协作和任务安排。"],
+  "choices": [
+    {
+      "label": "具体询问培养节奏与反馈方式",
+      "hint": "准备后续安排，增进合作",
+      "text": "你具体询问培养节奏与反馈方式。",
+      "effects": {
+        "backup": 6,
+        "network": 3
+      },
+      "flags": ["mentor.checked"],
+      "days": 0
+    },
+    {
+      "label": "围绕近期论文追问一个方法问题",
+      "hint": "练习研究方法，练习表达",
+      "text": "你围绕近期论文追问一个方法问题。",
+      "effects": {
+        "research": 5,
+        "expression": 3
+      },
+      "flags": ["mail.specific"],
+      "days": 2
+    },
+    {
+      "label": "先和不同年级的学生交流",
+      "hint": "增进合作，增加实践经验",
+      "text": "你先和不同年级的学生交流。",
+      "effects": {
+        "network": 5,
+        "practice": 3
+      },
+      "flags": ["mentor.checked"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 37,
+  "when": {
+    "from": 37,
+    "to": 37
+  }
+}

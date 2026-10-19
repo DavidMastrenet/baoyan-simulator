@@ -1,0 +1,46 @@
+{
+  "id": "major.edu.2",
+  "title": "调整评价任务",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["任务完成率较高，但还不能说明学生掌握了迁移方法。"],
+  "choices": [
+    {
+      "label": "先明确目标，再选评价记录",
+      "hint": "练习研究方法，加强课程基础",
+      "text": "你先明确目标，再选评价记录。",
+      "effects": {
+        "research": 6,
+        "study": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "结合过程、作品与解释进行判断",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你结合过程、作品与解释进行判断。",
+      "effects": {
+        "practice": 5,
+        "research": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "先做小规模试用，再修订指标",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你先做小规模试用，再修订指标。",
+      "effects": {
+        "research": 4,
+        "practice": 4
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 8,
+    "to": 35,
+    "majors": ["师范教育类"]
+  },
+  "weight": 12
+}

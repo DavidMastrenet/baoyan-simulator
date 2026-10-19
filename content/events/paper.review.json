@@ -1,0 +1,84 @@
+{
+  "id": "paper.review",
+  "title": "处理审稿意见",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["评审要求补充实验、改进解释，并修正图文不一致的地方。"],
+  "choices": [
+    {
+      "label": "逐条回应，补记录",
+      "hint": "研究方法影响成功率",
+      "text": "你逐条回应，补记录。",
+      "effects": {
+        "research": 5,
+        "energy": -9,
+        "stress": 4
+      },
+      "check": {
+        "stat": "research",
+        "difficulty": 60,
+        "success": {
+          "text": "本次任务完成。之后会有相关的后续事件。",
+          "effects": {
+            "materials": 5
+          },
+          "schedule": [
+            {
+              "id": "paper.final",
+              "after": 3
+            }
+          ]
+        },
+        "failure": {
+          "text": "本次任务未完成。之后会有相关的后续事件。",
+          "effects": {
+            "research": 3
+          },
+          "schedule": [
+            {
+              "id": "paper.final",
+              "after": 4
+            }
+          ]
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "和合作者分工，再统一核对",
+      "hint": "消耗精力，增进合作，练习研究方法",
+      "text": "你和合作者分工，再统一核对。之后会有相关的后续事件。",
+      "effects": {
+        "network": 5,
+        "research": 3,
+        "energy": -5
+      },
+      "schedule": [
+        {
+          "id": "paper.final",
+          "after": 4
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "先完成学期任务，申请延长修改时间",
+      "hint": "缓解压力，加强课程基础，恢复精力",
+      "text": "你先完成学期任务，申请延长修改时间。之后会有相关的后续事件。",
+      "effects": {
+        "study": 4,
+        "energy": 5,
+        "stress": -4
+      },
+      "schedule": [
+        {
+          "id": "paper.final",
+          "after": 5
+        }
+      ],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

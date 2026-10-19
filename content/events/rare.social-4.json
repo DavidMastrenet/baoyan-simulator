@@ -1,0 +1,36 @@
+{
+  "id": "rare.social-4",
+  "title": "同一比赛不同奖项分值差异",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["你关注的比赛按组别和获奖等级分别认定，之前只看了总名称。"],
+  "when": {
+    "from": 24,
+    "to": 42
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "检查具体组别后重排准备计划",
+      "text": "你按实际要求处理了问题。",
+      "hint": "消耗精力，准备后续安排",
+      "effects": {
+        "backup": 3,
+        "energy": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "先确认信息再调整安排",
+      "text": "你核对通知内容，并重新安排当前任务。",
+      "hint": "消耗精力，准备后续安排",
+      "effects": {
+        "backup": 2,
+        "energy": -1
+      },
+      "days": 0
+    }
+  ]
+}

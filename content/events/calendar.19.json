@@ -1,0 +1,47 @@
+{
+  "id": "calendar.19",
+  "title": "跟进联系邮件",
+  "category": "关系",
+  "scene": "同学交流",
+  "body": ["你几天前发送的邮件尚未收到回复，当前项目仍有其他任务需要推进。"],
+  "choices": [
+    {
+      "label": "补充一条具体进展后再跟进",
+      "hint": "缓解压力，练习表达，增进合作",
+      "text": "你补充一条具体进展后再跟进。",
+      "effects": {
+        "expression": 4,
+        "network": 2,
+        "stress": -2
+      },
+      "flags": ["mail.specific"],
+      "days": 1
+    },
+    {
+      "label": "继续推进手里的工作",
+      "hint": "缓解压力，练习研究方法",
+      "text": "你继续推进手里的工作。",
+      "effects": {
+        "research": 4,
+        "stress": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "向熟悉的老师核对沟通方式",
+      "hint": "增进合作，练习表达",
+      "text": "你向熟悉的老师核对沟通方式。",
+      "effects": {
+        "network": 4,
+        "expression": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 19,
+  "when": {
+    "from": 19,
+    "to": 19
+  }
+}

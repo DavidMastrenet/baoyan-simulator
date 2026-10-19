@@ -1,0 +1,45 @@
+{
+  "id": "extra.open-source",
+  "title": "处理公开项目反馈",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["用户报告了一种未覆盖的使用方式，并提供了操作信息。"],
+  "choices": [
+    {
+      "label": "复现问题，回复处理计划",
+      "hint": "积累项目经验，增进合作",
+      "text": "你复现问题，回复处理计划。",
+      "effects": {
+        "craft": 5,
+        "network": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "先补文档说明当前行为",
+      "hint": "补齐申请材料，积累项目经验",
+      "text": "你先补文档说明当前行为。",
+      "effects": {
+        "materials": 5,
+        "craft": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "邀请对方共同补一个用例",
+      "hint": "增进合作，积累项目经验",
+      "text": "你邀请对方共同补一个用例。",
+      "effects": {
+        "network": 5,
+        "craft": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

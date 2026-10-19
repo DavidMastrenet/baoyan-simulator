@@ -1,0 +1,65 @@
+{
+  "id": "practice.adjustment",
+  "title": "修改教学活动",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["上次课堂出现了理解困难，需要根据记录修改下一次活动。"],
+  "choices": [
+    {
+      "label": "按观察调整任务与节奏",
+      "hint": "消耗精力，增加实践经验，练习研究方法",
+      "text": "你按观察调整任务与节奏。之后会有相关的后续事件。",
+      "effects": {
+        "practice": 6,
+        "research": 4,
+        "energy": -5
+      },
+      "flags": ["practice.evidence"],
+      "schedule": [
+        {
+          "id": "practice.long-term",
+          "after": 4
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "设计一个简短的理解检查",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你设计一个简短的理解检查。之后会有相关的后续事件。",
+      "effects": {
+        "research": 5,
+        "practice": 4
+      },
+      "flags": ["practice.evidence"],
+      "schedule": [
+        {
+          "id": "practice.long-term",
+          "after": 4
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "把经验整理给下一位同伴",
+      "hint": "练习表达，增进合作，补齐申请材料",
+      "text": "你把经验整理给下一位同伴。新增成果：一份源于现场的实践指南。",
+      "effects": {
+        "expression": 4,
+        "network": 4,
+        "materials": 4
+      },
+      "flags": ["team.handoff"],
+      "award": {
+        "id": "practice-guide",
+        "title": "一份源于现场的实践指南",
+        "kind": "实践",
+        "level": 2,
+        "recognized": false
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

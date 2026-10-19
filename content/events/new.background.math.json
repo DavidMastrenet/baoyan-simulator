@@ -1,0 +1,48 @@
+{
+  "id": "new.background.math",
+  "title": "课程学习小组",
+  "category": "学业",
+  "scene": "开局经历",
+  "body": ["你较熟悉推导，同学希望与你讨论一组新课程的题目。"],
+  "when": {
+    "from": 0,
+    "to": 10
+  },
+  "chain": true,
+  "once": true,
+  "weight": 10,
+  "choices": [
+    {
+      "label": "先用已有经验尝试",
+      "text": "你按目前掌握的方法完成了一次尝试。",
+      "hint": "消耗精力，加强课程基础",
+      "effects": {
+        "study": 2,
+        "energy": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "先确认要求，再安排任务",
+      "text": "你了解了课程和任务的具体要求。",
+      "hint": "消耗精力，加强课程基础，准备后续安排",
+      "effects": {
+        "study": 2,
+        "backup": 1,
+        "energy": -1
+      },
+      "days": 1
+    },
+    {
+      "label": "找同学讨论后再开始",
+      "text": "你和同学确认了合作方式。",
+      "hint": "消耗精力，增进合作，练习表达",
+      "effects": {
+        "network": 3,
+        "expression": 1,
+        "energy": -2
+      },
+      "days": 1
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "research.reading-group",
+  "title": "准备读书会",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["你能说明方法流程，但还没有解释作者为什么选择这个问题。"],
+  "choices": [
+    {
+      "label": "说明研究问题和方法",
+      "hint": "消耗精力，练习研究方法，练习表达",
+      "text": "你说明研究问题和方法。",
+      "effects": {
+        "research": 4,
+        "expression": 4,
+        "energy": -3
+      },
+      "days": 2
+    },
+    {
+      "label": "拿出最不理解的一处一起讨论",
+      "hint": "练习研究方法，增进合作",
+      "text": "你拿出最不理解的一处一起讨论。",
+      "effects": {
+        "research": 5,
+        "network": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "复现一个小例子帮助解释",
+      "hint": "消耗精力，积累项目经验，练习研究方法",
+      "text": "你复现一个小例子帮助解释。",
+      "effects": {
+        "craft": 4,
+        "research": 3,
+        "energy": -5
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5,
+    "to": 35
+  },
+  "weight": 5
+}

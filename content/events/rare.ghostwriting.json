@@ -1,0 +1,38 @@
+{
+  "id": "rare.ghostwriting",
+  "title": "有人出售挂名成果",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["有人提出付费后把你的名字加入现成作品，你没有参加这项工作的实际研究。"],
+  "when": {
+    "from": 20,
+    "to": 39
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "拒绝购买，继续做自己的工作",
+      "text": "你没有提交不属于自己的成果。",
+      "hint": "消耗精力，练习研究方法",
+      "effects": {
+        "research": 2,
+        "energy": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "购买后写入材料",
+      "text": "你提交了没有实际贡献的成果。后续询问和调查会带来严重风险。",
+      "hint": "支出800元，材料可信度下降，增加压力",
+      "effects": {
+        "money": -800,
+        "integrity": -45,
+        "stress": 7
+      },
+      "flags": ["record.risk"],
+      "days": 0
+    }
+  ]
+}

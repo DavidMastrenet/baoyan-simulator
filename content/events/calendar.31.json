@@ -1,0 +1,48 @@
+{
+  "id": "calendar.31",
+  "title": "修改申请简历",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["简历篇幅超出要求，需要挑选代表成果并检查每项工作的说明。"],
+  "choices": [
+    {
+      "label": "用问题、方法、记录写代表作",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你用问题、方法、记录写代表作。",
+      "effects": {
+        "materials": 15,
+        "expression": 4
+      },
+      "flags": ["portfolio.focus", "evidence.checked"],
+      "days": 1
+    },
+    {
+      "label": "优先展示一贯的课程基础",
+      "hint": "补齐申请材料，加强课程基础",
+      "text": "你优先展示一贯的课程基础。",
+      "effects": {
+        "materials": 12,
+        "study": 3
+      },
+      "flags": ["portfolio.academic"],
+      "days": 1
+    },
+    {
+      "label": "请熟悉你的同学做一次检查",
+      "hint": "补齐申请材料，增进合作",
+      "text": "你请熟悉你的同学做一次检查。",
+      "effects": {
+        "materials": 14,
+        "network": 3
+      },
+      "flags": ["evidence.checked"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "calendar": 31,
+  "when": {
+    "from": 31,
+    "to": 31
+  }
+}

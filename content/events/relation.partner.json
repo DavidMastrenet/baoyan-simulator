@@ -1,0 +1,52 @@
+{
+  "id": "relation.partner",
+  "title": "讨论相处安排",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["你和一位同学经常一起活动，最近开始讨论关系和未来安排。"],
+  "choices": [
+    {
+      "label": "找个合适的时候说清自己的想法",
+      "hint": "缓解压力，增进合作",
+      "text": "你找个合适的时候说清自己的想法。",
+      "effects": {
+        "network": 6,
+        "stress": -6
+      },
+      "flags": ["relationship.honest"],
+      "days": 0
+    },
+    {
+      "label": "保持朋友的节奏，认真回应",
+      "hint": "增进合作，恢复精力",
+      "text": "你保持朋友的节奏，认真回应。",
+      "effects": {
+        "network": 5,
+        "energy": 4
+      },
+      "flags": ["friend.kept"],
+      "days": 1
+    },
+    {
+      "label": "说明最近需要独处和准备的时间",
+      "hint": "缓解压力，练习表达，恢复精力",
+      "text": "你说明最近需要独处和准备的时间。",
+      "effects": {
+        "expression": 3,
+        "stress": -4,
+        "energy": 4
+      },
+      "flags": ["relationship.honest"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 9,
+    "to": 40,
+    "min": {
+      "network": 35
+    }
+  },
+  "weight": 5
+}

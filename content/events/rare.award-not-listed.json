@@ -1,0 +1,36 @@
+{
+  "id": "rare.award-not-listed",
+  "title": "比赛不在认定目录",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["你准备参加的比赛没有列入本年度推免成果认定目录。"],
+  "when": {
+    "from": 12,
+    "to": 31
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "按实际兴趣决定是否继续",
+      "text": "你继续完成项目，得到技能训练，但没有新增推荐加分。",
+      "hint": "消耗精力，积累项目经验",
+      "effects": {
+        "craft": 3,
+        "energy": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "调整投入，优先完成课程",
+      "text": "你停止为加分继续增加任务。",
+      "hint": "加强课程基础，恢复精力",
+      "effects": {
+        "study": 2,
+        "energy": 2
+      },
+      "days": 1
+    }
+  ]
+}

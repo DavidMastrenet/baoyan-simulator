@@ -1,0 +1,57 @@
+{
+  "id": "calendar.15",
+  "title": "检查实验设置",
+  "category": "科研",
+  "scene": "课题组",
+  "body": ["老师要求说明数据划分、基线设置和失败运行的记录，现有汇报还不完整。"],
+  "choices": [
+    {
+      "label": "先补齐记录，再继续解释",
+      "hint": "消耗精力，练习研究方法，补充准确材料",
+      "text": "你先补齐记录，再继续解释。材料真实性 +2。",
+      "effects": {
+        "research": 6,
+        "integrity": 2,
+        "energy": -5
+      },
+      "flags": ["lab.repaired"],
+      "days": 1
+    },
+    {
+      "label": "用一个小实验验证关键点",
+      "hint": "消耗精力，练习研究方法，积累项目经验",
+      "text": "你用一个小实验验证关键点。",
+      "effects": {
+        "research": 5,
+        "craft": 2,
+        "energy": -5
+      },
+      "flags": ["method.control"],
+      "days": 2
+    },
+    {
+      "label": "先按现有说法讲完",
+      "hint": "材料可信度下降，练习表达，增加压力",
+      "text": "你先按现有说法讲完。之后会有相关的后续事件。材料真实性 -8。",
+      "effects": {
+        "expression": 3,
+        "integrity": -8,
+        "stress": 4
+      },
+      "flags": ["record.unclear"],
+      "schedule": [
+        {
+          "id": "record.audit",
+          "after": 3
+        }
+      ],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 15,
+  "when": {
+    "from": 15,
+    "to": 15
+  }
+}

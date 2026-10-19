@@ -1,0 +1,50 @@
+{
+  "id": "apply.many-choices",
+  "title": "比较申请项目",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["几个项目在研究方向、生活成本和培养方式上各有差异。"],
+  "choices": [
+    {
+      "label": "写出最重要的三项偏好",
+      "hint": "缓解压力，准备后续安排",
+      "text": "你写出最重要的三项偏好。",
+      "effects": {
+        "backup": 7,
+        "stress": -4
+      },
+      "flags": ["decision.fit"],
+      "days": 0
+    },
+    {
+      "label": "向相关老师确认尚不清楚的一项",
+      "hint": "增进合作，练习表达，准备后续安排",
+      "text": "你向相关老师确认尚不清楚的一项。",
+      "effects": {
+        "network": 3,
+        "expression": 3,
+        "backup": 4
+      },
+      "flags": ["mentor.checked"],
+      "days": 1
+    },
+    {
+      "label": "考虑自己愿意持续过的一周",
+      "hint": "缓解压力，增加实践经验，准备后续安排",
+      "text": "你考虑自己愿意持续过的一周。",
+      "effects": {
+        "practice": 3,
+        "stress": -5,
+        "backup": 4
+      },
+      "flags": ["decision.fit"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 39,
+    "to": 47
+  },
+  "weight": 5
+}

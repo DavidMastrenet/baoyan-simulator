@@ -1,0 +1,51 @@
+{
+  "id": "career.job-task",
+  "title": "完成岗位任务",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["用人单位提供了限时任务，需要完成作品并说明处理方法。"],
+  "choices": [
+    {
+      "label": "按交付目标完成最小作品",
+      "hint": "消耗精力，积累项目经验，准备后续安排",
+      "text": "你按交付目标完成最小作品。后续准备方向：就业。",
+      "effects": {
+        "craft": 5,
+        "backup": 9,
+        "energy": -5
+      },
+      "flags": ["job.lead"],
+      "path": "work",
+      "days": 1
+    },
+    {
+      "label": "把既有项目整理成可验证案例",
+      "hint": "补齐申请材料，准备后续安排，练习表达",
+      "text": "你把既有项目整理成可验证案例。",
+      "effects": {
+        "materials": 7,
+        "backup": 7,
+        "expression": 3
+      },
+      "flags": ["job.lead"],
+      "days": 1
+    },
+    {
+      "label": "先体验任务，再比较研究与工作的差异",
+      "hint": "增加实践经验，准备后续安排，练习研究方法",
+      "text": "你先体验任务，再比较研究与工作的差异。",
+      "effects": {
+        "practice": 4,
+        "backup": 6,
+        "research": 2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 24,
+    "to": 46
+  },
+  "weight": 5
+}

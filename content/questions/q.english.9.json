@@ -1,0 +1,23 @@
+{
+  "id": "q.english.9",
+  "kind": "英语",
+  "title": "Plan further work",
+  "text": "What would you do next if you had more time?",
+  "options": [
+    {
+      "text": "I would test the key assumption and compare the result with a stronger baseline.",
+      "score": 4,
+      "response": "回答说明了关键条件和处理方法。"
+    },
+    {
+      "text": "I would make the result look better.",
+      "score": 0,
+      "response": "这一说法忽略了关键条件，需要重新分析。"
+    },
+    {
+      "text": "I would run more experiments without a specific comparison.",
+      "score": 2,
+      "response": "提到了部分处理方式，但解释还不完整。"
+    }
+  ]
+}

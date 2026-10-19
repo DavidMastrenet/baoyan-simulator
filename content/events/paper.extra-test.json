@@ -1,0 +1,65 @@
+{
+  "id": "paper.extra-test",
+  "title": "补充实验结果不佳",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["新增实验没有支持原来的判断，需要修改结论或继续检查。"],
+  "choices": [
+    {
+      "label": "改写结论，保留不支持的结果",
+      "hint": "消耗精力，练习研究方法，补充准确材料",
+      "text": "你改写结论，保留不支持的结果。之后会有相关的后续事件。材料真实性 +2。",
+      "effects": {
+        "research": 6,
+        "integrity": 2,
+        "energy": -5
+      },
+      "flags": ["paper.submitted", "lab.repaired"],
+      "schedule": [
+        {
+          "id": "paper.review",
+          "after": 3
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "请老师判断是否值得继续投入",
+      "hint": "缓解压力，练习研究方法，增进合作",
+      "text": "你请老师判断是否值得继续投入。之后会有相关的后续事件。",
+      "effects": {
+        "research": 4,
+        "network": 3,
+        "stress": -2
+      },
+      "flags": ["paper.submitted"],
+      "schedule": [
+        {
+          "id": "paper.review",
+          "after": 4
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "收束成一项完整的阶段工作",
+      "hint": "补齐申请材料，恢复精力，准备后续安排",
+      "text": "你收束成一项完整的阶段工作。新增成果：完成一份研究报告。",
+      "effects": {
+        "materials": 8,
+        "energy": 5,
+        "backup": 3
+      },
+      "award": {
+        "id": "research-report",
+        "title": "完成一份研究报告",
+        "kind": "科研",
+        "level": 1,
+        "recognized": false
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

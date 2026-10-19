@@ -1,0 +1,49 @@
+{
+  "id": "calendar.16",
+  "title": "考试周任务冲突",
+  "category": "学业",
+  "scene": "教务通知",
+  "body": ["考试临近，项目修改和比赛材料也需要处理，剩余时间不足以全部完成。"],
+  "choices": [
+    {
+      "label": "明确暂停非紧急任务",
+      "hint": "缓解压力，加强课程基础",
+      "text": "你明确暂停非紧急任务。",
+      "effects": {
+        "study": 6,
+        "stress": -3
+      },
+      "flags": ["boundary.exam"],
+      "days": 1
+    },
+    {
+      "label": "约一个短时段集中处理",
+      "hint": "消耗精力，加强课程基础，增进合作",
+      "text": "你约一个短时段集中处理。",
+      "effects": {
+        "study": 3,
+        "network": 3,
+        "energy": -3
+      },
+      "flags": ["time.batch"],
+      "days": 1
+    },
+    {
+      "label": "把所有尾巴都收完再复习",
+      "hint": "消耗精力，积累项目经验，增加压力",
+      "text": "你把所有尾巴都收完再复习。",
+      "effects": {
+        "craft": 5,
+        "energy": -10,
+        "stress": 6
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 16,
+  "when": {
+    "from": 16,
+    "to": 16
+  }
+}

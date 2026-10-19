@@ -1,0 +1,366 @@
+import type { Period, Trait, Plan, Major, Consequence, Condition } from './types';
+export const MAJORS: Major[] = [
+  '计算机类',
+  '理工实验类',
+  '经管类',
+  '人文社科类',
+  '师范教育类',
+  '交叉学科',
+];
+export const TRAITS: Trait[] = [
+  { id: 'steady', name: '学习稳定', description: '课程训练收益增加。' },
+  { id: 'curious', name: '好奇心较强', description: '科研训练收益增加，研究判定成功率略高。' },
+  { id: 'maker', name: '动手能力较好', description: '项目训练收益增加，现场排障成功率略高。' },
+  { id: 'listener', name: '善于倾听', description: '合作与实践更容易建立信任。' },
+  { id: 'speaker', name: '表达较主动', description: '交流训练收益增加，面试更容易进入状态。' },
+  { id: 'linguist', name: '英语基础较好', description: '英语训练收益增加。' },
+  { id: 'frugal', name: '节约开支', description: '固定生活开支减少。' },
+  { id: 'resilient', name: '休息恢复较好', description: '休息时额外降低压力。' },
+  { id: 'perfectionist', name: '重视细节', description: '整理材料更有效，连续赶工的压力稍高。' },
+  { id: 'connector', name: '重视合作', description: '交流合作更有收获。' },
+  { id: 'latebloomer', name: '适应较慢', description: '大二以后课程与科研训练增加收益。' },
+  { id: 'outdoors', name: '保持运动', description: '休息运动恢复更多精力。' },
+  { id: 'quicklearner', name: '理解较快', description: '课程训练收益增加。' },
+  { id: 'methodical', name: '重视步骤', description: '研究训练收益增加。' },
+  { id: 'improviser', name: '善于应变', description: '项目训练收益增加。' },
+  { id: 'generous', name: '愿意请客', description: '社交增加更多关系，也会额外花钱。' },
+  { id: 'anxious', name: '容易紧张', description: '学习投入有所增加，持续投入时压力较高。' },
+  { id: 'ambitious', name: '投入较多', description: '研究训练收益增加，持续投入时多消耗精力。' },
+  { id: 'independent', name: '习惯独立完成', description: '项目训练收益增加，社交收益略低。' },
+  { id: 'light-sleeper', name: '睡眠较浅', description: '英语训练收益增加，休息恢复较慢。' },
+  { id: 'organized', name: '安排有序', description: '申请材料整理收益增加。' },
+  { id: 'practical', name: '重视后续安排', description: '勤工和申请准备增加更多备选准备。' },
+  { id: 'patient', name: '耐心较好', description: '日常压力略微减少。' },
+  { id: 'competitive', name: '在意排名', description: '课程训练收益增加，研究投入也会增加压力。' },
+];
+export const BACKGROUNDS = [
+  {
+    id: 'foundation',
+    name: '基础课准备较多',
+    description: '入学前系统复习过基础知识，课外实践较少。',
+    effects: { study: 8, practice: -3 },
+  },
+  {
+    id: 'contest',
+    name: '参加过学科竞赛',
+    description: '有竞赛和展示经验，研究记录较少。',
+    effects: { craft: 8, expression: 4, research: -3 },
+  },
+  {
+    id: 'developer',
+    name: '自学过编程',
+    description: '完成过个人项目，需要补充研究方法。',
+    effects: { craft: 12, research: -4 },
+  },
+  {
+    id: 'language',
+    name: '英语训练较多',
+    description: '英语基础较好，专业实践还需积累。',
+    effects: { english: 10, practice: -3 },
+  },
+  {
+    id: 'reading',
+    name: '长期阅读习惯',
+    description: '阅读和表达较熟练，动手任务经验较少。',
+    effects: { expression: 7, research: 4, craft: -3 },
+  },
+  {
+    id: 'lab',
+    name: '参加过入门实验',
+    description: '熟悉部分实验步骤，理论知识仍需补充。',
+    effects: { research: 10, study: -3 },
+  },
+  {
+    id: 'volunteer',
+    name: '持续参加志愿活动',
+    description: '有活动实践经验，入学后需要适应课程。',
+    effects: { practice: 10, network: 4, study: -3 },
+  },
+  {
+    id: 'organizer',
+    name: '组织过学生活动',
+    description: '沟通经验较多，技术任务经验较少。',
+    effects: { expression: 7, network: 7, craft: -3 },
+  },
+  {
+    id: 'sports',
+    name: '保持运动习惯',
+    description: '初始精力较好，课外研究接触较少。',
+    effects: { energy: 8, stress: -4, research: -2 },
+  },
+  {
+    id: 'budget',
+    name: '计划勤工助学',
+    description: '了解部分兼职岗位，初始预算较紧。',
+    effects: { practice: 6, backup: 5, money: -300 },
+  },
+  {
+    id: 'transfer',
+    name: '考虑转专业',
+    description: '接触过其他方向，需要进一步确定学习重点。',
+    effects: { backup: 7, research: 3, study: -3 },
+  },
+  {
+    id: 'art',
+    name: '制作过设计作品',
+    description: '作品表达较熟练，专业理论需要补充。',
+    effects: { craft: 6, expression: 6, study: -2 },
+  },
+  {
+    id: 'rural-service',
+    name: '参加过社区教学',
+    description: '了解部分教学工作，研究方法需要继续学习。',
+    effects: { practice: 9, expression: 3, research: -2 },
+  },
+  {
+    id: 'math',
+    name: '数学基础较好',
+    description: '较熟悉推导和计算，交流经验较少。',
+    effects: { study: 10, expression: -4 },
+  },
+  {
+    id: 'repair',
+    name: '有设备维修经验',
+    description: '动手能力较好，英语准备较少。',
+    effects: { craft: 10, english: -4 },
+  },
+  {
+    id: 'family-work',
+    name: '协助过家庭经营',
+    description: '有实际工作经验，入学前学习时间较少。',
+    effects: { practice: 8, network: 4, study: -4 },
+  },
+  {
+    id: 'newcomer',
+    name: '课外经历较少',
+    description: '初始压力较低，研究和项目从入门开始。',
+    effects: { stress: -7, energy: 5, research: -3, craft: -3 },
+  },
+  {
+    id: 'selfstudy',
+    name: '习惯自主学习',
+    description: '学习和研究基础较好，合作经验较少。',
+    effects: { study: 5, research: 5, network: -5 },
+  },
+  {
+    id: 'debate',
+    name: '参加过辩论活动',
+    description: '口头表达较熟练，项目经验较少。',
+    effects: { expression: 12, craft: -4 },
+  },
+  {
+    id: 'parttime',
+    name: '做过假期兼职',
+    description: '有工作和预算管理经验，初始结余略多。',
+    effects: { practice: 7, money: 350, energy: -3 },
+  },
+] as const;
+export const PERIODS: Period[] = [];
+const months = [
+  '九月',
+  '十月',
+  '十一月',
+  '十二月',
+  '一月',
+  '二月',
+  '三月',
+  '四月',
+  '五月',
+  '六月',
+  '七月',
+  '八月',
+];
+const themes = [
+  [
+    '报到与课程',
+    '课外安排',
+    '小组作业',
+    '英语考试',
+    '期末准备',
+    '寒假安排',
+    '新学期课程',
+    '入门研究',
+    '比赛与实践',
+    '暑期计划',
+    '用户反馈',
+    '大一总结',
+  ],
+  [
+    '大二活动',
+    '专业课学习',
+    '团队进度',
+    '实验设置',
+    '考试周安排',
+    '跨专业阅读',
+    '项目交付',
+    '联系老师',
+    '比赛报名',
+    '成绩检查',
+    '暑期实习',
+    '成果整理',
+  ],
+  [
+    '大三课程',
+    '作者分工',
+    '推荐意见',
+    '项目介绍',
+    '核心课程',
+    '城市与预算',
+    '申请信息',
+    '简历准备',
+  ],
+];
+for (let year = 1; year <= 3; year++) {
+  const count = year === 3 ? 8 : 12;
+  for (let m = 0; m < count; m++) {
+    PERIODS.push({
+      year,
+      label: months[m]!,
+      chapter: year - 1,
+      theme: themes[year - 1]![m]!,
+      finance: 1,
+      ...(m === 4 ? { exam: (year - 1) * 2 + 1 } : m === 9 ? { exam: year * 2 } : {}),
+      ...([3, 9].includes(m) ? { englishExam: true } : {}),
+    });
+  }
+}
+const late: [string, string, number, number?, boolean?][] = [
+  ['五月上旬', '夏令营申请', 0.5],
+  ['五月下旬', '材料投递', 0.5],
+  ['六月上旬', '课程与申请并行', 0.5],
+  ['六月下旬', '课程成绩结算', 0.5, 6, true],
+  ['七月上旬', '夏令营开始', 1 / 3],
+  ['七月中旬', '夏令营考核', 1 / 3],
+  ['七月下旬', '整理考核结果', 1 / 3],
+  ['八月上旬', '调整申请组合', 1 / 3],
+  ['八月中旬', '预推免窗口', 1 / 3],
+  ['八月下旬', '确认培养条件', 1 / 3],
+  ['九月上旬', '校内资格公示', 1 / 3],
+  ['九月中旬', '预推免最后一轮', 1 / 3],
+  ['九月下旬 / 第1日', '正式填报', 1 / 6],
+  ['九月下旬 / 第2日', '确认复试回执', 1 / 6],
+  ['九月下旬 / 第3日', '等待与递补', 0],
+  ['九月下旬 / 第4日', '确定最终安排', 0],
+];
+late.forEach(([label, theme, finance, exam, englishExam], i) =>
+  PERIODS.push({
+    year: i < 10 ? 3 : 4,
+    label,
+    theme,
+    finance,
+    chapter: i < 7 ? 3 : 4,
+    exam,
+    englishExam,
+  }),
+);
+export const TOTAL_TURNS = PERIODS.length;
+export const BLANK_PLAN: Plan = {
+  study: 0,
+  research: 0,
+  english: 0,
+  craft: 0,
+  practice: 0,
+  social: 0,
+  work: 0,
+  rest: 0,
+  prepare: 0,
+};
+export const DEFAULT_PLAN: Plan = { ...BLANK_PLAN, study: 2, english: 1, research: 1, rest: 2 };
+export const PLAN_ITEMS: { key: keyof Plan; label: string; description: string }[] = [
+  { key: 'study', label: '课程学习', description: '专业基础与本学期成绩' },
+  { key: 'research', label: '研究训练', description: '研究方法与长期成果' },
+  { key: 'english', label: '英语训练', description: '语言能力与英语考试' },
+  { key: 'craft', label: '项目开发', description: '工程能力与竞赛准备' },
+  { key: 'practice', label: '参加实践', description: '实践经验与问题意识' },
+  { key: 'social', label: '交流合作', description: '表达、关系与合作' },
+  { key: 'work', label: '勤工助学', description: '增加结余与实践经验' },
+  { key: 'rest', label: '休息运动', description: '恢复精力，缓解压力' },
+  { key: 'prepare', label: '申请准备', description: '整理材料与准备备选路线' },
+];
+export const STAT_LABELS = {
+  study: '专业基础',
+  research: '研究方法',
+  english: '英语能力',
+  craft: '项目能力',
+  practice: '实践经验',
+  expression: '表达能力',
+  network: '协作关系',
+  energy: '精力',
+  stress: '压力',
+  money: '可用结余',
+  integrity: '材料可信度',
+  materials: '材料完整度',
+  backup: '备选准备',
+};
+export const ROUND_INCIDENTS: (Consequence & { when?: Condition })[] = [
+  { text: '打印店退回了多收的费用，余额增加40元。', effects: { money: 40 } },
+  {
+    text: '本期多了一次必要交通支出，花费50元。',
+    effects: { money: -50 },
+    when: { min: { money: 100 } },
+  },
+  { text: '本周睡眠较好，精力恢复了一些。', effects: { energy: 5, stress: -2 } },
+  { text: '近期天气影响休息，精力略有下降。', effects: { energy: -4 } },
+  { text: '同学分享了相关课程资料，学习效率有所改善。', effects: { study: 1, network: 1 } },
+  { text: '一项安排临时取消，多出了一些休息时间。', effects: { energy: 4 } },
+  { text: '报销单退回补充一项信息，需要额外处理。', effects: { energy: -2, stress: 2 } },
+  { text: '此前整理的预算减少了临时支出，节省60元。', effects: { money: 60 } },
+  {
+    text: '一位同学协助检查了当前项目，发现了一处错误。',
+    effects: { craft: 1, network: 1 },
+    when: { min: { network: 25 } },
+  },
+  { text: '一项任务比预计复杂，额外消耗了一些精力。', effects: { energy: -4, stress: 2 } },
+  {
+    text: '读书会发来一份相关笔记，帮助你理解了一个方法。',
+    effects: { research: 1 },
+    when: { from: 6 },
+  },
+  {
+    text: '常用设备需要更换一个配件，支出80元。',
+    effects: { money: -80 },
+    when: { min: { money: 150 } },
+  },
+  { text: '你按时完成本期主要安排，压力有所下降。', effects: { stress: -3 } },
+  { text: '等待回复的事项仍未处理，压力略有增加。', effects: { stress: 2 } },
+  {
+    text: '校内岗位结算了一笔临时协助费用，收入120元。',
+    effects: { money: 120 },
+    when: { flags: ['work.experience'] },
+  },
+  {
+    text: '同行的同学分担了交通费用，节省70元。',
+    effects: { money: 70, network: 1 },
+    when: { from: 32, min: { network: 35 } },
+  },
+  { text: '报名附件需要重新扫描，多花费了一些时间。', effects: { energy: -2 }, when: { from: 24 } },
+  { text: '你找到一份与当前专业相关的英文资料。', effects: { english: 1, research: 1 } },
+  {
+    text: '原定的实验时段被延后，准备进度受到小幅影响。',
+    effects: { stress: 2, research: -1 },
+    when: { from: 6, min: { research: 20 } },
+  },
+  {
+    text: '实践单位确认了近期的工作记录。',
+    effects: { materials: 1, practice: 1 },
+    when: { from: 24, min: { practice: 35 } },
+  },
+  { text: '你误记了一项非紧急事项的时间，需要重新安排。', effects: { stress: 2, energy: -2 } },
+  {
+    text: '本期有一次费用报销获批，余额增加100元。',
+    effects: { money: 100 },
+    when: { min: { practice: 30 } },
+  },
+  { text: '一次讨论解决了当前任务中的小问题。', effects: { expression: 1, stress: -1 } },
+  { text: '临时通知增加了一项必要工作，休息时间减少。', effects: { energy: -3, stress: 2 } },
+];
+export const PLAN_PRESETS: { name: string; plan: Plan }[] = [
+  { name: '均衡安排', plan: DEFAULT_PLAN },
+  { name: '课程优先', plan: { ...BLANK_PLAN, study: 3, english: 1, rest: 2 } },
+  { name: '长期项目', plan: { ...BLANK_PLAN, study: 1, research: 2, craft: 1, rest: 2 } },
+  { name: '申请季', plan: { ...BLANK_PLAN, study: 1, english: 1, prepare: 2, social: 1, rest: 1 } },
+];
+export function periodLabel(turn: number): string {
+  const p = PERIODS[Math.min(turn, TOTAL_TURNS - 1)]!;
+  return `大${['', '一', '二', '三', '四'][p.year]} / ${p.label}`;
+}

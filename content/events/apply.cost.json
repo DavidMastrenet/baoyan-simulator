@@ -1,0 +1,49 @@
+{
+  "id": "apply.cost",
+  "title": "比较读研费用",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["不同项目的学费、生活费和奖助金额不同，需要计算总支出。"],
+  "choices": [
+    {
+      "label": "核对固定支出与可确认的支持",
+      "hint": "准备后续安排，补齐申请材料",
+      "text": "你核对固定支出与可确认的支持。",
+      "effects": {
+        "backup": 7,
+        "materials": 4
+      },
+      "flags": ["cost.considered"],
+      "days": 0
+    },
+    {
+      "label": "与家人沟通可承担的范围",
+      "hint": "缓解压力，增进合作，准备后续安排",
+      "text": "你与家人沟通可承担的范围。",
+      "effects": {
+        "network": 3,
+        "stress": -6,
+        "backup": 5
+      },
+      "flags": ["family.talk"],
+      "days": 0
+    },
+    {
+      "label": "把方向相近、支出更合适的项目加入比较",
+      "hint": "准备后续安排，练习研究方法",
+      "text": "你把方向相近、支出更合适的项目加入比较。",
+      "effects": {
+        "backup": 8,
+        "research": 2
+      },
+      "flags": ["application.balanced"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 30,
+    "to": 46
+  },
+  "weight": 5
+}

@@ -1,0 +1,49 @@
+{
+  "id": "calendar.21",
+  "title": "成绩申诉",
+  "category": "学业",
+  "scene": "教务通知",
+  "body": ["一门课的平时分与你的记录不同，成绩申诉截止时间即将到来。"],
+  "choices": [
+    {
+      "label": "整理依据，按流程核对",
+      "hint": "缓解压力，加强课程基础，补齐申请材料",
+      "text": "你整理依据，按流程核对。",
+      "effects": {
+        "study": 3,
+        "materials": 5,
+        "stress": -3
+      },
+      "flags": ["archive.started"],
+      "days": 1
+    },
+    {
+      "label": "和同学一起检查计算方式",
+      "hint": "增进合作，加强课程基础，补齐申请材料",
+      "text": "你和同学一起检查计算方式。",
+      "effects": {
+        "network": 4,
+        "study": 2,
+        "materials": 4
+      },
+      "flags": ["policy.read"],
+      "days": 1
+    },
+    {
+      "label": "只核对自己的关键课程",
+      "hint": "加强课程基础，恢复精力",
+      "text": "你只核对自己的关键课程。",
+      "effects": {
+        "study": 4,
+        "energy": 4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 21,
+  "when": {
+    "from": 21,
+    "to": 21
+  }
+}

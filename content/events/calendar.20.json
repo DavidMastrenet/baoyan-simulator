@@ -1,0 +1,50 @@
+{
+  "id": "calendar.20",
+  "title": "是否继续参赛",
+  "category": "竞赛",
+  "scene": "校园",
+  "body": ["新比赛与已有项目相关。报名之前，需要更新作品并检查参赛规则。"],
+  "choices": [
+    {
+      "label": "沿着已有问题做实质改进",
+      "hint": "消耗精力，积累项目经验，练习研究方法",
+      "text": "你沿着已有问题做实质改进。",
+      "effects": {
+        "craft": 5,
+        "research": 3,
+        "energy": -6
+      },
+      "flags": ["contest.improved"],
+      "days": 2
+    },
+    {
+      "label": "先核对成果认定和比赛规则",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你先核对成果认定和比赛规则。",
+      "effects": {
+        "materials": 8,
+        "expression": 2
+      },
+      "flags": ["policy.read"],
+      "days": 1
+    },
+    {
+      "label": "这次不报，完成当前交付",
+      "hint": "缓解压力，积累项目经验，恢复精力",
+      "text": "你这次不报，完成当前交付。",
+      "effects": {
+        "craft": 4,
+        "energy": 4,
+        "stress": -4
+      },
+      "flags": ["direction.clear"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 20,
+  "when": {
+    "from": 20,
+    "to": 20
+  }
+}

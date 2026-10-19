@@ -1,0 +1,23 @@
+{
+  "id": "q.english.3",
+  "kind": "英语",
+  "title": "Why this group",
+  "text": "Why are you interested in this research group?",
+  "options": [
+    {
+      "text": "Your recent work addresses a question I met in practice. I would like to connect that experience with stronger methods.",
+      "score": 4,
+      "response": "动机与具体经历建立了联系，也说明了希望补足什么。"
+    },
+    {
+      "text": "Your university is the highest ranked option on my list.",
+      "score": 0,
+      "response": "声誉可以是因素，但这个回答没有体现研究匹配。"
+    },
+    {
+      "text": "I think I can learn many things here.",
+      "score": 2,
+      "response": "态度积极，仍需要更具体地说明学习目标。"
+    }
+  ]
+}

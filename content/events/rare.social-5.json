@@ -1,0 +1,36 @@
+{
+  "id": "rare.social-5",
+  "title": "推荐系统邮件被拦截",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["推荐人没有收到系统邮件，需要通过项目方确认补发方式。"],
+  "when": {
+    "from": 24,
+    "to": 42
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "联系项目方并说明截止时间",
+      "text": "你按实际要求处理了问题。",
+      "hint": "消耗精力，补齐申请材料",
+      "effects": {
+        "materials": 3,
+        "energy": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "先确认信息再调整安排",
+      "text": "你核对通知内容，并重新安排当前任务。",
+      "hint": "消耗精力，准备后续安排",
+      "effects": {
+        "backup": 2,
+        "energy": -1
+      },
+      "days": 0
+    }
+  ]
+}

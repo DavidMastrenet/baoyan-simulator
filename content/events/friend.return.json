@@ -1,0 +1,42 @@
+{
+  "id": "friend.return",
+  "title": "收到同学整理的资料",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["之前合作过的同学发来一份材料，其中部分内容与你的任务相关。"],
+  "choices": [
+    {
+      "label": "认真读完，再反馈自己的补充",
+      "hint": "增进合作，加强课程基础",
+      "text": "你认真读完，再反馈自己的补充。",
+      "effects": {
+        "network": 6,
+        "study": 3
+      },
+      "flags": ["friend.kept"],
+      "days": 1
+    },
+    {
+      "label": "约一次短聊，交换各自进度",
+      "hint": "缓解压力，增进合作",
+      "text": "你约一次短聊，交换各自进度。",
+      "effects": {
+        "network": 4,
+        "stress": -7
+      },
+      "days": 0
+    },
+    {
+      "label": "先道谢，把资料放进待办",
+      "hint": "增进合作，恢复精力",
+      "text": "你先道谢，把资料放进待办。",
+      "effects": {
+        "network": 3,
+        "energy": 4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

@@ -1,0 +1,48 @@
+{
+  "id": "apply.waitlist-feeling",
+  "title": "等待候补结果",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["候补名单暂未变化，需要保持联系，同时准备其他项目。"],
+  "choices": [
+    {
+      "label": "确认有效联系方式与下一步",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你确认有效联系方式与下一步。",
+      "effects": {
+        "materials": 5,
+        "stress": -3
+      },
+      "flags": ["application.tracker"],
+      "days": 0
+    },
+    {
+      "label": "继续准备另一场考核",
+      "hint": "加强课程基础，练习表达，准备后续安排",
+      "text": "你继续准备另一场考核。",
+      "effects": {
+        "study": 3,
+        "expression": 4,
+        "backup": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "和朋友出去走一段路",
+      "hint": "缓解压力，恢复精力，增进合作",
+      "text": "你和朋友出去走一段路。",
+      "effects": {
+        "energy": 10,
+        "stress": -9,
+        "network": 2
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 36,
+    "to": 47
+  },
+  "weight": 5
+}

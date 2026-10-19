@@ -1,0 +1,55 @@
+{
+  "id": "life.computer",
+  "title": "电脑故障",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["电脑卡顿并伴随异常风扇声，继续使用可能影响文件和任务进度。"],
+  "choices": [
+    {
+      "label": "先备份，再排查或维修",
+      "hint": "支出280元，缓解压力，积累项目经验",
+      "text": "你先备份，再排查或维修。余额 -280。",
+      "effects": {
+        "money": -280,
+        "craft": 3,
+        "stress": -4
+      },
+      "flags": ["archive.backup"],
+      "when": {
+        "min": {
+          "money": 280
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "借用公共设备，先完成关键任务",
+      "hint": "消耗精力，积累项目经验，补齐申请材料",
+      "text": "你借用公共设备，先完成关键任务。",
+      "effects": {
+        "craft": 4,
+        "materials": 3,
+        "energy": -4
+      },
+      "flags": ["archive.backup"],
+      "days": 1
+    },
+    {
+      "label": "请同学一起做基础排查",
+      "hint": "缓解压力，增进合作，积累项目经验",
+      "text": "你请同学一起做基础排查。",
+      "effects": {
+        "network": 4,
+        "craft": 3,
+        "stress": -2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 4,
+    "to": 39
+  },
+  "weight": 5
+}

@@ -1,0 +1,54 @@
+{
+  "id": "apply.professional-basics",
+  "title": "回答基础问题",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["面试老师询问一个学过的基本概念，你需要解释定义和使用条件。"],
+  "choices": [
+    {
+      "label": "回到定义与条件，慢一点讲清",
+      "hint": "加强课程基础，练习表达",
+      "text": "你回到定义与条件，慢一点讲清。",
+      "effects": {
+        "study": 5,
+        "expression": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "承认卡住，事后系统回补",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你承认卡住，事后系统回补。",
+      "effects": {
+        "study": 6,
+        "research": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "用一个熟悉的小例子说明理解",
+      "hint": "加强课程基础，积累项目经验，练习表达",
+      "text": "你用一个熟悉的小例子说明理解。",
+      "effects": {
+        "study": 4,
+        "craft": 2,
+        "expression": 2
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 30,
+    "to": 46
+  },
+  "weight": 5,
+  "variants": [
+    {
+      "when": {
+        "flags": ["foundation.rebuilt"]
+      },
+      "text": "你已经积累了与本次任务有关的经历。"
+    }
+  ]
+}

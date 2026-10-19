@@ -1,0 +1,23 @@
+{
+  "id": "q.english.8",
+  "kind": "英语",
+  "title": "Discuss a failed attempt",
+  "text": "What did you learn from an unsuccessful attempt?",
+  "options": [
+    {
+      "text": "I tried again, but I did not record what changed.",
+      "score": 2,
+      "response": "提到了部分处理方式，但解释还不完整。"
+    },
+    {
+      "text": "I checked the assumptions, kept the failed runs and revised the next experiment.",
+      "score": 4,
+      "response": "回答说明了关键条件和处理方法。"
+    },
+    {
+      "text": "I removed the failed result because it was not useful.",
+      "score": 0,
+      "response": "这一说法忽略了关键条件，需要重新分析。"
+    }
+  ]
+}

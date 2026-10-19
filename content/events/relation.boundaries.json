@@ -1,0 +1,49 @@
+{
+  "id": "relation.boundaries",
+  "title": "同学请你代做任务",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["同学把整份任务发给你，但你的日程已经排满。"],
+  "choices": [
+    {
+      "label": "讲清方法，让对方自己做",
+      "hint": "消耗精力，练习表达，增进合作",
+      "text": "你讲清方法，让对方自己做。",
+      "effects": {
+        "expression": 4,
+        "network": 3,
+        "energy": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "只帮最影响进度的一小部分",
+      "hint": "缓解压力，积累项目经验，增进合作",
+      "text": "你只帮最影响进度的一小部分。",
+      "effects": {
+        "craft": 3,
+        "network": 2,
+        "stress": -2
+      },
+      "flags": ["scope.control"],
+      "days": 1
+    },
+    {
+      "label": "说明本周安排，给出可用资料",
+      "hint": "缓解压力，恢复精力，补齐申请材料",
+      "text": "你说明本周安排，给出可用资料。",
+      "effects": {
+        "energy": 6,
+        "stress": -4,
+        "materials": 2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 0,
+    "to": 47
+  },
+  "weight": 5
+}

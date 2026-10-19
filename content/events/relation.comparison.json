@@ -1,0 +1,47 @@
+{
+  "id": "relation.comparison",
+  "title": "同学获得新成果",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["熟悉的同学获得一项成果，你需要继续处理自己的学习计划。"],
+  "choices": [
+    {
+      "label": "祝贺对方，再做自己的具体任务",
+      "hint": "缓解压力，增进合作，加强课程基础",
+      "text": "你祝贺对方，再做自己的具体任务。",
+      "effects": {
+        "network": 4,
+        "study": 2,
+        "stress": -4
+      },
+      "flags": ["friend.kept"],
+      "days": 1
+    },
+    {
+      "label": "问一个自己确实需要了解的问题",
+      "hint": "增进合作，准备后续安排，练习表达",
+      "text": "你问一个自己确实需要了解的问题。",
+      "effects": {
+        "network": 4,
+        "backup": 3,
+        "expression": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "暂时不刷群，去休息一会儿",
+      "hint": "缓解压力，恢复精力",
+      "text": "你暂时不刷群，去休息一会儿。",
+      "effects": {
+        "energy": 9,
+        "stress": -8
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 7
+  },
+  "weight": 5
+}

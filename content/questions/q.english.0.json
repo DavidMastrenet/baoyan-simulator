@@ -1,0 +1,23 @@
+{
+  "id": "q.english.0",
+  "kind": "英语",
+  "title": "A small contribution",
+  "text": "Could you explain your own contribution to the project?",
+  "options": [
+    {
+      "text": "I designed the evaluation protocol and implemented the analysis. My teammate built the interface. I can show the records for my part.",
+      "score": 4,
+      "response": "你清楚地区分了个人贡献与团队成果，回答具体而可追问。"
+    },
+    {
+      "text": "I did everything, because I was the leader.",
+      "score": 0,
+      "response": "负责协调不等于完成所有工作，回答没有提供具体记录。"
+    },
+    {
+      "text": "I helped with the project and learned a lot.",
+      "score": 2,
+      "response": "表达自然，但贡献仍然抽象，可以补一个任务和结果。"
+    }
+  ]
+}

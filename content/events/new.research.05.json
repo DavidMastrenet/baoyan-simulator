@@ -1,0 +1,170 @@
+{
+  "id": "new.research.05",
+  "title": "数据字段缺失",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["合作方提供的数据缺少一个关键字段，需要重新申请。"],
+  "when": {
+    "from": 6,
+    "to": 41
+  },
+  "weight": 11,
+  "once": true,
+  "choices": [
+    {
+      "label": "联系合作方补充数据",
+      "hint": "按研究方法判断结果，还可能出现额外情况",
+      "text": "你联系合作方补充数据。",
+      "effects": {
+        "energy": -4
+      },
+      "check": {
+        "stat": "research",
+        "difficulty": 38,
+        "success": {
+          "text": "对方补齐了所需字段。",
+          "effects": {
+            "research": 5,
+            "stress": -2
+          },
+          "flags": ["new.research.05.done", "new.research.experience"],
+          "schedule": [
+            {
+              "id": "new.research.05.follow",
+              "after": 3
+            }
+          ]
+        },
+        "failure": {
+          "text": "数据暂时无法补齐，原计划受到影响。",
+          "effects": {
+            "energy": -4,
+            "stress": 4
+          },
+          "flags": ["new.research.05.setback"],
+          "schedule": [
+            {
+              "id": "new.research.05.follow",
+              "after": 2
+            }
+          ]
+        }
+      },
+      "outcomes": [
+        {
+          "weight": 2,
+          "text": "组员提供了相关记录，部分准备工作可以直接开展。",
+          "effects": {
+            "network": 2,
+            "energy": 3
+          }
+        },
+        {
+          "weight": 5,
+          "text": "所需时间与预计相近，没有额外调整。"
+        },
+        {
+          "weight": 2,
+          "text": "所需记录还缺少一项，需要补充整理。",
+          "effects": {
+            "energy": -3,
+            "stress": 2
+          }
+        },
+        {
+          "weight": 1,
+          "when": {
+            "min": {
+              "network": 50
+            }
+          },
+          "text": "此前认识的同学协助处理了问题。",
+          "effects": {
+            "research": 2,
+            "stress": -2
+          }
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "用现有字段调整问题",
+      "hint": "结果确定",
+      "text": "你用现有字段调整问题，完成了当前能确定的部分。",
+      "effects": {
+        "research": 2,
+        "energy": -1
+      },
+      "days": 1
+    },
+    {
+      "label": "请组员共同检查研究设置",
+      "hint": "沟通结果有差异",
+      "text": "你请组员共同检查研究设置。",
+      "effects": {
+        "network": 2,
+        "energy": -2
+      },
+      "check": {
+        "stat": "expression",
+        "difficulty": 34,
+        "success": {
+          "text": "分工得到确认，任务进展改善。",
+          "effects": {
+            "research": 3,
+            "stress": -2
+          },
+          "flags": ["new.research.experience"]
+        },
+        "failure": {
+          "text": "大家理解不同，需要重新确认要求。",
+          "effects": {
+            "stress": 3,
+            "energy": -2
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "暂缓处理，先完成已有安排",
+      "hint": "本次机会暂不继续",
+      "text": "你没有继续增加任务，保留了休息和现有工作时间。",
+      "effects": {
+        "energy": 5,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "使用之前同类任务的经验",
+      "when": {
+        "flags": ["new.research.experience"]
+      },
+      "hint": "需要同类经历",
+      "text": "你按之前整理的方法完成了主要步骤。",
+      "effects": {
+        "research": 3,
+        "energy": -2,
+        "stress": -1
+      },
+      "days": 1
+    }
+  ],
+  "variants": [
+    {
+      "when": {
+        "max": {
+          "energy": 30
+        }
+      },
+      "text": "当前精力偏低，继续赶工会降低完成任务的机会。"
+    },
+    {
+      "when": {
+        "flags": ["new.research.experience"]
+      },
+      "text": "你已处理过同类任务，可以使用之前的方法。"
+    }
+  ]
+}

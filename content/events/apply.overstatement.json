@@ -1,0 +1,63 @@
+{
+  "id": "apply.overstatement",
+  "title": "修改夸大描述",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["简历把试验性工作写成了稳定系统，描述超出了项目实际完成的内容。"],
+  "choices": [
+    {
+      "label": "保留准确动作，删去过度表述",
+      "hint": "补齐申请材料，练习表达，补充准确材料",
+      "text": "你保留准确动作，删去过度表述。材料真实性 +2。",
+      "effects": {
+        "materials": 7,
+        "expression": 3,
+        "integrity": 2
+      },
+      "flags": ["evidence.checked"],
+      "days": 1
+    },
+    {
+      "label": "附上可核对的版本与个人贡献",
+      "hint": "补齐申请材料，练习研究方法",
+      "text": "你附上可核对的版本与个人贡献。",
+      "effects": {
+        "materials": 8,
+        "research": 2
+      },
+      "flags": ["credit.clear"],
+      "days": 1
+    },
+    {
+      "label": "先保留更显眼的说法",
+      "hint": "材料可信度下降，补齐申请材料",
+      "text": "你先保留更显眼的说法。之后会有相关的后续事件。材料真实性 -16。",
+      "effects": {
+        "materials": 5,
+        "integrity": -16
+      },
+      "flags": ["record.inflated"],
+      "schedule": [
+        {
+          "id": "record.audit",
+          "after": 2
+        }
+      ],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 26,
+    "to": 40
+  },
+  "weight": 5,
+  "variants": [
+    {
+      "when": {
+        "flags": ["lab.repaired"]
+      },
+      "text": "你已经积累了与本次任务有关的经历。"
+    }
+  ]
+}

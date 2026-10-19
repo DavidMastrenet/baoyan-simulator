@@ -1,0 +1,46 @@
+{
+  "id": "major.human.2",
+  "title": "检查理论适用性",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["现有理论无法解释部分材料，需要比较其他解释。"],
+  "choices": [
+    {
+      "label": "先保留材料，再检查理论适用范围",
+      "hint": "练习研究方法，加强课程基础",
+      "text": "你先保留材料，再检查理论适用范围。",
+      "effects": {
+        "research": 6,
+        "study": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "比较另一种有依据的解释",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你比较另一种有依据的解释。",
+      "effects": {
+        "study": 4,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "在讨论中说明不能解释的部分",
+      "hint": "练习表达，练习研究方法",
+      "text": "你在讨论中说明不能解释的部分。",
+      "effects": {
+        "expression": 5,
+        "research": 3
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 8,
+    "to": 35,
+    "majors": ["人文社科类"]
+  },
+  "weight": 12
+}

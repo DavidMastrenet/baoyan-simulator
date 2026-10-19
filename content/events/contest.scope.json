@@ -1,0 +1,61 @@
+{
+  "id": "contest.scope",
+  "title": "确认比赛规则",
+  "category": "竞赛",
+  "scene": "竞赛事件",
+  "body": ["团队已经提出多个想法，但还没有明确评分标准和提交要求。"],
+  "choices": [
+    {
+      "label": "拆解评分标准，做最小可行方案",
+      "hint": "积累项目经验，练习表达",
+      "text": "你拆解评分标准，做最小可行方案。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 4,
+        "expression": 3
+      },
+      "flags": ["contest.rules"],
+      "schedule": [
+        {
+          "id": "contest.midnight",
+          "after": 2
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "先做最有把握的一条技术路线",
+      "hint": "消耗精力，积累项目经验",
+      "text": "你先做最有把握的一条技术路线。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 6,
+        "energy": -5
+      },
+      "schedule": [
+        {
+          "id": "contest.midnight",
+          "after": 2
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "先确认样本与资料来源",
+      "hint": "练习研究方法，补充准确材料",
+      "text": "你先确认样本与资料来源。之后会有相关的后续事件。材料真实性 +2。",
+      "effects": {
+        "research": 5,
+        "integrity": 2
+      },
+      "flags": ["evidence.checked"],
+      "schedule": [
+        {
+          "id": "contest.midnight",
+          "after": 2
+        }
+      ],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

@@ -1,0 +1,46 @@
+{
+  "id": "extra.lab-slot",
+  "title": "预约实验设备",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["多组共用设备，最近只剩一个时段，需要重新安排实验。"],
+  "choices": [
+    {
+      "label": "把准备放在前面，缩短占用",
+      "hint": "练习研究方法，积累项目经验",
+      "text": "你把准备放在前面，缩短占用。",
+      "effects": {
+        "research": 4,
+        "craft": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "与其他小组协调共享与交接",
+      "hint": "增进合作，练习表达",
+      "text": "你与其他小组协调共享与交接。",
+      "effects": {
+        "network": 5,
+        "expression": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "先做可独立推进的分析",
+      "hint": "缓解压力，加强课程基础，练习研究方法",
+      "text": "你先做可独立推进的分析。",
+      "effects": {
+        "study": 3,
+        "research": 3,
+        "stress": -2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

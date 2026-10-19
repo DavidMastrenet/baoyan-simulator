@@ -1,0 +1,50 @@
+{
+  "id": "calendar.34",
+  "title": "答辩与面试冲突",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["课程答辩和项目面试时间接近，需要协调时间或调整申请安排。"],
+  "choices": [
+    {
+      "label": "带着具体时间请求协调",
+      "hint": "缓解压力，练习表达，增进合作",
+      "text": "你带着具体时间请求协调。",
+      "effects": {
+        "expression": 4,
+        "network": 2,
+        "stress": -4
+      },
+      "flags": ["schedule.checked"],
+      "days": 1
+    },
+    {
+      "label": "保住课程，把考核准备压紧",
+      "hint": "消耗精力，加强课程基础，练习表达",
+      "text": "你保住课程，把考核准备压紧。",
+      "effects": {
+        "study": 4,
+        "expression": 3,
+        "energy": -8
+      },
+      "days": 2
+    },
+    {
+      "label": "重新比较项目，放弃较不合适的一项",
+      "hint": "缓解压力，准备后续安排，恢复精力",
+      "text": "你重新比较项目，放弃较不合适的一项。",
+      "effects": {
+        "backup": 6,
+        "energy": 6,
+        "stress": -4
+      },
+      "flags": ["direction.clear"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 34,
+  "when": {
+    "from": 34,
+    "to": 34
+  }
+}

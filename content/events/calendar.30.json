@@ -1,0 +1,49 @@
+{
+  "id": "calendar.30",
+  "title": "整理申请信息",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["项目公告较多，需要记录截止日期、研究方向和材料要求。"],
+  "choices": [
+    {
+      "label": "按项目建截止日期与材料表",
+      "hint": "补齐申请材料，准备后续安排",
+      "text": "你按项目建截止日期与材料表。",
+      "effects": {
+        "materials": 12,
+        "backup": 4
+      },
+      "flags": ["application.tracker"],
+      "days": 0
+    },
+    {
+      "label": "先读研究方向，再筛项目",
+      "hint": "练习研究方法，补齐申请材料",
+      "text": "你先读研究方向，再筛项目。",
+      "effects": {
+        "research": 5,
+        "materials": 5
+      },
+      "flags": ["direction.clear"],
+      "days": 1
+    },
+    {
+      "label": "找不同去向的学长学姐交流",
+      "hint": "增进合作，练习表达，准备后续安排",
+      "text": "你找不同去向的学长学姐交流。",
+      "effects": {
+        "network": 5,
+        "expression": 2,
+        "backup": 4
+      },
+      "flags": ["mentor.checked"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 30,
+  "when": {
+    "from": 30,
+    "to": 30
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "rare.course-correction",
+  "title": "一项课程成绩录入错误",
+  "category": "学业",
+  "scene": "低概率事件",
+  "body": ["你发现已公布课程的一项平时分漏记。老师保留的作业记录可以用于检查。"],
+  "when": {
+    "from": 12,
+    "to": 40
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "提交原有作业和成绩记录",
+      "text": "老师确认漏记后更正了成绩，本学期加权均分增加0.4分。",
+      "hint": "消耗精力",
+      "effects": {
+        "energy": -3
+      },
+      "semesterCorrection": 0.4,
+      "flags": ["grade.corrected"],
+      "days": 0
+    },
+    {
+      "label": "先核对计算方式",
+      "text": "你检查了课程成绩的组成，并保留了申诉记录。",
+      "hint": "消耗精力，补齐申请材料",
+      "effects": {
+        "materials": 2,
+        "energy": -1
+      },
+      "days": 0
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "calendar.00",
+  "title": "新生报到",
+  "category": "生活",
+  "scene": "校园",
+  "body": ["你已到{{campus}}报到。课程安排已经公布，室友和项目社团也发来了邀请。"],
+  "choices": [
+    {
+      "label": "先认清课表和教学楼",
+      "hint": "消耗精力，加强课程基础",
+      "text": "你先认清课表和教学楼。",
+      "effects": {
+        "study": 4,
+        "energy": -3
+      },
+      "flags": ["start.syllabus"],
+      "days": 1
+    },
+    {
+      "label": "和室友一起吃晚饭",
+      "hint": "缓解压力，增进合作",
+      "text": "你和室友一起吃晚饭。",
+      "effects": {
+        "network": 6,
+        "stress": -3
+      },
+      "flags": ["roommate.close"],
+      "days": 0
+    },
+    {
+      "label": "去看看项目社团",
+      "hint": "消耗精力，积累项目经验，练习表达",
+      "text": "你去看看项目社团。",
+      "effects": {
+        "craft": 4,
+        "expression": 2,
+        "energy": -4
+      },
+      "flags": ["club.visited"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 0,
+  "when": {
+    "from": 0,
+    "to": 0
+  }
+}

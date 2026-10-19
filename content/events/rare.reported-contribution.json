@@ -1,0 +1,58 @@
+{
+  "id": "rare.reported-contribution",
+  "title": "个人贡献被提出异议",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["学院收到对你成果贡献的异议，要求提供工作记录。提出异议本身不改变推荐资格。"],
+  "when": {
+    "from": 24,
+    "to": 41,
+    "min": {
+      "materials": 20
+    }
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "提交完整的工作记录",
+      "text": "现有记录能够说明你的具体工作，相关说明得到补充。",
+      "hint": "消耗精力，缓解压力，补齐申请材料",
+      "effects": {
+        "energy": -5,
+        "stress": -2,
+        "materials": 3
+      },
+      "when": {
+        "min": {
+          "integrity": 80
+        }
+      },
+      "flags": ["report.cleared"],
+      "days": 0
+    },
+    {
+      "label": "核对后更正不准确的描述",
+      "text": "你修正了个人贡献说明，按实际完成的工作提交。",
+      "hint": "消耗精力，材料准备受影响，补充准确材料",
+      "effects": {
+        "energy": -4,
+        "integrity": 8,
+        "materials": -2
+      },
+      "days": 0
+    },
+    {
+      "label": "请合作者共同说明分工",
+      "text": "合作者提供了分工记录，学院继续按材料处理。",
+      "hint": "消耗精力，增进合作，补齐申请材料",
+      "effects": {
+        "energy": -3,
+        "network": 2,
+        "materials": 2
+      },
+      "days": 0
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "project.demo-bug",
+  "title": "演示程序报错",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["展示刚开始就出现报错，需要切换方案或现场排查。"],
+  "choices": [
+    {
+      "label": "说明问题，切换到验证过的流程",
+      "hint": "缓解压力，练习表达，积累项目经验",
+      "text": "你说明问题，切换到验证过的流程。",
+      "effects": {
+        "expression": 5,
+        "craft": 3,
+        "stress": -2
+      },
+      "days": 2
+    },
+    {
+      "label": "请同伴接着讲，自己排查",
+      "hint": "消耗精力，增进合作，积累项目经验",
+      "text": "你请同伴接着讲，自己排查。",
+      "effects": {
+        "network": 5,
+        "craft": 4,
+        "energy": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "缩成一个小例子，现场解释",
+      "hint": "练习研究方法，练习表达",
+      "text": "你缩成一个小例子，现场解释。",
+      "effects": {
+        "research": 3,
+        "expression": 4
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5
+  },
+  "weight": 5
+}

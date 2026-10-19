@@ -1,0 +1,47 @@
+{
+  "id": "calendar.47",
+  "title": "确定最终安排",
+  "category": "生活",
+  "scene": "校园",
+  "body": ["本轮申请即将结束，需要处理剩余通知，并确定升学或就业安排。"],
+  "choices": [
+    {
+      "label": "继续升学和研究准备",
+      "hint": "缓解压力",
+      "text": "你继续升学和研究准备。",
+      "effects": {
+        "stress": -5
+      },
+      "flags": ["decision.fit"],
+      "days": 0
+    },
+    {
+      "label": "接下来准备统考",
+      "hint": "准备后续安排，加强课程基础",
+      "text": "你接下来准备统考。后续准备方向：考研。",
+      "effects": {
+        "backup": 8,
+        "study": 2
+      },
+      "path": "exam",
+      "days": 1
+    },
+    {
+      "label": "接下来准备就业",
+      "hint": "准备后续安排，积累项目经验",
+      "text": "你接下来准备就业。后续准备方向：就业。",
+      "effects": {
+        "backup": 8,
+        "craft": 2
+      },
+      "path": "work",
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 47,
+  "when": {
+    "from": 47,
+    "to": 47
+  }
+}

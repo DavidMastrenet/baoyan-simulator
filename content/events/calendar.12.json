@@ -1,0 +1,50 @@
+{
+  "id": "calendar.12",
+  "title": "大二活动选择",
+  "category": "生活",
+  "scene": "校园",
+  "body": ["学生组织、比赛队伍和实验室都在招人，你目前的时间只能承担部分工作。"],
+  "choices": [
+    {
+      "label": "减少事务，继续补基础",
+      "hint": "加强课程基础，恢复精力",
+      "text": "你减少事务，继续补基础。",
+      "effects": {
+        "study": 5,
+        "energy": 4
+      },
+      "flags": ["duty.handoff"],
+      "days": 1
+    },
+    {
+      "label": "带一位新人做小项目",
+      "hint": "消耗精力，增进合作，练习表达",
+      "text": "你带一位新人做小项目。",
+      "effects": {
+        "network": 5,
+        "expression": 4,
+        "energy": -5
+      },
+      "flags": ["mentor.junior"],
+      "days": 1
+    },
+    {
+      "label": "承担一个明确范围的职责",
+      "hint": "消耗精力，增加实践经验，增进合作",
+      "text": "你承担一个明确范围的职责。",
+      "effects": {
+        "practice": 4,
+        "network": 3,
+        "energy": -4
+      },
+      "flags": ["duty.bounded"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 12,
+  "when": {
+    "from": 12,
+    "to": 12
+  }
+}

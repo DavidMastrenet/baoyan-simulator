@@ -1,0 +1,47 @@
+{
+  "id": "major.edu.3",
+  "title": "处理课堂意外",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["设备、时间和学生提问打断了原定流程，需要调整课堂安排。"],
+  "choices": [
+    {
+      "label": "保住核心目标，调整活动顺序",
+      "hint": "增加实践经验，练习表达",
+      "text": "你保住核心目标，调整活动顺序。",
+      "effects": {
+        "practice": 6,
+        "expression": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "把突发问题变成一次共同探究",
+      "hint": "练习表达，练习研究方法，增加实践经验",
+      "text": "你把突发问题变成一次共同探究。",
+      "effects": {
+        "expression": 4,
+        "research": 3,
+        "practice": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "记录偏离原因，课后认真总结",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你记录偏离原因，课后认真总结。",
+      "effects": {
+        "research": 4,
+        "practice": 4
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 11,
+    "to": 35,
+    "majors": ["师范教育类"]
+  },
+  "weight": 12
+}

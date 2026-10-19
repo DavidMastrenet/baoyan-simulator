@@ -1,0 +1,48 @@
+{
+  "id": "apply.unanswered-contact",
+  "title": "联系邮件未回复",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["联系邮件尚未收到回复，其他项目的截止日期已经接近。"],
+  "choices": [
+    {
+      "label": "带着一项新进展简短跟进",
+      "hint": "练习表达，补齐申请材料",
+      "text": "你带着一项新进展简短跟进。",
+      "effects": {
+        "expression": 4,
+        "materials": 3
+      },
+      "flags": ["mail.specific"],
+      "days": 1
+    },
+    {
+      "label": "继续筛选方向相近的项目",
+      "hint": "准备后续安排，练习研究方法",
+      "text": "你继续筛选方向相近的项目。",
+      "effects": {
+        "backup": 6,
+        "research": 2
+      },
+      "flags": ["application.balanced"],
+      "days": 1
+    },
+    {
+      "label": "请熟悉领域的人看看匹配程度",
+      "hint": "练习研究方法，增进合作",
+      "text": "你请熟悉领域的人看看匹配程度。",
+      "effects": {
+        "research": 4,
+        "network": 3
+      },
+      "flags": ["mentor.checked"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 28,
+    "to": 43
+  },
+  "weight": 5
+}

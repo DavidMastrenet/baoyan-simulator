@@ -1,0 +1,55 @@
+{
+  "id": "career.internship-link",
+  "title": "实习单位再次联系",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["之前的实习单位询问项目进展，并提出短期协作的可能。"],
+  "choices": [
+    {
+      "label": "整理进展，做一次简短技术交流",
+      "hint": "积累项目经验，增进合作，准备后续安排",
+      "text": "你整理进展，做一次简短技术交流。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 4,
+        "network": 3,
+        "backup": 3
+      },
+      "schedule": [
+        {
+          "id": "internship.follow-up",
+          "after": 2
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "把已有资料交接清楚，保持联系",
+      "hint": "补齐申请材料，增进合作，准备后续安排",
+      "text": "你把已有资料交接清楚，保持联系。",
+      "effects": {
+        "materials": 5,
+        "network": 4,
+        "backup": 5
+      },
+      "flags": ["job.lead"],
+      "days": 0
+    },
+    {
+      "label": "说明近期安排，约之后再谈",
+      "hint": "恢复精力，增进合作，准备后续安排",
+      "text": "你说明近期安排，约之后再谈。",
+      "effects": {
+        "energy": 5,
+        "network": 3,
+        "backup": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 24,
+    "flags": ["internship.real"]
+  },
+  "weight": 5
+}

@@ -1,0 +1,45 @@
+{
+  "id": "extra.feedback-harsh",
+  "title": "处理批评意见",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["老师指出了多处问题，需要把批注转成具体修改任务。"],
+  "choices": [
+    {
+      "label": "先拆开实际情况问题与表达方式",
+      "hint": "缓解压力，练习研究方法",
+      "text": "你先拆开实际情况问题与表达方式。",
+      "effects": {
+        "research": 4,
+        "stress": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "找合作者一起判断哪些需要改",
+      "hint": "增进合作，补齐申请材料",
+      "text": "你找合作者一起判断哪些需要改。",
+      "effects": {
+        "network": 4,
+        "materials": 3
+      },
+      "days": 0
+    },
+    {
+      "label": "休息一段再回复",
+      "hint": "缓解压力，恢复精力",
+      "text": "你休息一段再回复。",
+      "effects": {
+        "energy": 8,
+        "stress": -6
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

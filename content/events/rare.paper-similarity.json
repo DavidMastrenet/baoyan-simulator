@@ -1,0 +1,37 @@
+{
+  "id": "rare.paper-similarity",
+  "title": "课程论文被要求解释相似内容",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["老师发现课程论文与公开文本有相似段落，要求说明引用和独立工作。"],
+  "when": {
+    "from": 6,
+    "to": 31
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "逐段核对来源并补齐引用",
+      "text": "引用遗漏得到修正，老师按修改后的内容处理。",
+      "hint": "消耗精力，补充准确材料，练习研究方法",
+      "effects": {
+        "energy": -5,
+        "integrity": 3,
+        "research": 1
+      },
+      "days": 1
+    },
+    {
+      "label": "提交写作记录并解释独立部分",
+      "text": "你提供了过程记录和已有引用，等待老师按材料判断。",
+      "hint": "消耗精力，补齐申请材料",
+      "effects": {
+        "energy": -3,
+        "materials": 2
+      },
+      "days": 0
+    }
+  ]
+}

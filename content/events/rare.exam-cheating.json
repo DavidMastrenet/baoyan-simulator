@@ -1,0 +1,73 @@
+{
+  "id": "rare.exam-cheating",
+  "title": "考前有人提出违规互助",
+  "category": "学业",
+  "scene": "低概率事件",
+  "body": [
+    "一门课程考前，同学提出在考试中违规互相帮助。校规明确要求独立完成，查实后会取消课程成绩并处分。"
+  ],
+  "when": {
+    "from": 1,
+    "to": 31
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "拒绝，按自己的准备参加考试",
+      "text": "你独立参加考试，本次没有新增违规记录。",
+      "hint": "补充准确材料，增加压力",
+      "effects": {
+        "integrity": 1,
+        "stress": 1
+      },
+      "days": 0
+    },
+    {
+      "label": "不参加违规互助，先补习薄弱内容",
+      "text": "你和同学在考前正常讨论，考试各自完成。",
+      "hint": "消耗精力，加强课程基础",
+      "effects": {
+        "study": 2,
+        "energy": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "参与违规互助",
+      "text": "你参与了违规行为，承担成绩和纪律处理风险。",
+      "hint": "材料可信度下降",
+      "effects": {
+        "integrity": -10
+      },
+      "outcomes": [
+        {
+          "weight": 3,
+          "text": "监考人员发现并记录了违规行为。该课成绩无效，调查完成后记入作弊处分，影响推荐资格。",
+          "effects": {
+            "integrity": -60,
+            "stress": 15
+          },
+          "flags": ["discipline.cheating"],
+          "course": {
+            "title": "作弊成绩无效课程",
+            "score": 0,
+            "credits": 3,
+            "counted": "all",
+            "replace": true
+          }
+        },
+        {
+          "weight": 2,
+          "text": "本次没有被当场指出问题，但违规记录仍可能在之后被查明。",
+          "flags": ["misconduct.unresolved"],
+          "effects": {
+            "stress": 6
+          }
+        }
+      ],
+      "days": 0
+    }
+  ]
+}

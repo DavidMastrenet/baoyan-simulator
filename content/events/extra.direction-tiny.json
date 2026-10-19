@@ -1,0 +1,45 @@
+{
+  "id": "extra.direction-tiny",
+  "title": "整理重复问题",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["几项任务出现了相似问题，你可以比较原因并决定是否继续研究。"],
+  "choices": [
+    {
+      "label": "把情境与共同之处写下来",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你把情境与共同之处写下来。",
+      "effects": {
+        "research": 5,
+        "practice": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "找老师讨论什么记录能回答它",
+      "hint": "练习研究方法，增进合作",
+      "text": "你找老师讨论什么记录能回答它。",
+      "effects": {
+        "research": 4,
+        "network": 4
+      },
+      "days": 1
+    },
+    {
+      "label": "先保留观察，继续补相关基础",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你先保留观察，继续补相关基础。",
+      "effects": {
+        "study": 4,
+        "research": 3
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 18,
+    "to": 41
+  },
+  "weight": 5
+}

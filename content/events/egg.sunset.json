@@ -1,0 +1,36 @@
+{
+  "id": "egg.sunset",
+  "title": "讨论超时",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["讨论持续时间超过计划，大家需要决定继续还是下次再谈。"],
+  "choices": [
+    {
+      "label": "站一会儿，再继续走",
+      "hint": "缓解压力，恢复精力",
+      "text": "你站一会儿，再继续走。",
+      "effects": {
+        "energy": 5,
+        "stress": -7
+      },
+      "days": 1
+    },
+    {
+      "label": "和同伴拍一张没有成果介绍的照片",
+      "hint": "缓解压力，增进合作",
+      "text": "你和同伴拍一张没有成果介绍的照片。",
+      "effects": {
+        "network": 4,
+        "stress": -5
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 14,
+    "to": 47
+  },
+  "weight": 1
+}

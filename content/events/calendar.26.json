@@ -1,0 +1,49 @@
+{
+  "id": "calendar.26",
+  "title": "联系推荐人",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["申请需要推荐意见。你要向老师提供近期工作、个人贡献和成绩信息。"],
+  "choices": [
+    {
+      "label": "附上简洁的贡献与进展清单",
+      "hint": "补齐申请材料，增进合作",
+      "text": "你附上简洁的贡献与进展清单。",
+      "effects": {
+        "materials": 12,
+        "network": 3
+      },
+      "flags": ["references.ready"],
+      "days": 0
+    },
+    {
+      "label": "带一个正在推进的问题去讨论",
+      "hint": "练习研究方法，增进合作，补齐申请材料",
+      "text": "你带一个正在推进的问题去讨论。",
+      "effects": {
+        "research": 4,
+        "network": 5,
+        "materials": 5
+      },
+      "flags": ["references.ready"],
+      "days": 1
+    },
+    {
+      "label": "先联系熟悉自己的课程老师",
+      "hint": "加强课程基础，补齐申请材料",
+      "text": "你先联系熟悉自己的课程老师。",
+      "effects": {
+        "study": 3,
+        "materials": 8
+      },
+      "flags": ["references.ready"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 26,
+  "when": {
+    "from": 26,
+    "to": 26
+  }
+}

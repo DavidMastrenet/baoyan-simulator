@@ -1,0 +1,48 @@
+{
+  "id": "record.audit",
+  "title": "说明材料真实性",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["老师要求说明简历中的个人贡献，其中一部分超出了实际工作。"],
+  "choices": [
+    {
+      "label": "主动改正，提交能核对的版本",
+      "hint": "材料准备受影响，补充准确材料，增加压力",
+      "text": "你主动改正，提交能核对的版本。材料真实性 +20。",
+      "effects": {
+        "integrity": 20,
+        "materials": -3,
+        "stress": 4
+      },
+      "flags": ["record.corrected"],
+      "clearFlags": ["record.inflated", "record.unclear"],
+      "days": 0
+    },
+    {
+      "label": "请合作者一同核对贡献",
+      "hint": "合作关系受影响，补充准确材料，补齐申请材料",
+      "text": "你请合作者一同核对贡献。材料真实性 +16。",
+      "effects": {
+        "integrity": 16,
+        "network": -2,
+        "materials": 4
+      },
+      "flags": ["record.corrected"],
+      "clearFlags": ["record.inflated", "record.unclear"],
+      "days": 0
+    },
+    {
+      "label": "继续沿用原来的夸大表述",
+      "hint": "材料可信度下降，增加压力",
+      "text": "你继续沿用原来的夸大表述。材料存在严重问题，会影响推荐资格。材料真实性 -45。",
+      "effects": {
+        "integrity": -45,
+        "stress": 12
+      },
+      "flags": ["record.verified"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "chain": true
+}

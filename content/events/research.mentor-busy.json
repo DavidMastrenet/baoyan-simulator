@@ -1,0 +1,48 @@
+{
+  "id": "research.mentor-busy",
+  "title": "导师推迟讨论",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["原定讨论连续推迟，部分工作需要反馈才能继续。"],
+  "choices": [
+    {
+      "label": "发一页问题、尝试与待决策项",
+      "hint": "练习表达，增进合作，练习研究方法",
+      "text": "你发一页问题、尝试与待决策项。",
+      "effects": {
+        "expression": 4,
+        "network": 3,
+        "research": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "先向组内同伴验证基础环节",
+      "hint": "积累项目经验，练习研究方法，增进合作",
+      "text": "你先向组内同伴验证基础环节。",
+      "effects": {
+        "craft": 3,
+        "research": 3,
+        "network": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "整理记录，转去推进独立任务",
+      "hint": "缓解压力，加强课程基础，补齐申请材料",
+      "text": "你整理记录，转去推进独立任务。",
+      "effects": {
+        "study": 3,
+        "materials": 3,
+        "stress": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 8,
+    "flags": ["lab.joined"]
+  },
+  "weight": 5
+}

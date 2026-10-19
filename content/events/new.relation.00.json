@@ -1,0 +1,158 @@
+{
+  "id": "new.relation.00",
+  "title": "同学请求代签",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["同学因私人安排请你代签课程签到。"],
+  "when": {
+    "from": 0,
+    "to": 47
+  },
+  "weight": 10,
+  "once": true,
+  "choices": [
+    {
+      "label": "说明要求并帮忙联系请假",
+      "hint": "按表达能力判断结果，还可能出现额外情况",
+      "text": "你说明要求并帮忙联系请假。",
+      "effects": {
+        "energy": -4
+      },
+      "check": {
+        "stat": "expression",
+        "difficulty": 38,
+        "success": {
+          "text": "同学完成了正常请假。",
+          "effects": {
+            "expression": 5,
+            "stress": -2
+          },
+          "flags": ["new.relation.00.done", "new.relation.experience"]
+        },
+        "failure": {
+          "text": "对方暂时不理解，你们发生了争执。",
+          "effects": {
+            "energy": -4,
+            "stress": 4
+          },
+          "flags": ["new.relation.00.setback"]
+        }
+      },
+      "outcomes": [
+        {
+          "weight": 2,
+          "text": "对方补充了之前没有说清的安排，沟通更顺利。",
+          "effects": {
+            "network": 2,
+            "energy": 3
+          }
+        },
+        {
+          "weight": 5,
+          "text": "所需时间与预计相近，没有额外调整。"
+        },
+        {
+          "weight": 2,
+          "text": "双方空闲时间不同，还需要再协调。",
+          "effects": {
+            "energy": -3,
+            "stress": 2
+          }
+        },
+        {
+          "weight": 1,
+          "when": {
+            "min": {
+              "network": 50
+            }
+          },
+          "text": "此前认识的同学协助处理了问题。",
+          "effects": {
+            "expression": 2,
+            "stress": -2
+          }
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "拒绝代签并提醒补办手续",
+      "hint": "结果确定",
+      "text": "你拒绝代签并提醒补办手续，完成了当前能确定的部分。",
+      "effects": {
+        "expression": 2,
+        "energy": -1
+      },
+      "days": 1
+    },
+    {
+      "label": "约时间当面说明情况",
+      "hint": "沟通结果有差异",
+      "text": "你约时间当面说明情况。",
+      "effects": {
+        "network": 2,
+        "energy": -2
+      },
+      "check": {
+        "stat": "expression",
+        "difficulty": 34,
+        "success": {
+          "text": "分工得到确认，任务进展改善。",
+          "effects": {
+            "expression": 3,
+            "stress": -2
+          },
+          "flags": ["new.relation.experience"]
+        },
+        "failure": {
+          "text": "大家理解不同，需要重新确认要求。",
+          "effects": {
+            "stress": 3,
+            "energy": -2
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "暂缓处理，先完成已有安排",
+      "hint": "本次机会暂不继续",
+      "text": "你没有继续增加任务，保留了休息和现有工作时间。",
+      "effects": {
+        "energy": 5,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "使用之前同类任务的经验",
+      "when": {
+        "flags": ["new.relation.experience"]
+      },
+      "hint": "需要同类经历",
+      "text": "你按之前整理的方法完成了主要步骤。",
+      "effects": {
+        "expression": 3,
+        "energy": -2,
+        "stress": -1
+      },
+      "days": 1
+    }
+  ],
+  "variants": [
+    {
+      "when": {
+        "max": {
+          "energy": 30
+        }
+      },
+      "text": "当前精力偏低，继续赶工会降低完成任务的机会。"
+    },
+    {
+      "when": {
+        "flags": ["new.relation.experience"]
+      },
+      "text": "你已处理过同类任务，可以使用之前的方法。"
+    }
+  ]
+}

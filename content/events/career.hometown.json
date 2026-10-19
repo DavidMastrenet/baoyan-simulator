@@ -1,0 +1,49 @@
+{
+  "id": "career.hometown",
+  "title": "了解家乡岗位",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["家人转来一份本地岗位信息，需要检查工作内容和申请条件。"],
+  "choices": [
+    {
+      "label": "核对职责与成长，再决定是否投递",
+      "hint": "准备后续安排，增加实践经验",
+      "text": "你核对职责与成长，再决定是否投递。",
+      "effects": {
+        "backup": 8,
+        "practice": 3
+      },
+      "flags": ["home.preferred", "career.near-home"],
+      "days": 1
+    },
+    {
+      "label": "解释当前计划与愿意考虑的条件",
+      "hint": "缓解压力，练习表达，增进合作",
+      "text": "你解释当前计划与愿意考虑的条件。",
+      "effects": {
+        "expression": 4,
+        "network": 3,
+        "stress": -4
+      },
+      "flags": ["family.talk"],
+      "days": 1
+    },
+    {
+      "label": "把它作为一种备选，完成手头准备",
+      "hint": "准备后续安排，补齐申请材料，恢复精力",
+      "text": "你把它作为一种备选，完成手头准备。",
+      "effects": {
+        "backup": 6,
+        "materials": 3,
+        "energy": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 28,
+    "to": 45
+  },
+  "weight": 5
+}

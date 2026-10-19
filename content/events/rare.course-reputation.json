@@ -1,0 +1,57 @@
+{
+  "id": "rare.course-reputation",
+  "title": "给分评价过时了",
+  "category": "学业",
+  "scene": "低概率事件",
+  "body": ["你按往年评价选了一门课程，本学期更换教师并增加了闭卷考核。"],
+  "when": {
+    "from": 1,
+    "to": 30
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "按新要求认真准备",
+      "text": "你补上了课程练习。",
+      "hint": "消耗精力",
+      "effects": {
+        "energy": -5
+      },
+      "check": {
+        "stat": "study",
+        "difficulty": 48,
+        "success": {
+          "text": "课程最终取得90分。",
+          "course": {
+            "title": "新增选修课",
+            "score": 90,
+            "credits": 2,
+            "counted": "policy"
+          }
+        },
+        "failure": {
+          "text": "准备不足，课程最终取得72分。",
+          "course": {
+            "title": "新增选修课",
+            "score": 72,
+            "credits": 2,
+            "counted": "policy"
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "在允许期限内退选",
+      "text": "你按教务规定完成退选，本次没有新增课程成绩。",
+      "hint": "消耗精力，增加压力",
+      "effects": {
+        "energy": -1,
+        "stress": 1
+      },
+      "days": 0
+    }
+  ]
+}

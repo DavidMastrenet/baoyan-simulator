@@ -1,0 +1,46 @@
+{
+  "id": "major.lab.0",
+  "title": "检查仪器漂移",
+  "category": "学业",
+  "scene": "学业事件",
+  "body": ["重复测量的读数有变化，需要检查校准和实验条件。"],
+  "choices": [
+    {
+      "label": "核对校准与实验条件",
+      "hint": "练习研究方法，加强课程基础",
+      "text": "你核对校准与实验条件。",
+      "effects": {
+        "research": 6,
+        "study": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "报告重复测量与不确定性",
+      "hint": "练习研究方法，练习表达",
+      "text": "你报告重复测量与不确定性。",
+      "effects": {
+        "research": 5,
+        "expression": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "请同伴独立复测",
+      "hint": "增进合作，练习研究方法",
+      "text": "你请同伴独立复测。",
+      "effects": {
+        "network": 4,
+        "research": 4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 2,
+    "to": 35,
+    "majors": ["理工实验类"]
+  },
+  "weight": 12
+}

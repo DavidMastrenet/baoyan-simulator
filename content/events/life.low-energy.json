@@ -1,0 +1,54 @@
+{
+  "id": "life.low-energy",
+  "title": "睡眠不足",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["你没有按时起床，今天的任务较多，但当前精力不足。"],
+  "choices": [
+    {
+      "label": "给自己留一个完整休息时段",
+      "hint": "缓解压力，恢复精力",
+      "text": "你给自己留一个完整休息时段。之后会有相关的后续事件。",
+      "effects": {
+        "energy": 14,
+        "stress": -6
+      },
+      "schedule": [
+        {
+          "id": "burnout.follow-up",
+          "after": 2
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "取消一项非必要活动",
+      "hint": "缓解压力，恢复精力",
+      "text": "你取消一项非必要活动。",
+      "effects": {
+        "energy": 6,
+        "stress": -3
+      },
+      "flags": ["boundary.exam"],
+      "days": 1
+    },
+    {
+      "label": "和同伴重排今天的工作",
+      "hint": "缓解压力，恢复精力，增进合作",
+      "text": "你和同伴重排今天的工作。",
+      "effects": {
+        "energy": 4,
+        "network": 1,
+        "stress": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": false,
+  "when": {
+    "max": {
+      "energy": 25
+    }
+  },
+  "weight": 90
+}

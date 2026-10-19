@@ -1,0 +1,36 @@
+{
+  "id": "egg.seat",
+  "title": "自习座位冲突",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["你与另一位同学同时使用一张桌子，需要协调位置。"],
+  "choices": [
+    {
+      "label": "一起坐下，各留一半",
+      "hint": "缓解压力，增进合作",
+      "text": "你一起坐下，各留一半。",
+      "effects": {
+        "network": 4,
+        "stress": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "换个位置，笑着打个招呼",
+      "hint": "缓解压力，恢复精力",
+      "text": "你换个位置，笑着打个招呼。",
+      "effects": {
+        "energy": 5,
+        "stress": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

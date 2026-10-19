@@ -1,0 +1,48 @@
+{
+  "id": "calendar.44",
+  "title": "正式系统开放",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["系统提供三个平行志愿，需要提交信息并按项目要求处理复试通知。"],
+  "choices": [
+    {
+      "label": "按实际意向核对三个位置",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你按实际意向核对三个位置。",
+      "effects": {
+        "materials": 6,
+        "stress": -3
+      },
+      "flags": ["system.checked"],
+      "days": 0
+    },
+    {
+      "label": "先回复暂不继续的联系",
+      "hint": "增进合作，练习表达",
+      "text": "你先回复暂不继续的联系。",
+      "effects": {
+        "network": 3,
+        "expression": 3
+      },
+      "flags": ["reply.complete"],
+      "days": 1
+    },
+    {
+      "label": "继续把时间留给其他路线",
+      "hint": "准备后续安排，加强课程基础",
+      "text": "你继续把时间留给其他路线。后续准备方向：考研。",
+      "effects": {
+        "backup": 10,
+        "study": 2
+      },
+      "path": "exam",
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 44,
+  "when": {
+    "from": 44,
+    "to": 44
+  }
+}

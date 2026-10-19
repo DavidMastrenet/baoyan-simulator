@@ -1,0 +1,52 @@
+{
+  "id": "study.quiet-student",
+  "title": "向同学请教",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["一位同学对难题有完整解法，可以交流学习方法。"],
+  "choices": [
+    {
+      "label": "请教一道具体的问题",
+      "hint": "加强课程基础，增进合作",
+      "text": "你请教一道具体的问题。之后会有相关的后续事件。",
+      "effects": {
+        "study": 4,
+        "network": 4
+      },
+      "schedule": [
+        {
+          "id": "friend.return",
+          "after": 5
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "分享自己的项目经验",
+      "hint": "积累项目经验，加强课程基础，增进合作",
+      "text": "你分享自己的项目经验。",
+      "effects": {
+        "craft": 3,
+        "study": 2,
+        "network": 4
+      },
+      "days": 1
+    },
+    {
+      "label": "各自做题，临走时约下次",
+      "hint": "缓解压力，增进合作",
+      "text": "你各自做题，临走时约下次。",
+      "effects": {
+        "network": 3,
+        "stress": -3
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 2,
+    "to": 27
+  },
+  "weight": 5
+}

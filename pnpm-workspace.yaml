@@ -1,0 +1,4 @@
+allowBuilds:
+  '@ibm/plex-sans-sc': false
+  esbuild: true
+  vue-demi: true

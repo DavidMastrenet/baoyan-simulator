@@ -1,0 +1,36 @@
+{
+  "id": "egg.question-box",
+  "title": "看到相关提问",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["匿名提问中有人提出了你也没有理解的问题，老师准备统一讲解。"],
+  "choices": [
+    {
+      "label": "认真听完解释，再补一个问题",
+      "hint": "加强课程基础，练习表达",
+      "text": "你认真听完解释，再补一个问题。",
+      "effects": {
+        "study": 3,
+        "expression": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "课后与旁边同学交流理解",
+      "hint": "加强课程基础，增进合作",
+      "text": "你课后与旁边同学交流理解。",
+      "effects": {
+        "study": 2,
+        "network": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 14,
+    "to": 47
+  },
+  "weight": 1
+}

@@ -1,0 +1,47 @@
+{
+  "id": "calendar.45",
+  "title": "处理系统通知",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["复试、考核和待录取通知陆续到达，需要在各自期限内处理。"],
+  "choices": [
+    {
+      "label": "把申请栏逐条检查一遍",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你把申请栏逐条检查一遍。",
+      "effects": {
+        "materials": 5,
+        "stress": -3
+      },
+      "flags": ["system.checked"],
+      "days": 0
+    },
+    {
+      "label": "先处理培养类型与方向的疑问",
+      "hint": "准备后续安排，练习表达",
+      "text": "你先处理培养类型与方向的疑问。",
+      "effects": {
+        "backup": 5,
+        "expression": 3
+      },
+      "flags": ["mentor.checked"],
+      "days": 1
+    },
+    {
+      "label": "留一段安静时间恢复状态",
+      "hint": "缓解压力，恢复精力",
+      "text": "你留一段安静时间恢复状态。",
+      "effects": {
+        "energy": 10,
+        "stress": -7
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 45,
+  "when": {
+    "from": 45,
+    "to": 45
+  }
+}

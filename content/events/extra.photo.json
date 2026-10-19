@@ -1,0 +1,45 @@
+{
+  "id": "extra.photo",
+  "title": "安排活动交接",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["活动结束后，部分成员即将离校，需要确定后续联系和交接方式。"],
+  "choices": [
+    {
+      "label": "把照片和一句近况发给伙伴",
+      "hint": "缓解压力，增进合作",
+      "text": "你把照片和一句近况发给伙伴。",
+      "effects": {
+        "network": 5,
+        "stress": -4
+      },
+      "days": 0
+    },
+    {
+      "label": "记录这段合作真正改变了什么",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你记录这段合作真正改变了什么。",
+      "effects": {
+        "materials": 4,
+        "expression": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "收好照片，给今天留一点空白",
+      "hint": "缓解压力，恢复精力",
+      "text": "你收好照片，给今天留一点空白。",
+      "effects": {
+        "energy": 8,
+        "stress": -5
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 18,
+    "to": 41
+  },
+  "weight": 5
+}

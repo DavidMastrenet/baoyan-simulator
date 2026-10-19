@@ -1,0 +1,37 @@
+{
+  "id": "rare.exchange-grade",
+  "title": "交流课程计分方式不同",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["你咨询的交流项目可以认定学分，但校外成绩不按原分数计入本校推荐均分。"],
+  "when": {
+    "from": 12,
+    "to": 30
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "了解规则后仍参加相关学习",
+      "text": "你把交流用于学习，按本校要求处理学分。",
+      "hint": "消耗精力，加强英语训练，练习研究方法",
+      "effects": {
+        "english": 3,
+        "research": 2,
+        "energy": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "优先完成本校计分课程",
+      "text": "你按当前培养方案继续学习。",
+      "hint": "消耗精力，加强课程基础",
+      "effects": {
+        "study": 3,
+        "energy": -2
+      },
+      "days": 1
+    }
+  ]
+}

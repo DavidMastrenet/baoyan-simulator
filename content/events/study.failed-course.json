@@ -1,0 +1,50 @@
+{
+  "id": "study.failed-course",
+  "title": "安排补修",
+  "category": "学业",
+  "scene": "学业事件",
+  "body": ["补修时间与课外任务冲突，需要优先处理未完成的课程。"],
+  "choices": [
+    {
+      "label": "暂停次要任务，完整补修",
+      "hint": "消耗精力，缓解压力，加强课程基础",
+      "text": "你暂停次要任务，完整补修。已完成一门补修课程。",
+      "effects": {
+        "study": 7,
+        "energy": -8,
+        "stress": -4
+      },
+      "clearFailure": true,
+      "days": 2
+    },
+    {
+      "label": "请同学陪着梳理，再参加考核",
+      "hint": "消耗精力，加强课程基础，增进合作",
+      "text": "你请同学陪着梳理，再参加考核。已完成一门补修课程。",
+      "effects": {
+        "study": 5,
+        "network": 3,
+        "energy": -6
+      },
+      "clearFailure": true,
+      "days": 1
+    },
+    {
+      "label": "推迟处理，先完成当前项目",
+      "hint": "积累项目经验，增加压力",
+      "text": "你推迟处理，先完成当前项目。",
+      "effects": {
+        "craft": 4,
+        "stress": 5
+      },
+      "days": 1
+    }
+  ],
+  "once": false,
+  "when": {
+    "from": 5,
+    "to": 41,
+    "failures": true
+  },
+  "weight": 80
+}

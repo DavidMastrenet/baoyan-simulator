@@ -1,0 +1,52 @@
+{
+  "id": "career.research-assistant",
+  "title": "了解助研岗位",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["老师提供了一段助研工作的机会，内容包括资料整理和实验分析。"],
+  "choices": [
+    {
+      "label": "核对任务与周期，认真准备",
+      "hint": "练习研究方法，准备后续安排，补齐申请材料",
+      "text": "你核对任务与周期，认真准备。",
+      "effects": {
+        "research": 5,
+        "backup": 8,
+        "materials": 3
+      },
+      "flags": ["ra.prepared"],
+      "days": 1
+    },
+    {
+      "label": "先完成现有代表作，再考虑扩展",
+      "hint": "练习研究方法，恢复精力，补齐申请材料",
+      "text": "你先完成现有代表作，再考虑扩展。",
+      "effects": {
+        "research": 5,
+        "energy": 4,
+        "materials": 4
+      },
+      "flags": ["direction.clear"],
+      "days": 1
+    },
+    {
+      "label": "请老师介绍不同研究岗位的日常",
+      "hint": "增进合作，增加实践经验，准备后续安排",
+      "text": "你请老师介绍不同研究岗位的日常。",
+      "effects": {
+        "network": 4,
+        "practice": 3,
+        "backup": 5
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 28,
+    "min": {
+      "research": 40
+    }
+  },
+  "weight": 5
+}

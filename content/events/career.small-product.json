@@ -1,0 +1,62 @@
+{
+  "id": "career.small-product",
+  "title": "维护收费产品",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["已有用户愿意为后续服务付费，需要考虑维护范围和收费方式。"],
+  "choices": [
+    {
+      "label": "明确范围，试着经营一个小产品",
+      "hint": "积累项目经验，准备后续安排，增加实践经验",
+      "text": "你明确范围，试着经营一个小产品。后续准备方向：创业。",
+      "effects": {
+        "craft": 5,
+        "backup": 10,
+        "practice": 3
+      },
+      "flags": ["product.business"],
+      "path": "startup",
+      "days": 2
+    },
+    {
+      "label": "继续作为代表作维护，不急着扩张",
+      "hint": "积累项目经验，补齐申请材料，增进合作",
+      "text": "你继续作为代表作维护，不急着扩张。",
+      "effects": {
+        "craft": 5,
+        "materials": 5,
+        "network": 2
+      },
+      "flags": ["product.reliable"],
+      "days": 1
+    },
+    {
+      "label": "完整交接，把重心留给下一阶段",
+      "hint": "增进合作，准备后续安排，恢复精力",
+      "text": "你完整交接，把重心留给下一阶段。",
+      "effects": {
+        "network": 5,
+        "backup": 6,
+        "energy": 5
+      },
+      "flags": ["team.handoff"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 26,
+    "min": {
+      "craft": 50
+    }
+  },
+  "weight": 5,
+  "variants": [
+    {
+      "when": {
+        "flags": ["product.reliable"]
+      },
+      "text": "你已经积累了与本次任务有关的经历。"
+    }
+  ]
+}

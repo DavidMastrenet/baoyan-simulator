@@ -1,0 +1,38 @@
+{
+  "id": "rare.reported-wrong-author",
+  "title": "同名作者引发误认",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["有人把另一位同名作者的文章当成你的成果，要求学院调查。"],
+  "when": {
+    "from": 24,
+    "to": 41
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "提交作者单位和项目记录",
+      "text": "核对后确认同名误认，异议已澄清。",
+      "hint": "消耗精力，缓解压力",
+      "effects": {
+        "energy": -4,
+        "stress": -1
+      },
+      "flags": ["report.cleared"],
+      "days": 0
+    },
+    {
+      "label": "由导师协助说明",
+      "text": "导师补充了项目资料，说明你与该文无关。",
+      "hint": "消耗精力，增进合作",
+      "effects": {
+        "energy": -2,
+        "network": 1
+      },
+      "flags": ["report.cleared"],
+      "days": 0
+    }
+  ]
+}

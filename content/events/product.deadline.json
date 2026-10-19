@@ -1,0 +1,86 @@
+{
+  "id": "product.deadline",
+  "title": "处理新增需求",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["上线前使用方提出新功能，会影响已经检查过的流程。"],
+  "choices": [
+    {
+      "label": "冻结版本，把新需求排到下一轮",
+      "hint": "缓解压力，积累项目经验，练习表达",
+      "text": "你冻结版本，把新需求排到下一轮。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 5,
+        "expression": 3,
+        "stress": -3
+      },
+      "flags": ["product.reliable"],
+      "schedule": [
+        {
+          "id": "product.live",
+          "after": 2
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "增加功能，同时补测试与备用方案",
+      "hint": "项目能力影响成功率",
+      "text": "你增加功能，同时补测试与备用方案。",
+      "effects": {
+        "craft": 4,
+        "energy": -9,
+        "stress": 4
+      },
+      "check": {
+        "stat": "craft",
+        "difficulty": 48,
+        "success": {
+          "text": "本次任务完成。之后会有相关的后续事件。",
+          "effects": {
+            "practice": 3
+          },
+          "flags": ["product.reliable"],
+          "schedule": [
+            {
+              "id": "product.live",
+              "after": 2
+            }
+          ]
+        },
+        "failure": {
+          "text": "本次任务未完成。之后会有相关的后续事件。",
+          "effects": {
+            "craft": 3
+          },
+          "schedule": [
+            {
+              "id": "product.live",
+              "after": 3
+            }
+          ]
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "与使用方共同删减本次范围",
+      "hint": "练习表达，增进合作",
+      "text": "你与使用方共同删减本次范围。之后会有相关的后续事件。",
+      "effects": {
+        "expression": 5,
+        "network": 3
+      },
+      "flags": ["scope.control"],
+      "schedule": [
+        {
+          "id": "product.live",
+          "after": 2
+        }
+      ],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

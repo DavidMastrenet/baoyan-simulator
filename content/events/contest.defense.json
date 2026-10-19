@@ -1,0 +1,121 @@
+{
+  "id": "contest.defense",
+  "title": "回答比赛追问",
+  "category": "竞赛",
+  "scene": "竞赛事件",
+  "body": ["评委要求说明一项假设改变后，项目结果是否仍然成立。"],
+  "choices": [
+    {
+      "label": "说明假设与适用范围",
+      "hint": "研究方法影响成功率",
+      "text": "你说明假设与适用范围。",
+      "effects": {
+        "expression": 3,
+        "energy": -4
+      },
+      "check": {
+        "stat": "research",
+        "difficulty": 53,
+        "success": {
+          "text": "本次任务完成。新增成果：一项省级竞赛成果。之后会有相关的后续事件。",
+          "effects": {
+            "craft": 4
+          },
+          "schedule": [
+            {
+              "id": "contest.final-round",
+              "after": 3
+            }
+          ],
+          "award": {
+            "id": "contest-provincial",
+            "title": "一项省级竞赛成果",
+            "kind": "竞赛",
+            "level": 2,
+            "recognized": true
+          }
+        },
+        "failure": {
+          "text": "本次任务未完成。新增成果：一项校级竞赛成果。",
+          "effects": {
+            "research": 3
+          },
+          "award": {
+            "id": "contest-campus",
+            "title": "一项校级竞赛成果",
+            "kind": "竞赛",
+            "level": 1,
+            "recognized": false
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "用已有样例展示实际变化",
+      "hint": "项目能力影响成功率",
+      "text": "你用已有样例展示实际变化。",
+      "effects": {
+        "expression": 3,
+        "energy": -4
+      },
+      "check": {
+        "stat": "craft",
+        "difficulty": 58,
+        "success": {
+          "text": "本次任务完成。新增成果：一项省级竞赛成果。之后会有相关的后续事件。",
+          "effects": {
+            "practice": 3
+          },
+          "schedule": [
+            {
+              "id": "contest.final-round",
+              "after": 3
+            }
+          ],
+          "award": {
+            "id": "contest-provincial",
+            "title": "一项省级竞赛成果",
+            "kind": "竞赛",
+            "level": 2,
+            "recognized": true
+          }
+        },
+        "failure": {
+          "text": "本次任务未完成。新增成果：一项校级竞赛成果。",
+          "effects": {
+            "craft": 3
+          },
+          "award": {
+            "id": "contest-campus",
+            "title": "一项校级竞赛成果",
+            "kind": "竞赛",
+            "level": 1,
+            "recognized": false
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "如实说明尚未验证的部分",
+      "hint": "缓解压力，练习研究方法，补充准确材料",
+      "text": "你如实说明尚未验证的部分。新增成果：一项校级竞赛成果。材料真实性 +3。",
+      "effects": {
+        "research": 3,
+        "integrity": 3,
+        "stress": -3
+      },
+      "award": {
+        "id": "contest-campus",
+        "title": "一项校级竞赛成果",
+        "kind": "竞赛",
+        "level": 1,
+        "recognized": false
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

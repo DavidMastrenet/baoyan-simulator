@@ -1,0 +1,46 @@
+{
+  "id": "major.cs.0",
+  "title": "处理特殊输入",
+  "category": "学业",
+  "scene": "学业事件",
+  "body": ["程序通过了样例，但空输入和重复数据会触发错误。"],
+  "choices": [
+    {
+      "label": "补范围测试与预期行为",
+      "hint": "积累项目经验，加强课程基础",
+      "text": "你补范围测试与预期行为。",
+      "effects": {
+        "craft": 5,
+        "study": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "重新解释数据结构的约定",
+      "hint": "加强课程基础，练习表达",
+      "text": "你重新解释数据结构的约定。",
+      "effects": {
+        "study": 5,
+        "expression": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "缩小规模，逐步跟踪状态",
+      "hint": "积累项目经验，练习研究方法",
+      "text": "你缩小规模，逐步跟踪状态。",
+      "effects": {
+        "craft": 4,
+        "research": 2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 2,
+    "to": 35,
+    "majors": ["计算机类"]
+  },
+  "weight": 12
+}

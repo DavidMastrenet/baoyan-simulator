@@ -1,0 +1,65 @@
+{
+  "id": "project.borrowed-equipment",
+  "title": "展示设备变更",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["原定设备无法借用，备用设备的性能和环境不同。"],
+  "choices": [
+    {
+      "label": "立即适配备用设备",
+      "hint": "项目能力影响成功率",
+      "text": "你立即适配备用设备。",
+      "effects": {
+        "energy": -5
+      },
+      "check": {
+        "stat": "craft",
+        "difficulty": 45,
+        "success": {
+          "text": "本次任务完成。",
+          "effects": {
+            "craft": 5,
+            "stress": -3
+          }
+        },
+        "failure": {
+          "text": "本次任务未完成。",
+          "effects": {
+            "craft": 3,
+            "practice": 2
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "准备离线演示与实物说明",
+      "hint": "练习表达，积累项目经验，补齐申请材料",
+      "text": "你准备离线演示与实物说明。",
+      "effects": {
+        "expression": 4,
+        "craft": 3,
+        "materials": 3
+      },
+      "flags": ["interview.backup"],
+      "days": 2
+    },
+    {
+      "label": "重新协调预约，说明实际需求",
+      "hint": "缓解压力，增进合作，练习表达",
+      "text": "你重新协调预约，说明实际需求。",
+      "effects": {
+        "network": 5,
+        "expression": 2,
+        "stress": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 6,
+    "to": 39
+  },
+  "weight": 5
+}

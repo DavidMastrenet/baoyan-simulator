@@ -1,0 +1,47 @@
+{
+  "id": "extra.lost-file",
+  "title": "查找最新文件",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["常用目录找不到最新版本，旧文件还在，需要检查保存和同步记录。"],
+  "choices": [
+    {
+      "label": "从记录恢复，再建立独立备份",
+      "hint": "消耗精力，积累项目经验，补齐申请材料",
+      "text": "你从记录恢复，再建立独立备份。",
+      "effects": {
+        "craft": 4,
+        "materials": 4,
+        "energy": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "请合作方核对共同版本",
+      "hint": "增进合作，补齐申请材料",
+      "text": "你请合作方核对共同版本。",
+      "effects": {
+        "network": 4,
+        "materials": 4
+      },
+      "days": 0
+    },
+    {
+      "label": "重做必要部分，固定发布目录",
+      "hint": "消耗精力，积累项目经验，补齐申请材料",
+      "text": "你重做必要部分，固定发布目录。",
+      "effects": {
+        "craft": 4,
+        "energy": -5,
+        "materials": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

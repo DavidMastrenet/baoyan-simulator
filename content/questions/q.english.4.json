@@ -1,0 +1,23 @@
+{
+  "id": "q.english.4",
+  "kind": "英语",
+  "title": "Clarify first",
+  "text": "The interviewer asks a long question and one phrase is unclear.",
+  "options": [
+    {
+      "text": "Yes, of course. It is very important.",
+      "score": 0,
+      "response": "泛化回应没有回答问题，也没有修复理解上的空缺。"
+    },
+    {
+      "text": "Sorry, my English is not good.",
+      "score": 2,
+      "response": "可以坦诚，但给出具体澄清请求会让交流继续。"
+    },
+    {
+      "text": "Could you clarify what you mean by external validity in this case? I want to make sure I address the right issue.",
+      "score": 4,
+      "response": "确认含义后再回答，通常比猜测问题更有效。"
+    }
+  ]
+}

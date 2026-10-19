@@ -1,0 +1,46 @@
+{
+  "id": "grant.arrives",
+  "title": "补助申请通过",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["此前提交的补助申请已通过审核，可以决定如何安排这笔收入。"],
+  "choices": [
+    {
+      "label": "留作交通和申请结余",
+      "hint": "缓解压力，获得900元",
+      "text": "你留作交通和申请结余。余额 +900。",
+      "effects": {
+        "money": 900,
+        "stress": -4
+      },
+      "flags": ["support.received"],
+      "days": 0
+    },
+    {
+      "label": "补齐最影响学习的设备用品",
+      "hint": "获得350元，积累项目经验，加强课程基础",
+      "text": "你补齐最影响学习的设备用品。余额 +350。",
+      "effects": {
+        "money": 350,
+        "craft": 4,
+        "study": 3
+      },
+      "flags": ["support.received"],
+      "days": 2
+    },
+    {
+      "label": "先减轻一部分家庭支出",
+      "hint": "缓解压力，获得500元，增进合作",
+      "text": "你先减轻一部分家庭支出。余额 +500。",
+      "effects": {
+        "money": 500,
+        "stress": -7,
+        "network": 2
+      },
+      "flags": ["support.received", "family.talk"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "chain": true
+}

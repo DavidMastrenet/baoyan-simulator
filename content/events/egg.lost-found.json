@@ -1,0 +1,36 @@
+{
+  "id": "egg.lost-found",
+  "title": "找到丢失的文具",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["失物招领处出现了你丢失的笔，可以登记取回。"],
+  "choices": [
+    {
+      "label": "登记领回，继续用它写",
+      "hint": "缓解压力，恢复精力",
+      "text": "你登记领回，继续用它写。",
+      "effects": {
+        "energy": 4,
+        "stress": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "认真感谢登记失物的同学",
+      "hint": "缓解压力，增进合作",
+      "text": "你认真感谢登记失物的同学。",
+      "effects": {
+        "network": 3,
+        "stress": -4
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 14,
+    "to": 47
+  },
+  "weight": 1
+}

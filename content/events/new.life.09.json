@@ -1,0 +1,157 @@
+{
+  "id": "new.life.09",
+  "title": "家庭临时事务",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["家里需要你协助处理一项事务，会占用部分时间。"],
+  "when": {
+    "from": 0,
+    "to": 47
+  },
+  "weight": 11,
+  "once": true,
+  "choices": [
+    {
+      "label": "安排时间完成家事并调整计划",
+      "hint": "消耗精力，支出100元",
+      "text": "你安排时间完成家事并调整计划。",
+      "effects": {
+        "energy": -4,
+        "money": -100
+      },
+      "check": {
+        "stat": "energy",
+        "difficulty": 62,
+        "success": {
+          "text": "家事处理顺利，任务基本按期完成。",
+          "effects": {
+            "energy": 5,
+            "stress": -2
+          },
+          "flags": ["new.life.09.done", "new.life.experience"]
+        },
+        "failure": {
+          "text": "处理时间超出预计，学习计划受到影响。",
+          "effects": {
+            "energy": -4,
+            "stress": 4
+          },
+          "flags": ["new.life.09.setback"]
+        }
+      },
+      "outcomes": [
+        {
+          "weight": 2,
+          "text": "安排比预计顺利，多出了一些休息时间。",
+          "effects": {
+            "network": 2,
+            "energy": 3
+          }
+        },
+        {
+          "weight": 5,
+          "text": "所需时间与预计相近，没有额外调整。"
+        },
+        {
+          "weight": 2,
+          "text": "办理和等待占用了额外时间。",
+          "effects": {
+            "energy": -3,
+            "stress": 2
+          }
+        },
+        {
+          "weight": 1,
+          "when": {
+            "min": {
+              "network": 50
+            }
+          },
+          "text": "此前认识的同学协助处理了问题。",
+          "effects": {
+            "energy": 2,
+            "stress": -2
+          }
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "说明近期安排，分担部分工作",
+      "hint": "结果确定",
+      "text": "你说明近期安排，分担部分工作，完成了当前能确定的部分。",
+      "effects": {
+        "energy": 1
+      },
+      "days": 1
+    },
+    {
+      "label": "联系负责人员并安排协助",
+      "hint": "沟通结果有差异",
+      "text": "你联系负责人员并安排协助。",
+      "effects": {
+        "network": 2,
+        "energy": -2
+      },
+      "check": {
+        "stat": "expression",
+        "difficulty": 58,
+        "success": {
+          "text": "分工得到确认，任务进展改善。",
+          "effects": {
+            "energy": 3,
+            "stress": -2
+          },
+          "flags": ["new.life.experience"]
+        },
+        "failure": {
+          "text": "大家理解不同，需要重新确认要求。",
+          "effects": {
+            "stress": 3,
+            "energy": -2
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "暂缓处理，先完成已有安排",
+      "hint": "本次机会暂不继续",
+      "text": "你没有继续增加任务，保留了休息和现有工作时间。",
+      "effects": {
+        "energy": 5,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "使用之前同类任务的经验",
+      "when": {
+        "flags": ["new.life.experience"]
+      },
+      "hint": "需要同类经历",
+      "text": "你按之前整理的方法完成了主要步骤。",
+      "effects": {
+        "energy": -2,
+        "stress": -1
+      },
+      "days": 0
+    }
+  ],
+  "variants": [
+    {
+      "when": {
+        "max": {
+          "energy": 30
+        }
+      },
+      "text": "当前精力偏低，继续赶工会降低完成任务的机会。"
+    },
+    {
+      "when": {
+        "flags": ["new.life.experience"]
+      },
+      "text": "你已处理过同类任务，可以使用之前的方法。"
+    }
+  ]
+}

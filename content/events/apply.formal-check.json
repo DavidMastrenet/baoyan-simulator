@@ -1,0 +1,47 @@
+{
+  "id": "apply.formal-check",
+  "title": "检查学位信息",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["提交确认之前，需要检查研究方向、学制和学位类型是否符合预期。"],
+  "choices": [
+    {
+      "label": "核对方向、学制与学位类型",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你核对方向、学制与学位类型。",
+      "effects": {
+        "materials": 5,
+        "stress": -3
+      },
+      "flags": ["system.checked"],
+      "days": 0
+    },
+    {
+      "label": "把仍有疑问的一项问清再处理",
+      "hint": "练习表达，准备后续安排",
+      "text": "你把仍有疑问的一项问清再处理。",
+      "effects": {
+        "expression": 3,
+        "backup": 4
+      },
+      "flags": ["degree.checked"],
+      "days": 1
+    },
+    {
+      "label": "请信任的人只核对信息一致性",
+      "hint": "增进合作，补齐申请材料",
+      "text": "你请信任的人只核对信息一致性。",
+      "effects": {
+        "network": 3,
+        "materials": 4
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 44,
+    "to": 47
+  },
+  "weight": 5
+}

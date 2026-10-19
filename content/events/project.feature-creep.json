@@ -1,0 +1,48 @@
+{
+  "id": "project.feature-creep",
+  "title": "新增需求过多",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["累计新增功能已经超过原定工作量，但交付日期没有延后。"],
+  "choices": [
+    {
+      "label": "列出影响范围，重新排优先级",
+      "hint": "缓解压力，积累项目经验，练习表达",
+      "text": "你列出影响范围，重新排优先级。",
+      "effects": {
+        "craft": 4,
+        "expression": 4,
+        "stress": -3
+      },
+      "flags": ["scope.control"],
+      "days": 2
+    },
+    {
+      "label": "只接与核心流程直接相关的部分",
+      "hint": "消耗精力，积累项目经验",
+      "text": "你只接与核心流程直接相关的部分。",
+      "effects": {
+        "craft": 5,
+        "energy": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "先全部接下，再靠赶工完成",
+      "hint": "消耗精力，积累项目经验，增加压力",
+      "text": "你先全部接下，再靠赶工完成。",
+      "effects": {
+        "craft": 7,
+        "energy": -12,
+        "stress": 7
+      },
+      "flags": ["team.overload"],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5
+  },
+  "weight": 5
+}

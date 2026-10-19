@@ -1,0 +1,49 @@
+{
+  "id": "contest.teammate-leaves",
+  "title": "队友退出比赛",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["一位队友因课程和家庭安排退出，需要分配剩余工作并完成交接。"],
+  "choices": [
+    {
+      "label": "确认贡献，缩小剩余范围",
+      "hint": "缓解压力，增进合作，积累项目经验",
+      "text": "你确认贡献，缩小剩余范围。",
+      "effects": {
+        "network": 4,
+        "craft": 3,
+        "stress": -3
+      },
+      "flags": ["team.handoff"],
+      "days": 1
+    },
+    {
+      "label": "找新搭档，先留出磨合时间",
+      "hint": "消耗精力，增进合作，练习表达",
+      "text": "你找新搭档，先留出磨合时间。",
+      "effects": {
+        "network": 6,
+        "expression": 2,
+        "energy": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "独立完成最关键的部分",
+      "hint": "消耗精力，积累项目经验，增加压力",
+      "text": "你独立完成最关键的部分。",
+      "effects": {
+        "craft": 6,
+        "energy": -8,
+        "stress": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 7,
+    "to": 34
+  },
+  "weight": 5
+}

@@ -1,0 +1,55 @@
+{
+  "id": "life.burnout",
+  "title": "工作效率下降",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["连续工作后注意力下降，简单修改也没有按时完成。"],
+  "choices": [
+    {
+      "label": "停下来，调整几项安排",
+      "hint": "缓解压力，恢复精力",
+      "text": "你停下来，调整几项安排。之后会有相关的后续事件。",
+      "effects": {
+        "energy": 18,
+        "stress": -14
+      },
+      "schedule": [
+        {
+          "id": "burnout.follow-up",
+          "after": 2
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "请求搭档分担一个明确任务",
+      "hint": "缓解压力，增进合作，恢复精力",
+      "text": "你请求搭档分担一个明确任务。",
+      "effects": {
+        "network": 4,
+        "energy": 12,
+        "stress": -9
+      },
+      "flags": ["team.handoff"],
+      "days": 2
+    },
+    {
+      "label": "只完成最必要的一步，然后休息",
+      "hint": "缓解压力，加强课程基础，恢复精力",
+      "text": "你只完成最必要的一步，然后休息。",
+      "effects": {
+        "study": 2,
+        "energy": 14,
+        "stress": -10
+      },
+      "days": 2
+    }
+  ],
+  "once": false,
+  "when": {
+    "min": {
+      "stress": 78
+    }
+  },
+  "weight": 80
+}

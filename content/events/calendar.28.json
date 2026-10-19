@@ -1,0 +1,48 @@
+{
+  "id": "calendar.28",
+  "title": "大三期末准备",
+  "category": "学业",
+  "scene": "教务通知",
+  "body": ["本轮期末考试结束后将进入申请季，核心课程仍有内容需要复习。"],
+  "choices": [
+    {
+      "label": "按专业框架梳理核心概念",
+      "hint": "消耗精力，加强课程基础",
+      "text": "你按专业框架梳理核心概念。",
+      "effects": {
+        "study": 7,
+        "energy": -6
+      },
+      "flags": ["foundation.rebuilt"],
+      "days": 2
+    },
+    {
+      "label": "用真题检验理解，再回补",
+      "hint": "缓解压力，加强课程基础，练习表达",
+      "text": "你用真题检验理解，再回补。",
+      "effects": {
+        "study": 5,
+        "expression": 1,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "守住作息，完成最低必要任务",
+      "hint": "缓解压力，加强课程基础，恢复精力",
+      "text": "你守住作息，完成最低必要任务。",
+      "effects": {
+        "study": 2,
+        "energy": 12,
+        "stress": -8
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 28,
+  "when": {
+    "from": 28,
+    "to": 28
+  }
+}

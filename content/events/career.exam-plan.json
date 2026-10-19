@@ -1,0 +1,49 @@
+{
+  "id": "career.exam-plan",
+  "title": "安排考研复习",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["你考虑参加统考，需要单独安排专业课和公共课复习。"],
+  "choices": [
+    {
+      "label": "从专业基础与薄弱环节开始",
+      "hint": "准备后续安排，加强课程基础",
+      "text": "你从专业基础与薄弱环节开始。后续准备方向：考研。",
+      "effects": {
+        "backup": 10,
+        "study": 4
+      },
+      "path": "exam",
+      "days": 1
+    },
+    {
+      "label": "保留申请，同时固定备选时间",
+      "hint": "准备后续安排，加强课程基础，补齐申请材料",
+      "text": "你保留申请，同时固定备选时间。",
+      "effects": {
+        "backup": 8,
+        "study": 2,
+        "materials": 3
+      },
+      "flags": ["paths.open"],
+      "days": 1
+    },
+    {
+      "label": "先核对自己真正想继续学什么",
+      "hint": "缓解压力，练习研究方法，准备后续安排",
+      "text": "你先核对自己真正想继续学什么。",
+      "effects": {
+        "research": 3,
+        "backup": 5,
+        "stress": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 26,
+    "to": 46
+  },
+  "weight": 5
+}

@@ -1,0 +1,54 @@
+{
+  "id": "calendar.40",
+  "title": "支教团专项",
+  "category": "实践",
+  "scene": "实践安排",
+  "body": ["学校介绍支教团申请。入选者需要先完成一年的支教工作，再开始读研。"],
+  "choices": [
+    {
+      "label": "认真准备支教团专项遴选",
+      "hint": "增加实践经验，准备后续安排，补齐申请材料",
+      "text": "你认真准备支教团专项遴选。",
+      "effects": {
+        "practice": 5,
+        "backup": 4,
+        "materials": 5
+      },
+      "flags": ["service.committed"],
+      "when": {
+        "min": {
+          "practice": 45
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "把实践经历用于普通项目申请",
+      "hint": "练习表达，补齐申请材料",
+      "text": "你把实践经历用于普通项目申请。",
+      "effects": {
+        "expression": 4,
+        "materials": 8
+      },
+      "flags": ["practice.explained"],
+      "days": 1
+    },
+    {
+      "label": "继续按原定方向准备",
+      "hint": "缓解压力，练习研究方法，恢复精力",
+      "text": "你继续按原定方向准备。",
+      "effects": {
+        "research": 3,
+        "energy": 4,
+        "stress": -3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 40,
+  "when": {
+    "from": 40,
+    "to": 40
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "major.human.1",
+  "title": "调整访谈提纲",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["受访者反复提到提纲外的经历，需要决定是否继续追问。"],
+  "choices": [
+    {
+      "label": "追问具体经历，保留必要记录",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你追问具体经历，保留必要记录。",
+      "effects": {
+        "practice": 5,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "说明研究目的，重新确认参与意愿",
+      "hint": "增加实践经验，补充准确材料",
+      "text": "你说明研究目的，重新确认参与意愿。材料真实性 +3。",
+      "effects": {
+        "practice": 4,
+        "integrity": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "访谈后写反思，调整下一次提纲",
+      "hint": "练习研究方法，练习表达",
+      "text": "你访谈后写反思，调整下一次提纲。",
+      "effects": {
+        "research": 5,
+        "expression": 3
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5,
+    "to": 35,
+    "majors": ["人文社科类"]
+  },
+  "weight": 12
+}

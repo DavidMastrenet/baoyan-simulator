@@ -1,0 +1,36 @@
+{
+  "id": "rare.award-duplicate",
+  "title": "同一成果不能重复计分",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["同一个项目获得了两项相关奖励，学院规定同源成果取较高的一项计分。"],
+  "when": {
+    "from": 24,
+    "to": 41
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "按规定只申报一次",
+      "text": "你保留了较高一项，整理了两份证书的对应关系。",
+      "hint": "消耗精力，补齐申请材料",
+      "effects": {
+        "materials": 3,
+        "energy": -2
+      },
+      "days": 0
+    },
+    {
+      "label": "申请确认两个奖项是否独立",
+      "text": "学院核对项目内容后按规定处理。",
+      "hint": "消耗精力，补齐申请材料",
+      "effects": {
+        "materials": 2,
+        "energy": -3
+      },
+      "days": 0
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "research.data-permission",
+  "title": "确认数据授权",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["拿到的数据限制使用范围和公开传播，原定展示需要调整。"],
+  "choices": [
+    {
+      "label": "确认授权范围，调整展示方式",
+      "hint": "练习研究方法，补充准确材料，补齐申请材料",
+      "text": "你确认授权范围，调整展示方式。材料真实性 +3。",
+      "effects": {
+        "research": 4,
+        "integrity": 3,
+        "materials": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "换用可公开检查的数据",
+      "hint": "消耗精力，练习研究方法，积累项目经验",
+      "text": "你换用可公开检查的数据。",
+      "effects": {
+        "research": 4,
+        "craft": 3,
+        "energy": -5
+      },
+      "days": 2
+    },
+    {
+      "label": "先缩小问题，等待正式确认",
+      "hint": "缓解压力，加强课程基础，练习研究方法",
+      "text": "你先缩小问题，等待正式确认。",
+      "effects": {
+        "study": 3,
+        "research": 3,
+        "stress": -2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 9,
+    "min": {
+      "research": 25
+    }
+  },
+  "weight": 5
+}

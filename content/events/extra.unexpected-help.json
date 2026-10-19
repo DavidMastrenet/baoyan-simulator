@@ -1,0 +1,45 @@
+{
+  "id": "extra.unexpected-help",
+  "title": "收到课程资料",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["同学发来课程说明，并标出了最近更新的内容。"],
+  "choices": [
+    {
+      "label": "认真道谢，补充核对结果",
+      "hint": "增进合作，补齐申请材料",
+      "text": "你认真道谢，补充核对结果。",
+      "effects": {
+        "network": 5,
+        "materials": 3
+      },
+      "days": 0
+    },
+    {
+      "label": "把整理好的公共部分分享给同学",
+      "hint": "增进合作，练习表达",
+      "text": "你把整理好的公共部分分享给同学。",
+      "effects": {
+        "network": 4,
+        "expression": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "记下这份好意，以后再回应",
+      "hint": "缓解压力，增进合作",
+      "text": "你记下这份好意，以后再回应。",
+      "effects": {
+        "network": 3,
+        "stress": -3
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

@@ -1,0 +1,46 @@
+{
+  "id": "calendar.13",
+  "title": "专业课难度提高",
+  "category": "学业",
+  "scene": "教务通知",
+  "body": ["新课程增加了推导和综合题，原有的解题方法无法直接套用。"],
+  "choices": [
+    {
+      "label": "回头补先修概念",
+      "hint": "消耗精力，加强课程基础",
+      "text": "你回头补先修概念。",
+      "effects": {
+        "study": 6,
+        "energy": -5
+      },
+      "days": 1
+    },
+    {
+      "label": "组织一次小范围讲题",
+      "hint": "加强课程基础，练习表达，增进合作",
+      "text": "你组织一次小范围讲题。",
+      "effects": {
+        "study": 4,
+        "expression": 4,
+        "network": 1
+      },
+      "days": 2
+    },
+    {
+      "label": "先掌握核心题型，再回补",
+      "hint": "缓解压力，加强课程基础",
+      "text": "你先掌握核心题型，再回补。",
+      "effects": {
+        "study": 3,
+        "stress": -5
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 13,
+  "when": {
+    "from": 13,
+    "to": 13
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "contest.midnight",
+  "title": "确定比赛方案",
+  "category": "竞赛",
+  "scene": "竞赛事件",
+  "body": ["新方案结果不稳定，旧方案表现一般，队友正在等待最终版本。"],
+  "choices": [
+    {
+      "label": "固定主方案，只留一人做补充验证",
+      "hint": "消耗精力，积累项目经验，增进合作",
+      "text": "你固定主方案，只留一人做补充验证。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 4,
+        "network": 4,
+        "energy": -5
+      },
+      "flags": ["contest.complete"],
+      "schedule": [
+        {
+          "id": "contest.defense",
+          "after": 2
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "再尝试一次，但写清退出条件",
+      "hint": "项目能力影响成功率",
+      "text": "你再尝试一次，但写清退出条件。",
+      "effects": {
+        "energy": -8,
+        "stress": 4
+      },
+      "check": {
+        "stat": "craft",
+        "difficulty": 50,
+        "success": {
+          "text": "本次任务完成。之后会有相关的后续事件。",
+          "effects": {
+            "craft": 5
+          },
+          "flags": ["contest.improved"],
+          "schedule": [
+            {
+              "id": "contest.defense",
+              "after": 2
+            }
+          ]
+        },
+        "failure": {
+          "text": "本次任务未完成。之后会有相关的后续事件。",
+          "effects": {
+            "research": 3
+          },
+          "schedule": [
+            {
+              "id": "contest.defense",
+              "after": 2
+            }
+          ]
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "删掉记录不充分的亮点",
+      "hint": "练习研究方法，练习表达",
+      "text": "你删掉记录不充分的亮点。之后会有相关的后续事件。",
+      "effects": {
+        "research": 4,
+        "expression": 3
+      },
+      "flags": ["contest.complete"],
+      "schedule": [
+        {
+          "id": "contest.defense",
+          "after": 2
+        }
+      ],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "chain": true
+}

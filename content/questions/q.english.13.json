@@ -1,0 +1,23 @@
+{
+  "id": "q.english.13",
+  "kind": "英语",
+  "title": "Describe collaboration",
+  "text": "How do you handle disagreement in a team?",
+  "options": [
+    {
+      "text": "I avoid all discussion and continue alone.",
+      "score": 0,
+      "response": "这一说法忽略了关键条件，需要重新分析。"
+    },
+    {
+      "text": "I ask the leader to choose without checking the proposals.",
+      "score": 2,
+      "response": "提到了部分处理方式，但解释还不完整。"
+    },
+    {
+      "text": "I clarify the assumptions, compare the proposals and agree on a specific test.",
+      "score": 4,
+      "response": "回答说明了关键条件和处理方法。"
+    }
+  ]
+}

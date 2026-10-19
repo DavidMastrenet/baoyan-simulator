@@ -1,0 +1,23 @@
+{
+  "id": "q.english.5",
+  "kind": "英语",
+  "title": "The next step",
+  "text": "What would you do next if you had another month for this project?",
+  "options": [
+    {
+      "text": "I would collect more data.",
+      "score": 2,
+      "response": "方向可能合理，但需要说明为什么以及收集什么。"
+    },
+    {
+      "text": "I would test the weakest assumption first, using a small independent sample, before adding more features.",
+      "score": 4,
+      "response": "下一步与现有记录的薄弱环节相连，安排有优先级。"
+    },
+    {
+      "text": "I would make every part much better.",
+      "score": 0,
+      "response": "目标过于笼统，无法判断一个月内怎样推进。"
+    }
+  ]
+}

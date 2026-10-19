@@ -1,0 +1,53 @@
+{
+  "id": "rare.course-easy",
+  "title": "按给分评价选课",
+  "category": "学业",
+  "scene": "低概率事件",
+  "body": [
+    "同学推荐了一门俗称水课的通识选修，称认真完成作业比较容易拿高分。是否计入推荐均分，要看本校规则。"
+  ],
+  "when": {
+    "from": 1,
+    "to": 30
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "先确认规则，再认真修读",
+      "text": "你确认了课程要求并完成了作业，取得94分。学分按本校规则结算。",
+      "hint": "消耗精力",
+      "effects": {
+        "energy": -4
+      },
+      "course": {
+        "title": "通识选修课",
+        "score": 94,
+        "credits": 2,
+        "counted": "policy"
+      },
+      "flags": ["course.elective-plan"],
+      "days": 0
+    },
+    {
+      "label": "选择更符合兴趣的课程",
+      "text": "你选择了专业相关选修，完成了正常学习要求。",
+      "hint": "消耗精力，加强课程基础",
+      "effects": {
+        "study": 3,
+        "energy": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "本学期不增加选修",
+      "text": "你保留了现有课程安排。",
+      "hint": "恢复精力",
+      "effects": {
+        "energy": 3
+      },
+      "days": 1
+    }
+  ]
+}

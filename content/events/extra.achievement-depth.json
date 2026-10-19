@@ -1,0 +1,46 @@
+{
+  "id": "extra.achievement-depth",
+  "title": "筛选代表成果",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["简历罗列了很多证书，但还没有突出一项能够详细解释的工作。"],
+  "choices": [
+    {
+      "label": "选一项工作，补齐过程与记录",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你选一项工作，补齐过程与记录。",
+      "effects": {
+        "materials": 8,
+        "expression": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "把同一重点上的成果放在一起",
+      "hint": "补齐申请材料，练习研究方法",
+      "text": "你把同一重点上的成果放在一起。",
+      "effects": {
+        "materials": 6,
+        "research": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "删去不能清楚说明贡献的部分",
+      "hint": "缓解压力，补齐申请材料，补充准确材料",
+      "text": "你删去不能清楚说明贡献的部分。材料真实性 +2。",
+      "effects": {
+        "materials": 5,
+        "integrity": 2,
+        "stress": -2
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 18,
+    "to": 41
+  },
+  "weight": 5
+}

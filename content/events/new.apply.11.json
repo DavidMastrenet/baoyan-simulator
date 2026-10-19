@@ -1,0 +1,159 @@
+{
+  "id": "new.apply.11",
+  "title": "候补通知时间较短",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["候补项目要求尽快回复，但你还在等待另一份结果。"],
+  "when": {
+    "from": 24,
+    "to": 46
+  },
+  "weight": 13,
+  "once": true,
+  "choices": [
+    {
+      "label": "比较已有信息后按时回复",
+      "hint": "消耗精力，支出180元",
+      "text": "你比较已有信息后按时回复。",
+      "effects": {
+        "energy": -4,
+        "money": -180
+      },
+      "check": {
+        "stat": "materials",
+        "difficulty": 44,
+        "success": {
+          "text": "你在期限内完成了明确选择。",
+          "effects": {
+            "materials": 5,
+            "stress": -2
+          },
+          "flags": ["new.apply.11.done", "new.apply.experience"]
+        },
+        "failure": {
+          "text": "可用信息仍不充分，需要承担选择风险。",
+          "effects": {
+            "energy": -4,
+            "stress": 4
+          },
+          "flags": ["new.apply.11.setback"]
+        }
+      },
+      "outcomes": [
+        {
+          "weight": 2,
+          "text": "项目方及时回复了具体问题，后续准备更明确。",
+          "effects": {
+            "network": 2,
+            "energy": 3
+          }
+        },
+        {
+          "weight": 5,
+          "text": "所需时间与预计相近，没有额外调整。"
+        },
+        {
+          "weight": 2,
+          "text": "材料要求中还有一项附件需要补齐。",
+          "effects": {
+            "energy": -3,
+            "stress": 2
+          }
+        },
+        {
+          "weight": 1,
+          "when": {
+            "min": {
+              "network": 50
+            }
+          },
+          "text": "此前认识的同学协助处理了问题。",
+          "effects": {
+            "materials": 2,
+            "stress": -2
+          }
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "先向项目方确认最终期限",
+      "hint": "结果确定",
+      "text": "你先向项目方确认最终期限，完成了当前能确定的部分。",
+      "effects": {
+        "materials": 2,
+        "energy": -1
+      },
+      "days": 0
+    },
+    {
+      "label": "向项目联系人确认要求",
+      "hint": "沟通结果有差异",
+      "text": "你向项目联系人确认要求。",
+      "effects": {
+        "network": 2,
+        "energy": -2
+      },
+      "check": {
+        "stat": "expression",
+        "difficulty": 40,
+        "success": {
+          "text": "分工得到确认，任务进展改善。",
+          "effects": {
+            "materials": 3,
+            "stress": -2
+          },
+          "flags": ["new.apply.experience"]
+        },
+        "failure": {
+          "text": "大家理解不同，需要重新确认要求。",
+          "effects": {
+            "stress": 3,
+            "energy": -2
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "暂缓处理，先完成已有安排",
+      "hint": "本次机会暂不继续",
+      "text": "你没有继续增加任务，保留了休息和现有工作时间。",
+      "effects": {
+        "energy": 5,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "使用之前同类任务的经验",
+      "when": {
+        "flags": ["new.apply.experience"]
+      },
+      "hint": "需要同类经历",
+      "text": "你按之前整理的方法完成了主要步骤。",
+      "effects": {
+        "materials": 3,
+        "energy": -2,
+        "stress": -1
+      },
+      "days": 0
+    }
+  ],
+  "variants": [
+    {
+      "when": {
+        "max": {
+          "energy": 30
+        }
+      },
+      "text": "当前精力偏低，继续赶工会降低完成任务的机会。"
+    },
+    {
+      "when": {
+        "flags": ["new.apply.experience"]
+      },
+      "text": "你已处理过同类任务，可以使用之前的方法。"
+    }
+  ]
+}

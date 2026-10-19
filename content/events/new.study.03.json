@@ -1,0 +1,170 @@
+{
+  "id": "new.study.03",
+  "title": "先修课程不足",
+  "category": "学业",
+  "scene": "学业事件",
+  "body": ["新课程大量使用你尚未掌握的前置知识。"],
+  "when": {
+    "from": 1,
+    "to": 31
+  },
+  "weight": 13,
+  "once": true,
+  "choices": [
+    {
+      "label": "集中补习先修内容",
+      "hint": "按专业基础判断结果，还可能出现额外情况",
+      "text": "你集中补习先修内容。",
+      "effects": {
+        "energy": -4
+      },
+      "check": {
+        "stat": "study",
+        "difficulty": 56,
+        "success": {
+          "text": "你理解了关键概念，后续学习更顺利。",
+          "effects": {
+            "study": 5,
+            "stress": -2
+          },
+          "flags": ["new.study.03.done", "new.study.experience"],
+          "schedule": [
+            {
+              "id": "new.study.03.follow",
+              "after": 3
+            }
+          ]
+        },
+        "failure": {
+          "text": "补习内容过多，本周任务受到影响。",
+          "effects": {
+            "energy": -4,
+            "stress": 4
+          },
+          "flags": ["new.study.03.setback"],
+          "schedule": [
+            {
+              "id": "new.study.03.follow",
+              "after": 2
+            }
+          ]
+        }
+      },
+      "outcomes": [
+        {
+          "weight": 2,
+          "text": "助教补充了相关例题，减少了查找资料的时间。",
+          "effects": {
+            "network": 2,
+            "energy": 3
+          }
+        },
+        {
+          "weight": 5,
+          "text": "所需时间与预计相近，没有额外调整。"
+        },
+        {
+          "weight": 2,
+          "text": "答疑人数较多，需要再等一段时间。",
+          "effects": {
+            "energy": -3,
+            "stress": 2
+          }
+        },
+        {
+          "weight": 1,
+          "when": {
+            "min": {
+              "network": 50
+            }
+          },
+          "text": "此前认识的同学协助处理了问题。",
+          "effects": {
+            "study": 2,
+            "stress": -2
+          }
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "先完成本周核心作业",
+      "hint": "结果确定",
+      "text": "你先完成本周核心作业，完成了当前能确定的部分。",
+      "effects": {
+        "study": 2,
+        "energy": -1
+      },
+      "days": 1
+    },
+    {
+      "label": "带着具体问题参加答疑",
+      "hint": "沟通结果有差异",
+      "text": "你带着具体问题参加答疑。",
+      "effects": {
+        "network": 2,
+        "energy": -2
+      },
+      "check": {
+        "stat": "expression",
+        "difficulty": 52,
+        "success": {
+          "text": "分工得到确认，任务进展改善。",
+          "effects": {
+            "study": 3,
+            "stress": -2
+          },
+          "flags": ["new.study.experience"]
+        },
+        "failure": {
+          "text": "大家理解不同，需要重新确认要求。",
+          "effects": {
+            "stress": 3,
+            "energy": -2
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "暂缓处理，先完成已有安排",
+      "hint": "本次机会暂不继续",
+      "text": "你没有继续增加任务，保留了休息和现有工作时间。",
+      "effects": {
+        "energy": 5,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "使用之前同类任务的经验",
+      "when": {
+        "flags": ["new.study.experience"]
+      },
+      "hint": "需要同类经历",
+      "text": "你按之前整理的方法完成了主要步骤。",
+      "effects": {
+        "study": 3,
+        "energy": -2,
+        "stress": -1
+      },
+      "days": 1
+    }
+  ],
+  "variants": [
+    {
+      "when": {
+        "max": {
+          "energy": 30
+        }
+      },
+      "text": "当前精力偏低，继续赶工会降低完成任务的机会。"
+    },
+    {
+      "when": {
+        "flags": ["new.study.experience"]
+      },
+      "text": "你已处理过同类任务，可以使用之前的方法。"
+    }
+  ]
+}

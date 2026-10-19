@@ -1,0 +1,96 @@
+{
+  "id": "contest.final-round",
+  "title": "准备比赛决赛",
+  "category": "竞赛",
+  "scene": "竞赛事件",
+  "body": ["决赛要求线下展示，需要交通预算、设备和课程协调。"],
+  "choices": [
+    {
+      "label": "完整演练后参加决赛",
+      "hint": "支出500元，消耗精力，积累项目经验",
+      "text": "你完整演练后参加决赛。余额 -500。",
+      "effects": {
+        "money": -500,
+        "energy": -9,
+        "craft": 3
+      },
+      "when": {
+        "min": {
+          "money": 500
+        }
+      },
+      "check": {
+        "stat": "craft",
+        "difficulty": 68,
+        "success": {
+          "text": "本次任务完成。新增成果：一项国家级竞赛成果。",
+          "effects": {
+            "expression": 4
+          },
+          "award": {
+            "id": "contest-national",
+            "title": "一项国家级竞赛成果",
+            "kind": "竞赛",
+            "level": 3,
+            "recognized": true
+          }
+        },
+        "failure": {
+          "text": "本次任务未完成。",
+          "effects": {
+            "practice": 4,
+            "expression": 3
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "申请支持，分工准备展示材料",
+      "hint": "协作关系影响成功率",
+      "text": "你申请支持，分工准备展示材料。",
+      "effects": {
+        "network": 4,
+        "energy": -6
+      },
+      "check": {
+        "stat": "network",
+        "difficulty": 61,
+        "success": {
+          "text": "本次任务完成。新增成果：一项国家级竞赛成果。",
+          "effects": {
+            "practice": 3
+          },
+          "award": {
+            "id": "contest-national",
+            "title": "一项国家级竞赛成果",
+            "kind": "竞赛",
+            "level": 3,
+            "recognized": true
+          }
+        },
+        "failure": {
+          "text": "本次任务未完成。",
+          "effects": {
+            "expression": 4
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "保留阶段成果，完成课程与交接",
+      "hint": "缓解压力，加强课程基础，恢复精力",
+      "text": "你保留阶段成果，完成课程与交接。",
+      "effects": {
+        "study": 4,
+        "energy": 7,
+        "stress": -4
+      },
+      "flags": ["team.handoff"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

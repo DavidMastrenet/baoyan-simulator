@@ -1,0 +1,65 @@
+{
+  "id": "relation.noise",
+  "title": "宿舍夜间噪音",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["室友熄灯后仍在打电话，已经影响你的睡眠。"],
+  "choices": [
+    {
+      "label": "第二天直接商量作息范围",
+      "hint": "缓解压力，练习表达，增进合作",
+      "text": "你第二天直接商量作息范围。之后会有相关的后续事件。",
+      "effects": {
+        "expression": 3,
+        "network": 3,
+        "stress": -4
+      },
+      "schedule": [
+        {
+          "id": "roommate.boundary",
+          "after": 2
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "先调整自己今晚的休息位置",
+      "hint": "缓解压力，恢复精力",
+      "text": "你先调整自己今晚的休息位置。",
+      "effects": {
+        "energy": 8,
+        "stress": -3
+      },
+      "days": 2
+    },
+    {
+      "label": "请大家一起确认公共空间规则",
+      "hint": "增进合作，恢复精力",
+      "text": "你请大家一起确认公共空间规则。之后会有相关的后续事件。",
+      "effects": {
+        "network": 4,
+        "energy": 4
+      },
+      "schedule": [
+        {
+          "id": "roommate.boundary",
+          "after": 2
+        }
+      ],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "to": 30
+  },
+  "weight": 5,
+  "variants": [
+    {
+      "when": {
+        "flags": ["roommate.close"]
+      },
+      "text": "你已经积累了与本次任务有关的经历。"
+    }
+  ]
+}

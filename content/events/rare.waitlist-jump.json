@@ -1,0 +1,37 @@
+{
+  "id": "rare.waitlist-jump",
+  "title": "候补名单连续前移",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["前方几位申请者确认了其他项目，当前候补次序可以更新。"],
+  "when": {
+    "from": 36,
+    "to": 46,
+    "applicationStatus": ["waitlist"]
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "确认联系信息并继续跟进",
+      "text": "项目更新了候补次序，你继续按通知等待。",
+      "hint": "缓解压力",
+      "effects": {
+        "stress": -3
+      },
+      "waitlistShift": 3,
+      "days": 0
+    },
+    {
+      "label": "更新候补记录，同时保留其他申请",
+      "text": "候补向前移动，你继续准备其他可选项目。",
+      "hint": "准备后续安排",
+      "effects": {
+        "backup": 2
+      },
+      "waitlistShift": 2,
+      "days": 0
+    }
+  ]
+}

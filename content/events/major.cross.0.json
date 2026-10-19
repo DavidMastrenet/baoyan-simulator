@@ -1,0 +1,46 @@
+{
+  "id": "major.cross.0",
+  "title": "统一术语含义",
+  "category": "学业",
+  "scene": "学业事件",
+  "body": ["合作双方对同一术语的定义不同，已经影响研究设计。"],
+  "choices": [
+    {
+      "label": "先统一对象、定义与测量",
+      "hint": "练习研究方法，练习表达",
+      "text": "你先统一对象、定义与测量。",
+      "effects": {
+        "research": 6,
+        "expression": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "用一个具体案例核对彼此理解",
+      "hint": "增加实践经验，增进合作",
+      "text": "你用一个具体案例核对彼此理解。",
+      "effects": {
+        "practice": 4,
+        "network": 4
+      },
+      "days": 1
+    },
+    {
+      "label": "把不同定义并列写进记录",
+      "hint": "补齐申请材料，练习研究方法",
+      "text": "你把不同定义并列写进记录。",
+      "effects": {
+        "materials": 4,
+        "research": 4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 2,
+    "to": 35,
+    "majors": ["交叉学科"]
+  },
+  "weight": 12
+}

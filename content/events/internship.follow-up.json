@@ -1,0 +1,46 @@
+{
+  "id": "internship.follow-up",
+  "title": "实习单位回访",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["实习单位要求你解释之前的工作，并询问后续岗位意向。"],
+  "choices": [
+    {
+      "label": "问清实际职责和成长空间",
+      "hint": "准备后续安排，增加实践经验",
+      "text": "你问清实际职责和成长空间。",
+      "effects": {
+        "backup": 12,
+        "practice": 3
+      },
+      "flags": ["job.lead"],
+      "days": 1
+    },
+    {
+      "label": "完成一次技术交接，继续保持联系",
+      "hint": "积累项目经验，增进合作，准备后续安排",
+      "text": "你完成一次技术交接，继续保持联系。",
+      "effects": {
+        "craft": 5,
+        "network": 3,
+        "backup": 6
+      },
+      "flags": ["job.lead", "team.handoff"],
+      "days": 1
+    },
+    {
+      "label": "说明目前想继续深造的方向",
+      "hint": "练习表达，练习研究方法，增进合作",
+      "text": "你说明目前想继续深造的方向。",
+      "effects": {
+        "expression": 4,
+        "research": 3,
+        "network": 2
+      },
+      "flags": ["direction.clear"],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "chain": true
+}

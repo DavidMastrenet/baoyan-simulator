@@ -1,0 +1,37 @@
+{
+  "id": "rare.retake-original",
+  "title": "重修没有覆盖原始成绩",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["你查到本校推荐排名使用首次成绩，后续重修可以完成课程要求，却不能直接覆盖原分。"],
+  "when": {
+    "from": 12,
+    "to": 31
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "按首次成绩安排其他补强",
+      "text": "你确认了规则，继续提高后续课程表现。",
+      "hint": "消耗精力，加强课程基础，准备后续安排",
+      "effects": {
+        "study": 3,
+        "backup": 2,
+        "energy": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "先完成毕业要求再规划申请",
+      "text": "你把课程完成与排名计算分开处理。",
+      "hint": "缓解压力，补齐申请材料",
+      "effects": {
+        "materials": 2,
+        "stress": -2
+      },
+      "days": 0
+    }
+  ]
+}

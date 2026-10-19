@@ -1,0 +1,48 @@
+{
+  "id": "apply.no-offer",
+  "title": "调整申请计划",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["当前还没有确定通过的项目，需要补充准备或增加其他选择。"],
+  "choices": [
+    {
+      "label": "总结筛选条件，调整申请组合",
+      "hint": "准备后续安排，补齐申请材料",
+      "text": "你总结筛选条件，调整申请组合。",
+      "effects": {
+        "backup": 8,
+        "materials": 6
+      },
+      "flags": ["application.balanced"],
+      "days": 0
+    },
+    {
+      "label": "集中补两项高频追问",
+      "hint": "加强课程基础，练习表达，练习研究方法",
+      "text": "你集中补两项高频追问。",
+      "effects": {
+        "study": 4,
+        "expression": 4,
+        "research": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "给备选路线一个完整时段",
+      "hint": "缓解压力，准备后续安排",
+      "text": "你给备选路线一个完整时段。",
+      "effects": {
+        "backup": 12,
+        "stress": -5
+      },
+      "flags": ["paths.open"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 38,
+    "to": 46
+  },
+  "weight": 5
+}

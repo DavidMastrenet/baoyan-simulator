@@ -1,0 +1,46 @@
+{
+  "id": "major.edu.0",
+  "title": "检查学生理解",
+  "category": "学业",
+  "scene": "学业事件",
+  "body": ["学生能完成原题，换一种情境后却频繁出错。"],
+  "choices": [
+    {
+      "label": "设计迁移任务，检查理解",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你设计迁移任务，检查理解。",
+      "effects": {
+        "practice": 5,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "请学生解释思路而非复述步骤",
+      "hint": "练习表达，增加实践经验",
+      "text": "你请学生解释思路而非复述步骤。",
+      "effects": {
+        "expression": 4,
+        "practice": 5
+      },
+      "days": 2
+    },
+    {
+      "label": "调整示例，再保留前后记录",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你调整示例，再保留前后记录。",
+      "effects": {
+        "research": 4,
+        "practice": 4
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 2,
+    "to": 35,
+    "majors": ["师范教育类"]
+  },
+  "weight": 12
+}

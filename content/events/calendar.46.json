@@ -1,0 +1,48 @@
+{
+  "id": "calendar.46",
+  "title": "候补名单变化",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["部分申请者退出后，候补次序发生变化，你需要比较已有结果和候补机会。"],
+  "choices": [
+    {
+      "label": "比较手里的确定性与真正偏好",
+      "hint": "缓解压力，准备后续安排",
+      "text": "你比较手里的确定性与真正偏好。",
+      "effects": {
+        "backup": 6,
+        "stress": -4
+      },
+      "flags": ["decision.fit"],
+      "days": 0
+    },
+    {
+      "label": "继续跟进候补，同时保留已有选择",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你继续跟进候补，同时保留已有选择。",
+      "effects": {
+        "materials": 5,
+        "expression": 2
+      },
+      "flags": ["application.tracker"],
+      "days": 1
+    },
+    {
+      "label": "回复不再考虑的去向",
+      "hint": "缓解压力，增进合作",
+      "text": "你回复不再考虑的去向。",
+      "effects": {
+        "network": 3,
+        "stress": -3
+      },
+      "flags": ["reply.complete"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "calendar": 46,
+  "when": {
+    "from": 46,
+    "to": 46
+  }
+}

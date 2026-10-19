@@ -1,0 +1,46 @@
+{
+  "id": "major.cross.2",
+  "title": "对应实际需求",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["技术指标提高后，合作方要求说明实际工作的变化。"],
+  "choices": [
+    {
+      "label": "共同定义一个实际任务与记录",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你共同定义一个实际任务与记录。",
+      "effects": {
+        "practice": 5,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "观察真实流程中的使用条件",
+      "hint": "增加实践经验，积累项目经验",
+      "text": "你观察真实流程中的使用条件。",
+      "effects": {
+        "practice": 6,
+        "craft": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "明确技术结果能够支持到哪里",
+      "hint": "练习研究方法，练习表达",
+      "text": "你明确技术结果能够支持到哪里。",
+      "effects": {
+        "research": 4,
+        "expression": 4
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 8,
+    "to": 35,
+    "majors": ["交叉学科"]
+  },
+  "weight": 12
+}

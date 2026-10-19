@@ -1,0 +1,45 @@
+{
+  "id": "extra.public-room",
+  "title": "讨论室预约冲突",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["两组持有同一时段的预约记录，需要协调房间或时间。"],
+  "choices": [
+    {
+      "label": "核对预约，寻找可行替代",
+      "hint": "练习表达，增进合作",
+      "text": "你核对预约，寻找可行替代。",
+      "effects": {
+        "expression": 4,
+        "network": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "把会议缩成线上短会",
+      "hint": "积累项目经验，恢复精力",
+      "text": "你把会议缩成线上短会。",
+      "effects": {
+        "craft": 3,
+        "energy": 4
+      },
+      "days": 1
+    },
+    {
+      "label": "先让团队各自准备待决策项",
+      "hint": "练习研究方法，补齐申请材料",
+      "text": "你先让团队各自准备待决策项。",
+      "effects": {
+        "research": 3,
+        "materials": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

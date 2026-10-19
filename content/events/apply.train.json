@@ -1,0 +1,58 @@
+{
+  "id": "apply.train",
+  "title": "考核行程变更",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["原定车次发生变化，可能无法准时到达，需要重新安排行程。"],
+  "choices": [
+    {
+      "label": "预留更稳的行程，减少临场赶路",
+      "hint": "支出260元，缓解压力，恢复精力",
+      "text": "你预留更稳的行程，减少临场赶路。余额 -260。",
+      "effects": {
+        "money": -260,
+        "energy": 8,
+        "stress": -4
+      },
+      "when": {
+        "min": {
+          "money": 260
+        }
+      },
+      "days": 2
+    },
+    {
+      "label": "联系项目方询问可调整的安排",
+      "hint": "缓解压力，练习表达，补齐申请材料",
+      "text": "你联系项目方询问可调整的安排。",
+      "effects": {
+        "expression": 4,
+        "materials": 3,
+        "stress": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "与同路同学协调，采用更经济的方案",
+      "hint": "支出80元，增进合作，恢复精力",
+      "text": "你与同路同学协调，采用更经济的方案。余额 -80。",
+      "effects": {
+        "network": 5,
+        "energy": 3,
+        "money": -80
+      },
+      "when": {
+        "min": {
+          "money": 80
+        }
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 34,
+    "to": 43
+  },
+  "weight": 5
+}

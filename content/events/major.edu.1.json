@@ -1,0 +1,46 @@
+{
+  "id": "major.edu.1",
+  "title": "分析教学工具效果",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["新工具帮助了部分学生，也让其他学生更依赖提示。"],
+  "choices": [
+    {
+      "label": "观察不同起点的使用过程",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你观察不同起点的使用过程。",
+      "effects": {
+        "practice": 6,
+        "research": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "调整提示层级与退出机制",
+      "hint": "积累项目经验，增加实践经验",
+      "text": "你调整提示层级与退出机制。",
+      "effects": {
+        "craft": 4,
+        "practice": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "把技术目标重新对齐学习目标",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你把技术目标重新对齐学习目标。",
+      "effects": {
+        "study": 4,
+        "research": 4
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5,
+    "to": 35,
+    "majors": ["师范教育类"]
+  },
+  "weight": 12
+}

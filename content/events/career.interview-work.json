@@ -1,0 +1,49 @@
+{
+  "id": "career.interview-work",
+  "title": "说明失败经历",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["工作面试要求你介绍一项未按计划完成的任务及后续处理。"],
+  "choices": [
+    {
+      "label": "讲清判断失误与后续调整",
+      "hint": "练习表达，准备后续安排，增加实践经验",
+      "text": "你讲清判断失误与后续调整。",
+      "effects": {
+        "expression": 5,
+        "backup": 7,
+        "practice": 2
+      },
+      "flags": ["job.lead"],
+      "days": 2
+    },
+    {
+      "label": "用一项返工说明验证与协作",
+      "hint": "积累项目经验，练习表达，准备后续安排",
+      "text": "你用一项返工说明验证与协作。",
+      "effects": {
+        "craft": 4,
+        "expression": 4,
+        "backup": 5
+      },
+      "days": 2
+    },
+    {
+      "label": "先向合作过的同伴核对过程",
+      "hint": "增进合作，补齐申请材料，准备后续安排",
+      "text": "你先向合作过的同伴核对过程。",
+      "effects": {
+        "network": 4,
+        "materials": 5,
+        "backup": 5
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 29,
+    "to": 46
+  },
+  "weight": 5
+}

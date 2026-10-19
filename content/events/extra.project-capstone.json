@@ -1,0 +1,69 @@
+{
+  "id": "extra.project-capstone",
+  "title": "完成综合课程任务",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["课程允许自选题目，但需要独立说明方法和结果。"],
+  "choices": [
+    {
+      "label": "完成实现、测试与说明",
+      "hint": "积累项目经验，加强课程基础",
+      "text": "你完成实现、测试与说明。新增成果：一项完整的专业课程项目。",
+      "effects": {
+        "craft": 5,
+        "study": 3
+      },
+      "award": {
+        "id": "capstone",
+        "title": "一项完整的专业课程项目",
+        "kind": "项目",
+        "level": 2,
+        "recognized": false
+      },
+      "days": 2
+    },
+    {
+      "label": "围绕一个方法问题做比较",
+      "hint": "练习研究方法，加强课程基础",
+      "text": "你围绕一个方法问题做比较。新增成果：一项完整的专业课程项目。",
+      "effects": {
+        "research": 5,
+        "study": 3
+      },
+      "award": {
+        "id": "capstone",
+        "title": "一项完整的专业课程项目",
+        "kind": "项目",
+        "level": 2,
+        "recognized": false
+      },
+      "days": 2
+    },
+    {
+      "label": "联系真实使用者核对目标",
+      "hint": "增加实践经验，练习表达",
+      "text": "你联系真实使用者核对目标。新增成果：一项完整的专业课程项目。",
+      "effects": {
+        "practice": 5,
+        "expression": 3
+      },
+      "award": {
+        "id": "capstone",
+        "title": "一项完整的专业课程项目",
+        "kind": "项目",
+        "level": 2,
+        "recognized": false
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 15,
+    "to": 32,
+    "min": {
+      "craft": 45
+    }
+  },
+  "weight": 5
+}

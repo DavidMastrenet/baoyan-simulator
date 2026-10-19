@@ -1,0 +1,45 @@
+{
+  "id": "extra.scholarship-paper",
+  "title": "补充奖学金证明",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["一项成果符合申报条件，但对应证明还没有整理齐全。"],
+  "choices": [
+    {
+      "label": "找回原始记录，补齐依据",
+      "hint": "补齐申请材料，增进合作",
+      "text": "你找回原始记录，补齐依据。",
+      "effects": {
+        "materials": 7,
+        "network": 2
+      },
+      "days": 0
+    },
+    {
+      "label": "先申报记录完整的部分",
+      "hint": "补齐申请材料，补充准确材料",
+      "text": "你先申报记录完整的部分。材料真实性 +2。",
+      "effects": {
+        "materials": 5,
+        "integrity": 2
+      },
+      "days": 0
+    },
+    {
+      "label": "建立长期的成果台账",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你建立长期的成果台账。",
+      "effects": {
+        "materials": 8,
+        "stress": -2
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

@@ -1,0 +1,36 @@
+{
+  "id": "egg.printer",
+  "title": "打印机缺纸",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["打印机只打印出最后一页，需要补纸或换一台设备。"],
+  "choices": [
+    {
+      "label": "一起查打印范围",
+      "hint": "缓解压力，积累项目经验",
+      "text": "你一起查打印范围。",
+      "effects": {
+        "craft": 2,
+        "stress": -6
+      },
+      "days": 1
+    },
+    {
+      "label": "去隔壁打印室重新排队",
+      "hint": "增进合作，恢复精力",
+      "text": "你去隔壁打印室重新排队。",
+      "effects": {
+        "network": 2,
+        "energy": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

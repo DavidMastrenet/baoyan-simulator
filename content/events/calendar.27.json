@@ -1,0 +1,48 @@
+{
+  "id": "calendar.27",
+  "title": "压缩项目介绍",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["项目介绍超过规定时长，需要删减内容并突出自己的具体工作。"],
+  "choices": [
+    {
+      "label": "删到只剩一项代表性工作",
+      "hint": "练习表达，补齐申请材料",
+      "text": "你删到只剩一项代表性工作。",
+      "effects": {
+        "expression": 6,
+        "materials": 6
+      },
+      "flags": ["portfolio.focus"],
+      "days": 1
+    },
+    {
+      "label": "请同学连续追问三次为什么",
+      "hint": "练习研究方法，练习表达，增进合作",
+      "text": "你请同学连续追问三次为什么。",
+      "effects": {
+        "research": 4,
+        "expression": 4,
+        "network": 2
+      },
+      "flags": ["interview.practice"],
+      "days": 2
+    },
+    {
+      "label": "先补最容易卡住的英语介绍",
+      "hint": "加强英语训练，练习表达",
+      "text": "你先补最容易卡住的英语介绍。",
+      "effects": {
+        "english": 6,
+        "expression": 2
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 27,
+  "when": {
+    "from": 27,
+    "to": 27
+  }
+}

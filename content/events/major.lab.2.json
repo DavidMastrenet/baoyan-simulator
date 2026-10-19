@@ -1,0 +1,46 @@
+{
+  "id": "major.lab.2",
+  "title": "说明误差线含义",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["图中的误差线定义不清楚，需要检查统计量和重复单位。"],
+  "choices": [
+    {
+      "label": "说明统计量与重复单位",
+      "hint": "练习研究方法，练习表达",
+      "text": "你说明统计量与重复单位。",
+      "effects": {
+        "research": 5,
+        "expression": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "回查原始数据与绘图步骤",
+      "hint": "积累项目经验，练习研究方法",
+      "text": "你回查原始数据与绘图步骤。",
+      "effects": {
+        "craft": 4,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "请同学仅凭图注解释图意",
+      "hint": "练习表达，增进合作",
+      "text": "你请同学仅凭图注解释图意。",
+      "effects": {
+        "expression": 4,
+        "network": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 8,
+    "to": 35,
+    "majors": ["理工实验类"]
+  },
+  "weight": 12
+}

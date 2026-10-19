@@ -1,0 +1,49 @@
+{
+  "id": "calendar.10",
+  "title": "处理用户反馈",
+  "category": "实践",
+  "scene": "实践安排",
+  "body": ["项目交给其他人使用后出现了问题。用户希望简化操作并修正错误。"],
+  "choices": [
+    {
+      "label": "先观察使用者怎么做",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你先观察使用者怎么做。",
+      "effects": {
+        "practice": 5,
+        "research": 3
+      },
+      "flags": ["user.observed"],
+      "days": 2
+    },
+    {
+      "label": "先修最影响使用的问题",
+      "hint": "消耗精力，积累项目经验",
+      "text": "你先修最影响使用的问题。",
+      "effects": {
+        "craft": 6,
+        "energy": -5
+      },
+      "flags": ["product.reliable"],
+      "days": 1
+    },
+    {
+      "label": "请团队一起重新划范围",
+      "hint": "缓解压力，增进合作，练习表达",
+      "text": "你请团队一起重新划范围。",
+      "effects": {
+        "network": 4,
+        "expression": 3,
+        "stress": -3
+      },
+      "flags": ["scope.control"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 10,
+  "when": {
+    "from": 10,
+    "to": 10
+  }
+}

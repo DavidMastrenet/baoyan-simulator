@@ -1,0 +1,50 @@
+{
+  "id": "calendar.18",
+  "title": "项目交付准备",
+  "category": "项目",
+  "scene": "项目组",
+  "body": ["项目将交给其他人独立使用，需要补充说明、错误提示和备用方案。"],
+  "choices": [
+    {
+      "label": "先补文档、错误提示和备份",
+      "hint": "消耗精力，积累项目经验，增加实践经验",
+      "text": "你先补文档、错误提示和备份。",
+      "effects": {
+        "craft": 6,
+        "practice": 3,
+        "energy": -6
+      },
+      "flags": ["product.reliable"],
+      "days": 2
+    },
+    {
+      "label": "陪着使用者完整走一遍",
+      "hint": "消耗精力，增加实践经验，练习研究方法",
+      "text": "你陪着使用者完整走一遍。",
+      "effects": {
+        "practice": 6,
+        "research": 2,
+        "energy": -4
+      },
+      "flags": ["user.observed"],
+      "days": 2
+    },
+    {
+      "label": "先缩成稳定的最小版本",
+      "hint": "缓解压力，积累项目经验",
+      "text": "你先缩成稳定的最小版本。",
+      "effects": {
+        "craft": 4,
+        "stress": -3
+      },
+      "flags": ["scope.control"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 18,
+  "when": {
+    "from": 18,
+    "to": 18
+  }
+}

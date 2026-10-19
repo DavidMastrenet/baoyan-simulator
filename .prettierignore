@@ -1,0 +1,6 @@
+node_modules/
+dist/
+public/story/
+.share-data/
+pnpm-lock.yaml
+src/components.d.ts

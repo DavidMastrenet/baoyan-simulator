@@ -1,0 +1,50 @@
+{
+  "id": "career.offer-values",
+  "title": "比较工作和升学",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["一份工作已有明确消息，升学申请尚未结束，需要比较时间和发展安排。"],
+  "choices": [
+    {
+      "label": "比较实际工作内容与长期目标",
+      "hint": "缓解压力，准备后续安排",
+      "text": "你比较实际工作内容与长期目标。",
+      "effects": {
+        "backup": 8,
+        "stress": -4
+      },
+      "flags": ["decision.fit"],
+      "days": 0
+    },
+    {
+      "label": "核对双方时间，做清楚的沟通",
+      "hint": "练习表达，补齐申请材料，准备后续安排",
+      "text": "你核对双方时间，做清楚的沟通。",
+      "effects": {
+        "expression": 5,
+        "materials": 4,
+        "backup": 4
+      },
+      "flags": ["reply.complete"],
+      "days": 1
+    },
+    {
+      "label": "确定走向工作，把准备做到完整",
+      "hint": "准备后续安排，积累项目经验",
+      "text": "你确定走向工作，把准备做到完整。后续准备方向：就业。",
+      "effects": {
+        "backup": 10,
+        "craft": 3
+      },
+      "flags": ["job.lead"],
+      "path": "work",
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 40,
+    "flags": ["job.lead"]
+  },
+  "weight": 5
+}

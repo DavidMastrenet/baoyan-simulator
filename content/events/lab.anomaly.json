@@ -1,0 +1,87 @@
+{
+  "id": "lab.anomaly",
+  "title": "实验结果异常偏高",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["结果明显高于参照方法，检查发现数据划分可能使用了额外信息。"],
+  "choices": [
+    {
+      "label": "暂停结论，追踪完整数据流",
+      "hint": "消耗精力，练习研究方法，增加压力",
+      "text": "你暂停结论，追踪完整数据流。之后会有相关的后续事件。",
+      "effects": {
+        "research": 7,
+        "energy": -8,
+        "stress": 4
+      },
+      "flags": ["lab.repaired"],
+      "schedule": [
+        {
+          "id": "lab.rebuild",
+          "after": 2
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "请搭档独立检查一遍",
+      "hint": "协作关系影响成功率",
+      "text": "你请搭档独立检查一遍。",
+      "effects": {
+        "network": 3,
+        "energy": -4
+      },
+      "check": {
+        "stat": "network",
+        "difficulty": 40,
+        "success": {
+          "text": "本次任务完成。之后会有相关的后续事件。",
+          "effects": {
+            "research": 6
+          },
+          "flags": ["lab.repaired"],
+          "schedule": [
+            {
+              "id": "lab.rebuild",
+              "after": 2
+            }
+          ]
+        },
+        "failure": {
+          "text": "本次任务未完成。之后会有相关的后续事件。",
+          "effects": {
+            "research": 3,
+            "stress": 3
+          },
+          "schedule": [
+            {
+              "id": "lab.rebuild",
+              "after": 3
+            }
+          ]
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "先沿用结果，之后再查",
+      "hint": "材料可信度下降，补齐申请材料，增加压力",
+      "text": "你先沿用结果，之后再查。之后会有相关的后续事件。材料真实性 -16。",
+      "effects": {
+        "materials": 5,
+        "integrity": -16,
+        "stress": 5
+      },
+      "flags": ["record.unclear"],
+      "schedule": [
+        {
+          "id": "record.audit",
+          "after": 3
+        }
+      ],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "chain": true
+}

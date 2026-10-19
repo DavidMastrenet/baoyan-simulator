@@ -1,0 +1,36 @@
+{
+  "id": "egg.clock",
+  "title": "教室时钟不准",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["墙上的钟比实际时间快了三分钟，需要以手机时间安排进度。"],
+  "choices": [
+    {
+      "label": "仍然按自己的安排收尾",
+      "hint": "缓解压力，恢复精力",
+      "text": "你仍然按自己的安排收尾。",
+      "effects": {
+        "stress": -5,
+        "energy": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "提醒准备汇报的同学看计时器",
+      "hint": "增进合作，练习表达",
+      "text": "你提醒准备汇报的同学看计时器。",
+      "effects": {
+        "network": 3,
+        "expression": 1
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 14,
+    "to": 47
+  },
+  "weight": 1
+}

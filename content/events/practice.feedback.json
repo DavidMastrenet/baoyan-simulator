@@ -1,0 +1,46 @@
+{
+  "id": "practice.feedback",
+  "title": "分析实践反馈",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["参与者在你认为简单的环节出错较多，需要调查原因。"],
+  "choices": [
+    {
+      "label": "分析错误在哪里出现",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你分析错误在哪里出现。",
+      "effects": {
+        "research": 4,
+        "practice": 5
+      },
+      "flags": ["practice.evidence"],
+      "days": 2
+    },
+    {
+      "label": "请参与者自己解释做法",
+      "hint": "增加实践经验，练习表达",
+      "text": "你请参与者自己解释做法。",
+      "effects": {
+        "practice": 5,
+        "expression": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "把目标缩小，下次先验证一个环节",
+      "hint": "缓解压力，练习研究方法，增加实践经验",
+      "text": "你把目标缩小，下次先验证一个环节。",
+      "effects": {
+        "research": 4,
+        "practice": 3,
+        "stress": -2
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 7
+  },
+  "weight": 5
+}

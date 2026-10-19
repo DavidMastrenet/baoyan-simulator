@@ -1,0 +1,41 @@
+{
+  "id": "rare.course-excluded",
+  "title": "高分课程不计入推荐均分",
+  "category": "学业",
+  "scene": "低概率事件",
+  "body": ["你拿到一门公共选修的高分，但学院规定这类课程只用于满足毕业学分。"],
+  "when": {
+    "from": 1,
+    "to": 30
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "按公布的计算范围整理成绩",
+      "text": "该课取得96分，记入课程记录，推荐均分按规定计算。",
+      "hint": "补齐申请材料",
+      "effects": {
+        "materials": 2
+      },
+      "course": {
+        "title": "不计推荐排名的公共选修",
+        "score": 96,
+        "credits": 2,
+        "counted": "none"
+      },
+      "days": 0
+    },
+    {
+      "label": "向教务确认后调整后续选课",
+      "text": "教务说明了课程范围，你把后续时间用于专业课。",
+      "hint": "消耗精力，加强课程基础",
+      "effects": {
+        "study": 2,
+        "energy": -2
+      },
+      "days": 1
+    }
+  ]
+}

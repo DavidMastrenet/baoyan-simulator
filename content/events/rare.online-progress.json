@@ -1,0 +1,46 @@
+{
+  "id": "rare.online-progress",
+  "title": "网课完成记录不足",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["选修网课的观看记录不足，最终考核要求同时完成平时学习。"],
+  "when": {
+    "from": 1,
+    "to": 30
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "在允许期限内补完学习",
+      "text": "你按要求完成课程，取得82分。",
+      "hint": "消耗精力",
+      "effects": {
+        "energy": -5
+      },
+      "course": {
+        "title": "线上通识课程",
+        "score": 82,
+        "credits": 1,
+        "counted": "policy"
+      },
+      "days": 0
+    },
+    {
+      "label": "只参加最终考核",
+      "text": "平时要求未满足，课程最终取得55分，需要后续补修。",
+      "hint": "增加压力",
+      "effects": {
+        "stress": 5
+      },
+      "course": {
+        "title": "线上通识课程",
+        "score": 55,
+        "credits": 1,
+        "counted": "policy"
+      },
+      "days": 0
+    }
+  ]
+}

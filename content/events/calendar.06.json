@@ -1,0 +1,48 @@
+{
+  "id": "calendar.06",
+  "title": "新学期学习安排",
+  "category": "学业",
+  "scene": "教务通知",
+  "body": ["新学期开始，需要调整学习计划，决定答疑和课外活动的时间。"],
+  "choices": [
+    {
+      "label": "每周补齐一次课程笔记",
+      "hint": "缓解压力，加强课程基础",
+      "text": "你每周补齐一次课程笔记。",
+      "effects": {
+        "study": 5,
+        "stress": -2
+      },
+      "flags": ["notes.weekly"],
+      "days": 1
+    },
+    {
+      "label": "固定去一次答疑",
+      "hint": "加强课程基础，练习研究方法，增进合作",
+      "text": "你固定去一次答疑。",
+      "effects": {
+        "study": 3,
+        "research": 2,
+        "network": 3
+      },
+      "flags": ["teacher.knows"],
+      "days": 1
+    },
+    {
+      "label": "把空白晚上还给自己",
+      "hint": "缓解压力，恢复精力",
+      "text": "你把空白晚上还给自己。",
+      "effects": {
+        "energy": 12,
+        "stress": -6
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 6,
+  "when": {
+    "from": 6,
+    "to": 6
+  }
+}

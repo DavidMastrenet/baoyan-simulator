@@ -1,0 +1,36 @@
+{
+  "id": "egg.old-notes",
+  "title": "整理旧笔记",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["整理大一笔记时发现几道未完成的题，可以现在补做。"],
+  "choices": [
+    {
+      "label": "给当年的问题写一个新解释",
+      "hint": "缓解压力，加强课程基础",
+      "text": "你给当年的问题写一个新解释。",
+      "effects": {
+        "study": 3,
+        "stress": -5
+      },
+      "days": 1
+    },
+    {
+      "label": "保留原样，合上笔记",
+      "hint": "缓解压力，恢复精力",
+      "text": "你保留原样，合上笔记。",
+      "effects": {
+        "energy": 5,
+        "stress": -5
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 14,
+    "to": 47
+  },
+  "weight": 1
+}

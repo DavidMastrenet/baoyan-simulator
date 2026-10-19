@@ -1,0 +1,45 @@
+{
+  "id": "extra.data-cleaning",
+  "title": "清理问题数据",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["数据存在缺失、重复和格式冲突，需要先完成清理。"],
+  "choices": [
+    {
+      "label": "写清处理规则与保留记录",
+      "hint": "练习研究方法，积累项目经验",
+      "text": "你写清处理规则与保留记录。",
+      "effects": {
+        "research": 5,
+        "craft": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "先抽查一小批，确认规则合理",
+      "hint": "练习研究方法，加强课程基础",
+      "text": "你先抽查一小批，确认规则合理。",
+      "effects": {
+        "research": 5,
+        "study": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "与同伴交叉核对异常样本",
+      "hint": "增进合作，练习研究方法",
+      "text": "你与同伴交叉核对异常样本。",
+      "effects": {
+        "network": 4,
+        "research": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3,
+    "to": 41
+  },
+  "weight": 5
+}

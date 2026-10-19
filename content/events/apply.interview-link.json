@@ -1,0 +1,48 @@
+{
+  "id": "apply.interview-link",
+  "title": "面试链接变更",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["项目更新了会议链接和入场顺序，日历中仍然保存着旧信息。"],
+  "choices": [
+    {
+      "label": "核对通知来源，更新日历与备用设备",
+      "hint": "缓解压力，补齐申请材料，恢复精力",
+      "text": "你核对通知来源，更新日历与备用设备。",
+      "effects": {
+        "materials": 6,
+        "energy": 4,
+        "stress": -4
+      },
+      "flags": ["interview.backup"],
+      "days": 1
+    },
+    {
+      "label": "和同批同学确认各自收到的安排",
+      "hint": "增进合作，补齐申请材料",
+      "text": "你和同批同学确认各自收到的安排。",
+      "effects": {
+        "network": 4,
+        "materials": 5
+      },
+      "days": 0
+    },
+    {
+      "label": "联系项目方确认一个具体疑问",
+      "hint": "缓解压力，练习表达，补齐申请材料",
+      "text": "你联系项目方确认一个具体疑问。",
+      "effects": {
+        "expression": 4,
+        "stress": -3,
+        "materials": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 34,
+    "to": 46
+  },
+  "weight": 5
+}

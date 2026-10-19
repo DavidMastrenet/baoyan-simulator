@@ -1,0 +1,45 @@
+{
+  "id": "extra.quiet-morning",
+  "title": "安排自习时间",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["今天早上没有临时任务，可以集中处理一项重要工作。"],
+  "choices": [
+    {
+      "label": "先完成最需要专注的一项",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你先完成最需要专注的一项。",
+      "effects": {
+        "study": 4,
+        "research": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "把最难的问题写清，留给下一次讨论",
+      "hint": "练习研究方法，补齐申请材料",
+      "text": "你把最难的问题写清，留给下一次讨论。",
+      "effects": {
+        "research": 4,
+        "materials": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "慢慢吃早饭，再开始工作",
+      "hint": "缓解压力，恢复精力",
+      "text": "你慢慢吃早饭，再开始工作。",
+      "effects": {
+        "energy": 8,
+        "stress": -5
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 18,
+    "to": 41
+  },
+  "weight": 5
+}

@@ -1,0 +1,36 @@
+{
+  "id": "rare.course-rounding",
+  "title": "两份排名表精度不同",
+  "category": "学业",
+  "scene": "低概率事件",
+  "body": ["一份排名表保留两位小数，另一份使用原始精度，两名学生的显示顺序不同。"],
+  "when": {
+    "from": 24,
+    "to": 41
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "请教务说明排序精度",
+      "text": "教务解释了排序方式，最终按统一精度处理。",
+      "hint": "缓解压力，补齐申请材料",
+      "effects": {
+        "materials": 3,
+        "stress": -2
+      },
+      "days": 0
+    },
+    {
+      "label": "保留两份材料并申请正式证明",
+      "text": "你取得了统一格式的排名说明。",
+      "hint": "消耗精力，补齐申请材料",
+      "effects": {
+        "materials": 2,
+        "energy": -2
+      },
+      "days": 0
+    }
+  ]
+}

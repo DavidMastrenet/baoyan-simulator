@@ -1,0 +1,68 @@
+{
+  "id": "apply.alt-language",
+  "title": "替代语言考试",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["项目接受另一种语言成绩，报名需要预算和时间，成绩取决于准备情况。"],
+  "choices": [
+    {
+      "label": "完成一次替代语言测评",
+      "hint": "支出800元，消耗精力",
+      "text": "你完成一次替代语言测评。余额 -800。",
+      "effects": {
+        "money": -800,
+        "energy": -6
+      },
+      "when": {
+        "min": {
+          "money": 800
+        }
+      },
+      "check": {
+        "stat": "english",
+        "difficulty": 67,
+        "success": {
+          "text": "本次任务完成。",
+          "effects": {
+            "materials": 8
+          },
+          "flags": ["language.alternate"]
+        },
+        "failure": {
+          "text": "本次任务未完成。",
+          "effects": {
+            "english": 5,
+            "backup": 3
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "先保持现有申请组合",
+      "hint": "准备后续安排，恢复精力",
+      "text": "你先保持现有申请组合。",
+      "effects": {
+        "backup": 6,
+        "energy": 5
+      },
+      "days": 1
+    },
+    {
+      "label": "用同样的准备训练专业交流",
+      "hint": "加强英语训练，练习表达",
+      "text": "你用同样的准备训练专业交流。",
+      "effects": {
+        "english": 6,
+        "expression": 3
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 32,
+    "to": 41
+  },
+  "weight": 5
+}

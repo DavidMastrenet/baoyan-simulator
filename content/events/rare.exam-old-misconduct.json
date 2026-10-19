@@ -1,0 +1,42 @@
+{
+  "id": "rare.exam-old-misconduct",
+  "title": "此前违规被提出异议",
+  "category": "学业",
+  "scene": "低概率事件",
+  "body": ["学院收到与你此前考试违规有关的材料，要求你说明情况。"],
+  "when": {
+    "from": 12,
+    "to": 41,
+    "flags": ["misconduct.unresolved"]
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "如实说明并接受调查",
+      "text": "相关记录确认了违规行为，学校作出处分。",
+      "hint": "材料可信度下降，增加压力",
+      "effects": {
+        "integrity": -55,
+        "stress": 10
+      },
+      "flags": ["discipline.cheating"],
+      "clearFlags": ["misconduct.unresolved"],
+      "days": 0
+    },
+    {
+      "label": "提供记录并申请按程序处理",
+      "text": "调查按现有材料进行，确认此前违规后记入处分。",
+      "hint": "消耗精力，材料可信度下降，增加压力",
+      "effects": {
+        "energy": -5,
+        "integrity": -55,
+        "stress": 12
+      },
+      "flags": ["discipline.cheating"],
+      "clearFlags": ["misconduct.unresolved"],
+      "days": 0
+    }
+  ]
+}

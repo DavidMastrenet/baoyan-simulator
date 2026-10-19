@@ -1,0 +1,52 @@
+{
+  "id": "career.overseas",
+  "title": "准备出国申请",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["海外项目对语言、经费和研究计划有不同要求，需要重新准备材料。"],
+  "choices": [
+    {
+      "label": "核对经费、语言与导师匹配，开始准备",
+      "hint": "准备后续安排，加强英语训练，补齐申请材料",
+      "text": "你核对经费、语言与导师匹配，开始准备。后续准备方向：出国申请。",
+      "effects": {
+        "backup": 12,
+        "english": 3,
+        "materials": 4
+      },
+      "flags": ["abroad.prepared"],
+      "path": "abroad",
+      "days": 1
+    },
+    {
+      "label": "先把语言与研究材料做扎实",
+      "hint": "加强英语训练，练习研究方法，准备后续安排",
+      "text": "你先把语言与研究材料做扎实。",
+      "effects": {
+        "english": 5,
+        "research": 3,
+        "backup": 6
+      },
+      "days": 2
+    },
+    {
+      "label": "对照生活与预算，暂不扩大申请范围",
+      "hint": "缓解压力，准备后续安排",
+      "text": "你对照生活与预算，暂不扩大申请范围。",
+      "effects": {
+        "backup": 5,
+        "stress": -4
+      },
+      "flags": ["cost.considered"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 25,
+    "min": {
+      "english": 50
+    }
+  },
+  "weight": 5
+}

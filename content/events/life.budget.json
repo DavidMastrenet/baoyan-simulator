@@ -1,0 +1,55 @@
+{
+  "id": "life.budget",
+  "title": "本月支出超额",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["打印、交通和聚餐支出超过预期，需要调整接下来的预算。"],
+  "choices": [
+    {
+      "label": "申请勤工岗位与可获得的支持",
+      "hint": "消耗精力，补齐申请材料，增加实践经验",
+      "text": "你申请勤工岗位与可获得的支持。之后会有相关的后续事件。",
+      "effects": {
+        "materials": 3,
+        "practice": 2,
+        "energy": -3
+      },
+      "schedule": [
+        {
+          "id": "grant.arrives",
+          "after": 2
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "减少临时支出，做一周预算",
+      "hint": "缓解压力，获得220元",
+      "text": "你减少临时支出，做一周预算。余额 +220。",
+      "effects": {
+        "money": 220,
+        "stress": -4
+      },
+      "days": 0
+    },
+    {
+      "label": "接一项短期助学工作",
+      "hint": "消耗精力，获得550元，增加实践经验",
+      "text": "你接一项短期助学工作。余额 +550。",
+      "effects": {
+        "money": 550,
+        "practice": 2,
+        "energy": -8
+      },
+      "flags": ["work.experience"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "max": {
+      "money": 1000
+    }
+  },
+  "weight": 25
+}

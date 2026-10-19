@@ -1,0 +1,53 @@
+{
+  "id": "career.teaching",
+  "title": "准备教学岗位",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["你考虑申请教学工作，需要整理课程设计和课堂实践记录。"],
+  "choices": [
+    {
+      "label": "整理课程与观察记录，准备教学岗位",
+      "hint": "增加实践经验，准备后续安排，练习表达",
+      "text": "你整理课程与观察记录，准备教学岗位。后续准备方向：教学岗位。",
+      "effects": {
+        "practice": 5,
+        "backup": 10,
+        "expression": 3
+      },
+      "flags": ["teaching.career"],
+      "path": "teaching",
+      "days": 2
+    },
+    {
+      "label": "把课堂困惑带回研究计划",
+      "hint": "练习研究方法，增加实践经验，补齐申请材料",
+      "text": "你把课堂困惑带回研究计划。",
+      "effects": {
+        "research": 5,
+        "practice": 3,
+        "materials": 4
+      },
+      "flags": ["direction.clear"],
+      "days": 2
+    },
+    {
+      "label": "先继续观课，再判断适合程度",
+      "hint": "增加实践经验，准备后续安排，增进合作",
+      "text": "你先继续观课，再判断适合程度。",
+      "effects": {
+        "practice": 5,
+        "backup": 5,
+        "network": 2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 24,
+    "min": {
+      "practice": 40
+    }
+  },
+  "weight": 5
+}

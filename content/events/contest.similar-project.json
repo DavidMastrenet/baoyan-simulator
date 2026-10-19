@@ -1,0 +1,52 @@
+{
+  "id": "contest.similar-project",
+  "title": "发现同类作品",
+  "category": "竞赛",
+  "scene": "竞赛事件",
+  "body": ["其他团队展示了相似项目，需要比较各自的对象、方法和完成程度。"],
+  "choices": [
+    {
+      "label": "比较具体差异，重新确认问题",
+      "hint": "练习研究方法，练习表达",
+      "text": "你比较具体差异，重新确认问题。",
+      "effects": {
+        "research": 5,
+        "expression": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "向对方交流一个技术问题",
+      "hint": "增进合作，积累项目经验",
+      "text": "你向对方交流一个技术问题。之后会有相关的后续事件。",
+      "effects": {
+        "network": 5,
+        "craft": 3
+      },
+      "schedule": [
+        {
+          "id": "friend.return",
+          "after": 4
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "收束当前工作，把资源投向更合适的方向",
+      "hint": "缓解压力，准备后续安排，恢复精力",
+      "text": "你收束当前工作，把资源投向更合适的方向。",
+      "effects": {
+        "backup": 5,
+        "energy": 6,
+        "stress": -4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 10,
+    "to": 37
+  },
+  "weight": 5
+}

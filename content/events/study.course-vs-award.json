@@ -1,0 +1,48 @@
+{
+  "id": "study.course-vs-award",
+  "title": "比较课程与比赛",
+  "category": "学业",
+  "scene": "学业事件",
+  "body": ["同学对课程和比赛有不同建议，需要按本校规则分配时间。"],
+  "choices": [
+    {
+      "label": "回去查看自己的培养与推荐规则",
+      "hint": "加强课程基础，补齐申请材料",
+      "text": "你回去查看自己的培养与推荐规则。",
+      "effects": {
+        "study": 3,
+        "materials": 5
+      },
+      "flags": ["policy.read"],
+      "days": 1
+    },
+    {
+      "label": "保留课业，选择一个长期项目",
+      "hint": "缓解压力，加强课程基础，积累项目经验",
+      "text": "你保留课业，选择一个长期项目。",
+      "effects": {
+        "study": 3,
+        "craft": 3,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "问清对方经历里的具体条件",
+      "hint": "练习表达，增进合作，准备后续安排",
+      "text": "你问清对方经历里的具体条件。",
+      "effects": {
+        "expression": 4,
+        "network": 2,
+        "backup": 2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 4,
+    "to": 30
+  },
+  "weight": 5
+}

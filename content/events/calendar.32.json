@@ -1,0 +1,49 @@
+{
+  "id": "calendar.32",
+  "title": "夏令营申请开放",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["各项目开始接收报名，所需的成绩证明、研究计划和附加表格不同。"],
+  "choices": [
+    {
+      "label": "先完成一套可核对的材料",
+      "hint": "消耗精力，补齐申请材料",
+      "text": "你先完成一套可核对的材料。",
+      "effects": {
+        "materials": 18,
+        "energy": -4
+      },
+      "flags": ["evidence.checked"],
+      "days": 0
+    },
+    {
+      "label": "先筛出方向最合的几个项目",
+      "hint": "练习研究方法，补齐申请材料，准备后续安排",
+      "text": "你先筛出方向最合的几个项目。",
+      "effects": {
+        "research": 4,
+        "materials": 10,
+        "backup": 4
+      },
+      "flags": ["direction.clear"],
+      "days": 1
+    },
+    {
+      "label": "留出不同层次与路径的组合",
+      "hint": "补齐申请材料，准备后续安排",
+      "text": "你留出不同层次与路径的组合。",
+      "effects": {
+        "materials": 12,
+        "backup": 8
+      },
+      "flags": ["application.balanced"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "calendar": 32,
+  "when": {
+    "from": 32,
+    "to": 32
+  }
+}

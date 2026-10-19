@@ -1,0 +1,36 @@
+{
+  "id": "egg.book-note",
+  "title": "发现教材批注",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["借来的教材有一条关于公式假设的批注，可以检查自己此前的理解。"],
+  "choices": [
+    {
+      "label": "照着提醒重新读一遍",
+      "hint": "缓解压力，加强课程基础",
+      "text": "你照着提醒重新读一遍。",
+      "effects": {
+        "study": 3,
+        "stress": -3
+      },
+      "days": 1
+    },
+    {
+      "label": "把纸条交给借阅台",
+      "hint": "补充准确材料，恢复精力",
+      "text": "你把纸条交给借阅台。材料真实性 +1。",
+      "effects": {
+        "integrity": 1,
+        "energy": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

@@ -1,0 +1,64 @@
+{
+  "id": "lab.rebuild",
+  "title": "重新建立实验基线",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["重新划分数据后结果下降，多次运行波动较大，需要补充对照实验。"],
+  "choices": [
+    {
+      "label": "固定条件，多次运行后报告波动",
+      "hint": "消耗精力，练习研究方法",
+      "text": "你固定条件，多次运行后报告波动。之后会有相关的后续事件。",
+      "effects": {
+        "research": 7,
+        "energy": -7
+      },
+      "flags": ["lab.repaired", "method.control"],
+      "schedule": [
+        {
+          "id": "paper.first-draft",
+          "after": 3
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "缩小问题，先做一个可解释的比较",
+      "hint": "缓解压力，练习研究方法，积累项目经验",
+      "text": "你缩小问题，先做一个可解释的比较。之后会有相关的后续事件。",
+      "effects": {
+        "research": 5,
+        "craft": 3,
+        "stress": -3
+      },
+      "flags": ["lab.repaired"],
+      "schedule": [
+        {
+          "id": "paper.first-draft",
+          "after": 3
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "把复现整理成组内技术记录",
+      "hint": "练习研究方法，增进合作",
+      "text": "你把复现整理成组内技术记录。新增成果：一份可检查的研究记录。",
+      "effects": {
+        "research": 4,
+        "network": 3
+      },
+      "flags": ["lab.repaired"],
+      "award": {
+        "id": "reproduction",
+        "title": "一份可检查的研究记录",
+        "kind": "科研",
+        "level": 1,
+        "recognized": false
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

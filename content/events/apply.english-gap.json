@@ -1,0 +1,48 @@
+{
+  "id": "apply.english-gap",
+  "title": "语言成绩不足",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["某个项目的语言要求高于你当前的考试成绩，需要继续备考或调整申请。"],
+  "choices": [
+    {
+      "label": "针对薄弱环节训练，等待下一次考试",
+      "hint": "消耗精力，加强英语训练",
+      "text": "你针对薄弱环节训练，等待下一次考试。",
+      "effects": {
+        "english": 7,
+        "energy": -5
+      },
+      "days": 2
+    },
+    {
+      "label": "筛选与现有语言条件匹配的项目",
+      "hint": "准备后续安排，补齐申请材料",
+      "text": "你筛选与现有语言条件匹配的项目。",
+      "effects": {
+        "backup": 7,
+        "materials": 5
+      },
+      "days": 0
+    },
+    {
+      "label": "以一篇研究材料做完整口头复述",
+      "hint": "加强英语训练，练习表达",
+      "text": "你以一篇研究材料做完整口头复述。",
+      "effects": {
+        "english": 5,
+        "expression": 4
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 25,
+    "to": 35,
+    "max": {
+      "english": 70
+    }
+  },
+  "weight": 5
+}

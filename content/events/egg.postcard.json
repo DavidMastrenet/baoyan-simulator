@@ -1,0 +1,36 @@
+{
+  "id": "egg.postcard",
+  "title": "收到朋友来信",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["外地朋友寄来的明信片到了，你可以安排时间回复。"],
+  "choices": [
+    {
+      "label": "回一段自己的近况",
+      "hint": "缓解压力，增进合作",
+      "text": "你回一段自己的近况。",
+      "effects": {
+        "network": 4,
+        "stress": -5
+      },
+      "days": 0
+    },
+    {
+      "label": "把它夹进正在读的书",
+      "hint": "缓解压力，恢复精力",
+      "text": "你把它夹进正在读的书。",
+      "effects": {
+        "energy": 4,
+        "stress": -4
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

@@ -1,0 +1,47 @@
+{
+  "id": "practice.volunteer",
+  "title": "整理志愿工作",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["活动结束后需要登记时长，并记录本次遇到的问题和处理方法。"],
+  "choices": [
+    {
+      "label": "写一份具体的过程反思",
+      "hint": "增加实践经验，练习表达，补齐申请材料",
+      "text": "你写一份具体的过程反思。",
+      "effects": {
+        "practice": 4,
+        "expression": 4,
+        "materials": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "整理下一位志愿者能用的清单",
+      "hint": "增进合作，增加实践经验",
+      "text": "你整理下一位志愿者能用的清单。",
+      "effects": {
+        "network": 4,
+        "practice": 4
+      },
+      "flags": ["team.handoff"],
+      "days": 1
+    },
+    {
+      "label": "完成必要记录，给自己一个休息晚上",
+      "hint": "缓解压力，补齐申请材料，恢复精力",
+      "text": "你完成必要记录，给自己一个休息晚上。",
+      "effects": {
+        "materials": 3,
+        "energy": 10,
+        "stress": -5
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 3
+  },
+  "weight": 5
+}

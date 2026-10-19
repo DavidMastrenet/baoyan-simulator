@@ -1,0 +1,46 @@
+{
+  "id": "major.cs.3",
+  "title": "检查数据变化",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["模型在新来源的数据上表现下降，需要检查训练和评估设置。"],
+  "choices": [
+    {
+      "label": "检查分布、划分与预处理",
+      "hint": "练习研究方法，积累项目经验",
+      "text": "你检查分布、划分与预处理。",
+      "effects": {
+        "research": 6,
+        "craft": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "建立简单基线，再比较复杂方法",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你建立简单基线，再比较复杂方法。",
+      "effects": {
+        "study": 4,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "收集失败样例，重新界定使用范围",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你收集失败样例，重新界定使用范围。",
+      "effects": {
+        "practice": 4,
+        "research": 4
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 11,
+    "to": 35,
+    "majors": ["计算机类"]
+  },
+  "weight": 12
+}

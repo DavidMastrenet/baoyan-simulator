@@ -1,0 +1,46 @@
+{
+  "id": "major.cs.1",
+  "title": "排查并发错误",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["程序单独运行正常，同时执行多个任务时偶尔出错。"],
+  "choices": [
+    {
+      "label": "画出状态与访问顺序",
+      "hint": "加强课程基础，积累项目经验",
+      "text": "你画出状态与访问顺序。",
+      "effects": {
+        "study": 5,
+        "craft": 3
+      },
+      "days": 2
+    },
+    {
+      "label": "先写一个能稳定暴露问题的测试",
+      "hint": "积累项目经验，练习研究方法",
+      "text": "你先写一个能稳定暴露问题的测试。",
+      "effects": {
+        "craft": 6,
+        "research": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "向同伴解释你的同步假设",
+      "hint": "加强课程基础，增进合作",
+      "text": "你向同伴解释你的同步假设。",
+      "effects": {
+        "study": 4,
+        "network": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5,
+    "to": 35,
+    "majors": ["计算机类"]
+  },
+  "weight": 12
+}

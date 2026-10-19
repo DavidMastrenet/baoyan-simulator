@@ -1,0 +1,48 @@
+{
+  "id": "calendar.39",
+  "title": "预推免申请开放",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["新一批项目公布了报名安排，部分方向的名额和要求有所变化。"],
+  "choices": [
+    {
+      "label": "保留适合的项目，补上新的选择",
+      "hint": "补齐申请材料，准备后续安排",
+      "text": "你保留适合的项目，补上新的选择。",
+      "effects": {
+        "materials": 10,
+        "backup": 6
+      },
+      "flags": ["application.balanced"],
+      "days": 0
+    },
+    {
+      "label": "集中准备最有希望的几场",
+      "hint": "练习表达，练习研究方法",
+      "text": "你集中准备最有希望的几场。",
+      "effects": {
+        "expression": 5,
+        "research": 3
+      },
+      "flags": ["direction.clear"],
+      "days": 2
+    },
+    {
+      "label": "为其他路线留出真实时间",
+      "hint": "缓解压力，准备后续安排",
+      "text": "你为其他路线留出真实时间。",
+      "effects": {
+        "backup": 12,
+        "stress": -3
+      },
+      "flags": ["paths.open"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "calendar": 39,
+  "when": {
+    "from": 39,
+    "to": 39
+  }
+}

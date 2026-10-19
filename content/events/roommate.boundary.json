@@ -1,0 +1,45 @@
+{
+  "id": "roommate.boundary",
+  "title": "执行宿舍约定",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["之前已经商量过作息安排，今晚又出现了一次违反约定的情况。"],
+  "choices": [
+    {
+      "label": "提醒一次，然后各做各的事",
+      "hint": "缓解压力，增进合作",
+      "text": "你提醒一次，然后各做各的事。",
+      "effects": {
+        "network": 3,
+        "stress": -5
+      },
+      "flags": ["roommate.respected"],
+      "days": 0
+    },
+    {
+      "label": "把考试周的安排再对齐一下",
+      "hint": "恢复精力，增进合作",
+      "text": "你把考试周的安排再对齐一下。",
+      "effects": {
+        "energy": 7,
+        "network": 3
+      },
+      "flags": ["roommate.respected"],
+      "days": 1
+    },
+    {
+      "label": "顺便问问对方最近的难处",
+      "hint": "缓解压力，增进合作，练习表达",
+      "text": "你顺便问问对方最近的难处。",
+      "effects": {
+        "network": 5,
+        "expression": 2,
+        "stress": -3
+      },
+      "flags": ["roommate.close"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

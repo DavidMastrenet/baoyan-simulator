@@ -1,0 +1,48 @@
+{
+  "id": "apply.master-types",
+  "title": "比较硕士类型",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["两个项目分别偏重研究和实践，学制、费用和日常任务也不同。"],
+  "choices": [
+    {
+      "label": "逐项比较培养与研究内容",
+      "hint": "准备后续安排，练习研究方法",
+      "text": "你逐项比较培养与研究内容。",
+      "effects": {
+        "backup": 6,
+        "research": 3
+      },
+      "flags": ["degree.checked"],
+      "days": 1
+    },
+    {
+      "label": "与在读学生讨论一周的实际安排",
+      "hint": "增进合作，增加实践经验",
+      "text": "你与在读学生讨论一周的实际安排。",
+      "effects": {
+        "network": 5,
+        "practice": 3
+      },
+      "flags": ["degree.checked"],
+      "days": 1
+    },
+    {
+      "label": "把预算与支持条件一并核对",
+      "hint": "准备后续安排，补齐申请材料",
+      "text": "你把预算与支持条件一并核对。",
+      "effects": {
+        "backup": 6,
+        "materials": 4
+      },
+      "flags": ["cost.considered"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 29,
+    "to": 45
+  },
+  "weight": 5
+}

@@ -1,0 +1,89 @@
+{
+  "id": "new.contest.06.follow",
+  "title": "比赛提交文件损坏后续",
+  "category": "竞赛",
+  "scene": "后续处理",
+  "body": ["之前的任务需要提交最终结果，现有记录和个人状态会影响本次处理。"],
+  "when": {
+    "from": 9,
+    "to": 47
+  },
+  "chain": true,
+  "once": true,
+  "weight": 10,
+  "variants": [
+    {
+      "when": {
+        "flags": ["new.contest.06.done"]
+      },
+      "text": "之前的主要任务已经完成，本次需要补充说明并交付。"
+    },
+    {
+      "when": {
+        "flags": ["new.contest.06.setback"]
+      },
+      "text": "之前的任务没有完成，需要修正问题或缩小目标。"
+    }
+  ],
+  "choices": [
+    {
+      "label": "补齐工作并提交完整结果",
+      "hint": "项目能力判断；成功后获得成果",
+      "text": "你继续处理剩余任务。",
+      "effects": {
+        "energy": -5
+      },
+      "check": {
+        "stat": "craft",
+        "difficulty": 49,
+        "success": {
+          "text": "最终结果达到要求。",
+          "effects": {
+            "craft": 4,
+            "materials": 2
+          },
+          "award": {
+            "id": "new.contest.06.follow.result",
+            "title": "比赛提交文件损坏完成记录",
+            "kind": "竞赛",
+            "level": 1,
+            "recognized": false
+          }
+        },
+        "failure": {
+          "text": "结果仍有缺漏，本次按阶段进度结束。",
+          "effects": {
+            "craft": 1,
+            "stress": 3
+          }
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "按已有结果结束",
+      "hint": "缓解压力，积累项目经验",
+      "text": "你提交了已经完成的部分，并说明尚未完成的内容。",
+      "effects": {
+        "craft": 1,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "交给有时间的同伴接续",
+      "when": {
+        "min": {
+          "network": 25
+        }
+      },
+      "hint": "增进合作，恢复精力",
+      "text": "你整理了当前记录，和同伴完成交接。",
+      "effects": {
+        "network": 3,
+        "energy": 2
+      },
+      "days": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "major.lab.1",
+  "title": "分配剩余样品",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["剩余样品只够一次实验，需要在几个方案中选一个。"],
+  "choices": [
+    {
+      "label": "优先验证最关键的假设",
+      "hint": "练习研究方法，加强课程基础",
+      "text": "你优先验证最关键的假设。",
+      "effects": {
+        "research": 6,
+        "study": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "先检查设计与对照",
+      "hint": "加强课程基础，练习研究方法",
+      "text": "你先检查设计与对照。",
+      "effects": {
+        "study": 4,
+        "research": 4
+      },
+      "days": 2
+    },
+    {
+      "label": "与团队讨论资源与可行替代",
+      "hint": "增进合作，增加实践经验",
+      "text": "你与团队讨论资源与可行替代。",
+      "effects": {
+        "network": 4,
+        "practice": 3
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5,
+    "to": 35,
+    "majors": ["理工实验类"]
+  },
+  "weight": 12
+}

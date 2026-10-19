@@ -1,0 +1,36 @@
+{
+  "id": "egg.filename",
+  "title": "文件名与日期不符",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["旧文件的名称比新版本更像定稿，需要按修改日期检查。"],
+  "choices": [
+    {
+      "label": "建立一个唯一发布目录",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你建立一个唯一发布目录。",
+      "effects": {
+        "materials": 4,
+        "stress": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "找搭档一起核对差异",
+      "hint": "增进合作，补齐申请材料",
+      "text": "你找搭档一起核对差异。",
+      "effects": {
+        "network": 3,
+        "materials": 2
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

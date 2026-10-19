@@ -1,0 +1,11 @@
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import App from './App.vue';
+import './styles/main.css';
+import './styles/game-ui.css';
+import './styles/game-polish.css';
+import './styles/ibm-sc.css';
+import '@fontsource/rajdhani/latin-500.css';
+import '@fontsource/rajdhani/latin-600.css';
+import './styles/type-and-solid.css';
+createApp(App).use(createPinia()).mount('#app');

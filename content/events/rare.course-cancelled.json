@@ -1,0 +1,35 @@
+{
+  "id": "rare.course-cancelled",
+  "title": "选修课因人数不足停开",
+  "category": "学业",
+  "scene": "低概率事件",
+  "body": ["刚选上的课程因报名人数不足停开，教务开放了补选时间。"],
+  "when": {
+    "from": 1,
+    "to": 27
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "按时补选另一门合适课程",
+      "text": "你确认了新课程的学分和考核方式。",
+      "hint": "消耗精力，加强课程基础",
+      "effects": {
+        "energy": -2,
+        "study": 1
+      },
+      "days": 1
+    },
+    {
+      "label": "本学期不增加课程",
+      "text": "你保留了专业课和当前选修安排。",
+      "hint": "恢复精力",
+      "effects": {
+        "energy": 2
+      },
+      "days": 1
+    }
+  ]
+}

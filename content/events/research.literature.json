@@ -1,0 +1,46 @@
+{
+  "id": "research.literature",
+  "title": "核对引用内容",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["原文对结论附加了条件，但转述材料中省略了这些限制。"],
+  "choices": [
+    {
+      "label": "回到原始研究，保留适用条件",
+      "hint": "练习研究方法，补充准确材料，补齐申请材料",
+      "text": "你回到原始研究，保留适用条件。材料真实性 +2。",
+      "effects": {
+        "research": 5,
+        "integrity": 2,
+        "materials": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "把争议写进讨论，",
+      "hint": "练习研究方法，练习表达",
+      "text": "你把争议写进讨论。",
+      "effects": {
+        "research": 5,
+        "expression": 2
+      },
+      "days": 2
+    },
+    {
+      "label": "暂时删去不能确认的引用",
+      "hint": "缓解压力，补齐申请材料，补充准确材料",
+      "text": "你暂时删去不能确认的引用。材料真实性 +2。",
+      "effects": {
+        "materials": 4,
+        "integrity": 2,
+        "stress": -2
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 7
+  },
+  "weight": 5
+}

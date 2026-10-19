@@ -1,0 +1,48 @@
+{
+  "id": "project.version-conflict",
+  "title": "合并代码后报错",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["两份修改单独运行正常，合并后出现问题，需要检查差异。"],
+  "choices": [
+    {
+      "label": "缩小差异，补一条回归检查",
+      "hint": "消耗精力，积累项目经验",
+      "text": "你缩小差异，补一条回归检查。",
+      "effects": {
+        "craft": 6,
+        "energy": -4
+      },
+      "flags": ["project.tests"],
+      "days": 1
+    },
+    {
+      "label": "先回到稳定版本，约好共同排查",
+      "hint": "缓解压力，积累项目经验，增进合作",
+      "text": "你先回到稳定版本，约好共同排查。",
+      "effects": {
+        "craft": 4,
+        "network": 4,
+        "stress": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "将提交与交接规范写清",
+      "hint": "积累项目经验，增进合作，补齐申请材料",
+      "text": "你将提交与交接规范写清。",
+      "effects": {
+        "craft": 3,
+        "network": 4,
+        "materials": 3
+      },
+      "flags": ["team.rules"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5
+  },
+  "weight": 5
+}

@@ -1,0 +1,47 @@
+{
+  "id": "calendar.35",
+  "title": "大三课程结算",
+  "category": "学业",
+  "scene": "教务通知",
+  "body": ["用于申请的最后一轮课程即将结算，需要完成复习并办理成绩证明。"],
+  "choices": [
+    {
+      "label": "把最容易失分的基础补齐",
+      "hint": "消耗精力，加强课程基础",
+      "text": "你把最容易失分的基础补齐。",
+      "effects": {
+        "study": 7,
+        "energy": -6
+      },
+      "days": 2
+    },
+    {
+      "label": "讲一遍核心知识，再整理证明",
+      "hint": "加强课程基础，补齐申请材料，练习表达",
+      "text": "你讲一遍核心知识，再整理证明。",
+      "effects": {
+        "study": 4,
+        "materials": 6,
+        "expression": 2
+      },
+      "days": 1
+    },
+    {
+      "label": "优先恢复状态，完成必要复习",
+      "hint": "缓解压力，加强课程基础，恢复精力",
+      "text": "你优先恢复状态，完成必要复习。",
+      "effects": {
+        "study": 2,
+        "energy": 12,
+        "stress": -7
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 35,
+  "when": {
+    "from": 35,
+    "to": 35
+  }
+}

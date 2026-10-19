@@ -1,0 +1,64 @@
+{
+  "id": "practice.first-session",
+  "title": "开展首次教学",
+  "category": "实践",
+  "scene": "实践事件",
+  "body": ["参与者基础不同，需要调整讲解方式和任务难度。"],
+  "choices": [
+    {
+      "label": "先摸清起点，再拆成小任务",
+      "hint": "消耗精力，增加实践经验，练习表达",
+      "text": "你先摸清起点，再拆成小任务。之后会有相关的后续事件。",
+      "effects": {
+        "practice": 6,
+        "expression": 3,
+        "energy": -5
+      },
+      "flags": ["teaching.started"],
+      "schedule": [
+        {
+          "id": "practice.adjustment",
+          "after": 3
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "请同伴协助，分组推进",
+      "hint": "消耗精力，增进合作，增加实践经验",
+      "text": "你请同伴协助，分组推进。之后会有相关的后续事件。",
+      "effects": {
+        "network": 4,
+        "practice": 5,
+        "energy": -5
+      },
+      "flags": ["teaching.started"],
+      "schedule": [
+        {
+          "id": "practice.adjustment",
+          "after": 3
+        }
+      ],
+      "days": 1
+    },
+    {
+      "label": "缩减内容，保留一次完整体验",
+      "hint": "增加实践经验，练习研究方法",
+      "text": "你缩减内容，保留一次完整体验。之后会有相关的后续事件。",
+      "effects": {
+        "practice": 5,
+        "research": 2
+      },
+      "flags": ["teaching.started"],
+      "schedule": [
+        {
+          "id": "practice.adjustment",
+          "after": 3
+        }
+      ],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "chain": true
+}

@@ -1,0 +1,84 @@
+{
+  "id": "paper.first-draft",
+  "title": "修改论文初稿",
+  "category": "科研",
+  "scene": "科研事件",
+  "body": ["初稿已经写完，但研究问题、结果和论证之间的关系还不清楚。"],
+  "choices": [
+    {
+      "label": "重写问题和记录之间的联系",
+      "hint": "研究方法影响成功率",
+      "text": "你重写问题和记录之间的联系。",
+      "effects": {
+        "research": 4,
+        "energy": -6
+      },
+      "check": {
+        "stat": "research",
+        "difficulty": 47,
+        "success": {
+          "text": "本次任务完成。之后会有相关的后续事件。",
+          "effects": {
+            "materials": 6
+          },
+          "flags": ["paper.submitted"],
+          "schedule": [
+            {
+              "id": "paper.review",
+              "after": 4
+            }
+          ]
+        },
+        "failure": {
+          "text": "本次任务未完成。之后会有相关的后续事件。",
+          "effects": {
+            "research": 3
+          },
+          "schedule": [
+            {
+              "id": "paper.extra-test",
+              "after": 2
+            }
+          ]
+        }
+      },
+      "days": 1
+    },
+    {
+      "label": "请另一位同学只读摘要和结论",
+      "hint": "练习表达，练习研究方法，增进合作",
+      "text": "你请另一位同学只读摘要和结论。之后会有相关的后续事件。",
+      "effects": {
+        "expression": 4,
+        "research": 4,
+        "network": 2
+      },
+      "schedule": [
+        {
+          "id": "paper.extra-test",
+          "after": 2
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "先完成技术报告，不急着投稿",
+      "hint": "补齐申请材料，练习研究方法",
+      "text": "你先完成技术报告，不急着投稿。新增成果：完成一份研究报告。",
+      "effects": {
+        "materials": 8,
+        "research": 3
+      },
+      "award": {
+        "id": "research-report",
+        "title": "完成一份研究报告",
+        "kind": "科研",
+        "level": 1,
+        "recognized": false
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

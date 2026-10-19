@@ -1,0 +1,36 @@
+{
+  "id": "rare.award-deadline",
+  "title": "结题晚于材料截止",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["项目还需要一次验收，预计完成时间晚于本轮成果认定截止。"],
+  "when": {
+    "from": 26,
+    "to": 40
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "按原计划完成，不提前写成已结题",
+      "text": "你保留了真实进度，继续完成项目。",
+      "hint": "消耗精力，练习研究方法",
+      "effects": {
+        "research": 2,
+        "energy": -2
+      },
+      "days": 1
+    },
+    {
+      "label": "提交已完成部分并说明日期",
+      "text": "申请材料记录了阶段成果和实际完成时间。",
+      "hint": "补齐申请材料，补充准确材料",
+      "effects": {
+        "materials": 2,
+        "integrity": 2
+      },
+      "days": 0
+    }
+  ]
+}

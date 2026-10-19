@@ -1,0 +1,50 @@
+{
+  "id": "calendar.01",
+  "title": "课外时间安排",
+  "category": "学业",
+  "scene": "教务通知",
+  "body": ["高学分课程、社团和班级工作占用了同一段时间，需要决定优先顺序。"],
+  "choices": [
+    {
+      "label": "把高学分课程放在前面",
+      "hint": "缓解压力，加强课程基础",
+      "text": "你把高学分课程放在前面。",
+      "effects": {
+        "study": 5,
+        "stress": -2
+      },
+      "flags": ["habit.study"],
+      "days": 1
+    },
+    {
+      "label": "留下一个固定的项目晚上",
+      "hint": "消耗精力，积累项目经验，增进合作",
+      "text": "你留下一个固定的项目晚上。",
+      "effects": {
+        "craft": 5,
+        "network": 1,
+        "energy": -3
+      },
+      "flags": ["project.time"],
+      "days": 1
+    },
+    {
+      "label": "先接下班级的组织工作",
+      "hint": "消耗精力，练习表达，增进合作",
+      "text": "你先接下班级的组织工作。",
+      "effects": {
+        "expression": 3,
+        "network": 4,
+        "energy": -6
+      },
+      "flags": ["class.duty"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 1,
+  "when": {
+    "from": 1,
+    "to": 1
+  }
+}

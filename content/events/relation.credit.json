@@ -1,0 +1,48 @@
+{
+  "id": "relation.credit",
+  "title": "遗漏成员贡献",
+  "category": "关系",
+  "scene": "关系事件",
+  "body": ["团队介绍漏掉一位承担过关键工作的成员，需要修改贡献说明。"],
+  "choices": [
+    {
+      "label": "补齐贡献，再压缩其他内容",
+      "hint": "增进合作，补充准确材料",
+      "text": "你补齐贡献，再压缩其他内容。材料真实性 +3。",
+      "effects": {
+        "network": 6,
+        "integrity": 3
+      },
+      "flags": ["credit.clear"],
+      "days": 0
+    },
+    {
+      "label": "请所有成员一起确认最终版本",
+      "hint": "增进合作，补齐申请材料，补充准确材料",
+      "text": "你请所有成员一起确认最终版本。材料真实性 +2。",
+      "effects": {
+        "network": 4,
+        "materials": 4,
+        "integrity": 2
+      },
+      "flags": ["evidence.checked"],
+      "days": 0
+    },
+    {
+      "label": "先暂停发布，把问题说清",
+      "hint": "缓解压力，练习表达，增进合作",
+      "text": "你先暂停发布，把问题说清。",
+      "effects": {
+        "expression": 4,
+        "network": 3,
+        "stress": -2
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 5
+  },
+  "weight": 5
+}

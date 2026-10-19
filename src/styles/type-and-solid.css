@@ -1,0 +1,449 @@
+/* Fonts are bundled with this deployment and served from this site. */
+:root {
+  font-family: 'IBM Plex Sans SC', sans-serif;
+  --el-font-family: 'IBM Plex Sans SC', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+body,
+button,
+input,
+select,
+textarea,
+.el-dialog,
+.el-select,
+.el-popper {
+  font-family: 'IBM Plex Sans SC', sans-serif;
+}
+.status-item strong,
+.growth-summary strong,
+.ending-stats strong,
+.initial-skills strong,
+.entry-balance strong,
+.profile-grid dd,
+.map-action-duration strong,
+.semester-row strong,
+.choice-index,
+.slot-index,
+.file-number,
+kbd {
+  font-family: 'Rajdhani', 'IBM Plex Sans SC', sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+.game-brand strong,
+.stage-caption h1,
+.section-title h1,
+.entry-intro h1 {
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.story-body p,
+.chronicle-body,
+.interview-prompt {
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.85;
+}
+.choice-copy strong {
+  font-weight: 600;
+}
+.choice-copy > span {
+  font-weight: 400;
+}
+/* Opaque flat fills, hard edges, and solid offset shadows. */
+.campus-backdrop {
+  background: #eef2f3;
+}
+.campus-shade {
+  background: #f0f4f3d9;
+}
+.status-item:before,
+.student-card:before {
+  content: none;
+}
+.site-header,
+.site-footer,
+.main-nav,
+.character-panel,
+.paper {
+  backdrop-filter: none;
+}
+.el-overlay {
+  backdrop-filter: none;
+}
+.paper,
+.character-panel,
+.entry-intro {
+  box-shadow: 0 3px 0 #dfe8eb;
+}
+.choice {
+  box-shadow: 0 2px 0 #e1eaed;
+}
+.choice:hover:not(:disabled) {
+  box-shadow:
+    0 2px 0 #c9ddd9,
+    inset 3px 0 0 #6d9f95;
+}
+.main-nav button.active {
+  background: #3b7581;
+  box-shadow: 0 2px 0 #2b5d6b;
+}
+.el-button--primary,
+.continue-action {
+  background: #3b7b85;
+  border-color: #3b7b85;
+  box-shadow: 0 3px 0 #2d606e;
+}
+.el-button--primary:hover,
+.continue-action:hover,
+.continue-action:focus-visible {
+  background: #316b79;
+  border-color: #316b79;
+  box-shadow: 0 3px 0 #244f60;
+}
+.el-button--primary:active,
+.continue-action:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 #244f60;
+}
+.el-button.is-disabled,
+.el-button.is-disabled:hover {
+  background: #eff4f5;
+  border-color: #dce6e9;
+  color: #96a8af;
+  box-shadow: none;
+  transform: none;
+}
+.el-select__wrapper,
+.el-input__wrapper {
+  box-shadow: 0 0 0 1px #c8dadd inset !important;
+}
+.el-select__wrapper.is-focused,
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px #5f969a inset !important;
+}
+.map-site.selected {
+  background: #477f70;
+  border-color: #3c7368;
+  box-shadow: 0 2px 0 #c3d5c9;
+}
+.map-site.selected:after {
+  background: #477f70;
+}
+.map-site {
+  box-shadow: 0 2px 0 #d2dfd5;
+}
+.el-progress-bar__inner {
+  background: #76a79c !important;
+}
+.skill-item .el-progress-bar__inner {
+  background: #82afa5 !important;
+}
+.el-skeleton.is-animated .el-skeleton__item {
+  background: #e9f0f2 !important;
+  animation: none !important;
+}
+.el-skeleton__item {
+  background: #e9f0f2;
+}
+.main-nav button.active .nav-symbol {
+  filter: none;
+}
+/* Keep art in its own panel instead of fading it underneath text. */
+.campus-stage {
+  position: relative;
+  min-height: 156px;
+  background: #f8fbfa;
+  background-image: none;
+  box-shadow: 0 3px 0 #dfe8eb;
+  overflow: hidden;
+}
+.campus-stage:before {
+  content: none;
+}
+.campus-stage:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 43%;
+  content: '';
+  background: #29424b url('/art/campus-evening.webp') 61% center/cover no-repeat;
+  border-left: 1px solid #d8e3e5;
+}
+.stage-caption {
+  position: relative;
+  z-index: 1;
+  max-width: none;
+  width: 57%;
+  padding: 24px 21px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stage-caption h1 {
+  font-size: 27px;
+  line-height: 1.5;
+  text-shadow: none;
+}
+.stage-caption p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.stage-topline {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  bottom: 10px;
+  padding: 0;
+  max-width: 39%;
+}
+.stage-topline > span {
+  max-width: 100%;
+  background: #fff;
+  border-color: #dce6e8;
+  box-shadow: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.entry-landscape:after {
+  content: none;
+}
+.entry-campus-mark {
+  background: #f1f7f4;
+  color: #648880;
+  border-color: #d7e5e0;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.el-dialog {
+  box-shadow: 0 5px 0 #bfcfd4;
+}
+.el-overlay {
+  background: #344e5f66;
+}
+@media (max-width: 760px) {
+  .main-nav {
+    background: #fcfefe;
+  }
+  .main-nav button.active {
+    background: #437d87;
+    box-shadow: 0 2px 0 #326775;
+  }
+  .campus-stage {
+    min-height: 145px;
+  }
+  .campus-stage:after {
+    width: 39%;
+  }
+  .stage-caption {
+    width: 61%;
+    padding: 19px 17px;
+  }
+  .stage-caption h1 {
+    font-size: 24px;
+  }
+  .stage-topline {
+    right: 8px;
+    bottom: 8px;
+    max-width: 35%;
+  }
+  .stage-topline > span {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+  .entry-intro {
+    background: #f9fcfb;
+    min-height: 182px;
+  }
+  .entry-landscape {
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 36%;
+    height: auto;
+    background-position: 64% center;
+    border-left: 1px solid #d7e3e5;
+  }
+  .entry-landscape:after {
+    content: none;
+  }
+  .entry-intro-copy {
+    width: 64%;
+    padding: 22px 19px;
+    background: #f9fcfb;
+  }
+  .entry-intro h1 {
+    font-size: 31px;
+    line-height: 1.5;
+  }
+  .entry-intro-copy > p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+@media (max-width: 390px) {
+  .stage-caption {
+    padding: 17px 14px;
+  }
+  .stage-caption h1 {
+    font-size: 23px;
+  }
+  .entry-intro-copy {
+    padding: 19px 16px;
+  }
+  .entry-intro h1 {
+    font-size: 29px;
+  }
+}
+
+/* Sharper text hierarchy and actual alpha masks for scene art. */
+:root {
+  font-synthesis: none;
+  -webkit-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+}
+body {
+  color: #304a59;
+}
+.story-body p,
+.chronicle-body,
+.interview-prompt {
+  color: #2c4655;
+  font-size: 18px;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+.game-brand strong,
+.choice-copy strong {
+  font-weight: 600;
+  color: #2b4c5e;
+}
+.status-item strong,
+.growth-summary strong,
+.ending-stats strong,
+.initial-skills strong {
+  font-weight: 600;
+  color: #284c60;
+  letter-spacing: 0.01em;
+}
+.status-item strong {
+  font-size: 30px;
+  line-height: 1.15;
+}
+.status-item strong small {
+  font-family: 'Rajdhani', 'IBM Plex Sans SC', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #657d8b;
+}
+.choice-copy > span,
+.project-offer p,
+.map-action p,
+.background-story p,
+.entry-intro-copy > p {
+  color: #536c7a;
+}
+.status-item > .status-label,
+.profile-grid dt,
+.routine-panel p,
+.slot-copy span {
+  color: #597280;
+}
+.trait strong {
+  color: #4f637b;
+}
+.trait p,
+.student-traits > span {
+  color: #627581;
+}
+.stage-caption h1 {
+  color: #23495a;
+}
+.choice-index,
+.slot-index {
+  border-radius: 3px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #456c7c;
+}
+.el-button,
+.utility-button,
+.reroll-button,
+.focus-grid > button {
+  border-radius: 4px;
+}
+.map-site {
+  border-radius: 4px;
+}
+.map-site.selected {
+  border-radius: 4px;
+}
+.campus-stage:after {
+  width: 100%;
+  border-left: 0;
+  mask-image: linear-gradient(90deg, transparent 16%, #000 78%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 16%, #000 78%);
+}
+.stage-caption {
+  width: 75%;
+  padding: 24px 21px;
+}
+.stage-caption h1 {
+  max-width: 90%;
+}
+.stage-caption p {
+  max-width: 80%;
+}
+.stage-topline {
+  max-width: 42%;
+}
+@media (max-width: 760px) {
+  .campus-stage:after {
+    width: 100%;
+    mask-image: linear-gradient(90deg, transparent 13%, #000 94%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 13%, #000 94%);
+  }
+  .stage-caption {
+    width: 88%;
+    padding: 19px 17px;
+  }
+  .stage-caption h1 {
+    max-width: 94%;
+  }
+  .stage-caption p {
+    max-width: 82%;
+  }
+  .entry-landscape {
+    width: 100%;
+    border-left: 0;
+    mask-image: linear-gradient(90deg, transparent 14%, #000 92%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 14%, #000 92%);
+  }
+  .entry-intro-copy {
+    width: 84%;
+    background: transparent;
+  }
+  .entry-intro h1 {
+    font-size: 32px;
+  }
+  .status-item strong {
+    font-size: 29px;
+  }
+}
+@media (max-width: 390px) {
+  .stage-caption {
+    padding: 17px 14px;
+  }
+  .entry-intro h1 {
+    font-size: 30px;
+  }
+  .status-item strong {
+    font-size: 28px;
+  }
+}

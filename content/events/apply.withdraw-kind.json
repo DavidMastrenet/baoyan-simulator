@@ -1,0 +1,48 @@
+{
+  "id": "apply.withdraw-kind",
+  "title": "回复退出申请",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["你决定不继续某项申请，需要及时向项目方说明。"],
+  "choices": [
+    {
+      "label": "简短说明决定，感谢此前时间",
+      "hint": "缓解压力，增进合作",
+      "text": "你简短说明决定，感谢此前时间。",
+      "effects": {
+        "network": 4,
+        "stress": -4
+      },
+      "flags": ["reply.complete"],
+      "days": 0
+    },
+    {
+      "label": "先整理需要回复的名单，再统一处理",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你先整理需要回复的名单，再统一处理。",
+      "effects": {
+        "materials": 4,
+        "expression": 3
+      },
+      "flags": ["reply.complete"],
+      "days": 1
+    },
+    {
+      "label": "和熟悉的老师讨论措辞后再回复",
+      "hint": "练习表达，增进合作",
+      "text": "你和熟悉的老师讨论措辞后再回复。",
+      "effects": {
+        "expression": 4,
+        "network": 2
+      },
+      "flags": ["reply.complete"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 39,
+    "to": 47
+  },
+  "weight": 5
+}

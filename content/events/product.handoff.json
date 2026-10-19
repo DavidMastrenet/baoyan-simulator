@@ -1,0 +1,54 @@
+{
+  "id": "product.handoff",
+  "title": "安排项目交接",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["其他成员将接手维护，需要把关键操作补充到文档中。"],
+  "choices": [
+    {
+      "label": "写文档，让接手者独立跑一遍",
+      "hint": "消耗精力，积累项目经验，增进合作",
+      "text": "你写文档，让接手者独立跑一遍。新增成果：可交接的长期项目。",
+      "effects": {
+        "craft": 4,
+        "network": 5,
+        "energy": -4
+      },
+      "flags": ["team.handoff"],
+      "award": {
+        "id": "maintained",
+        "title": "可交接的长期项目",
+        "kind": "项目",
+        "level": 3,
+        "recognized": false
+      },
+      "days": 1
+    },
+    {
+      "label": "录一段关键流程，再约答疑",
+      "hint": "练习表达，补齐申请材料，增进合作",
+      "text": "你录一段关键流程，再约答疑。",
+      "effects": {
+        "expression": 4,
+        "materials": 6,
+        "network": 3
+      },
+      "flags": ["team.handoff"],
+      "days": 1
+    },
+    {
+      "label": "结束维护，明确说明替代办法",
+      "hint": "缓解压力，恢复精力，准备后续安排",
+      "text": "你结束维护，明确说明替代办法。",
+      "effects": {
+        "energy": 8,
+        "stress": -5,
+        "backup": 3
+      },
+      "flags": ["product.closed"],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "chain": true
+}

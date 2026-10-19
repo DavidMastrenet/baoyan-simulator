@@ -1,0 +1,47 @@
+{
+  "id": "calendar.42",
+  "title": "校内资格公示",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["学校按成绩和成果计算推荐顺序，你需要检查自己的分数和提交材料。"],
+  "choices": [
+    {
+      "label": "核对计算规则、封顶和原始记录",
+      "hint": "补齐申请材料，补充准确材料",
+      "text": "你核对计算规则、封顶和原始记录。材料真实性 +2。",
+      "effects": {
+        "materials": 8,
+        "integrity": 2
+      },
+      "flags": ["policy.read", "evidence.checked"],
+      "days": 0
+    },
+    {
+      "label": "请老师核查有疑问的条目",
+      "hint": "缓解压力，练习表达",
+      "text": "你请老师核查有疑问的条目。",
+      "effects": {
+        "expression": 3,
+        "stress": -4
+      },
+      "days": 1
+    },
+    {
+      "label": "确认材料后，安排接下来的路",
+      "hint": "缓解压力，准备后续安排",
+      "text": "你确认材料后，安排接下来的路。",
+      "effects": {
+        "backup": 7,
+        "stress": -3
+      },
+      "flags": ["paths.open"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "calendar": 42,
+  "when": {
+    "from": 42,
+    "to": 42
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "calendar.38",
+  "title": "整理夏令营结果",
+  "category": "申请",
+  "scene": "申请通知",
+  "body": ["部分项目已经公布结果，其他项目仍在审核，需要分别记录状态和期限。"],
+  "choices": [
+    {
+      "label": "按审核、候补、通过分别整理",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你按审核、候补、通过分别整理。",
+      "effects": {
+        "materials": 8,
+        "stress": -4
+      },
+      "flags": ["application.tracker"],
+      "days": 0
+    },
+    {
+      "label": "总结一场问答，再准备下一场",
+      "hint": "加强课程基础，练习表达，练习研究方法",
+      "text": "你总结一场问答，再准备下一场。",
+      "effects": {
+        "study": 3,
+        "expression": 4,
+        "research": 2
+      },
+      "flags": ["interview.practice"],
+      "days": 2
+    },
+    {
+      "label": "停一晚，不再反复刷新",
+      "hint": "缓解压力，恢复精力",
+      "text": "你停一晚，不再反复刷新。",
+      "effects": {
+        "energy": 12,
+        "stress": -9
+      },
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 38,
+  "when": {
+    "from": 38,
+    "to": 38
+  }
+}

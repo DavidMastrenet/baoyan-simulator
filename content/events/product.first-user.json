@@ -1,0 +1,65 @@
+{
+  "id": "product.first-user",
+  "title": "用户报告错误",
+  "category": "项目",
+  "scene": "项目事件",
+  "body": ["用户发来截图，但没有完整操作步骤，你的设备暂时无法重现。"],
+  "choices": [
+    {
+      "label": "一起复现，记录设备和步骤",
+      "hint": "消耗精力，积累项目经验，增加实践经验",
+      "text": "你一起复现，记录设备和步骤。之后会有相关的后续事件。",
+      "effects": {
+        "craft": 6,
+        "practice": 3,
+        "energy": -5
+      },
+      "flags": ["product.reliable"],
+      "schedule": [
+        {
+          "id": "product.deadline",
+          "after": 3
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "先提供能继续工作的临时办法",
+      "hint": "增加实践经验，增进合作，积累项目经验",
+      "text": "你先提供能继续工作的临时办法。之后会有相关的后续事件。",
+      "effects": {
+        "practice": 4,
+        "network": 3,
+        "craft": 3
+      },
+      "schedule": [
+        {
+          "id": "product.deadline",
+          "after": 3
+        }
+      ],
+      "days": 2
+    },
+    {
+      "label": "缩小支持范围，整理一份交接说明",
+      "hint": "积累项目经验，恢复精力，补齐申请材料",
+      "text": "你缩小支持范围，整理一份交接说明。新增成果：一件被持续使用的小工具。",
+      "effects": {
+        "craft": 3,
+        "energy": 4,
+        "materials": 4
+      },
+      "flags": ["team.handoff"],
+      "award": {
+        "id": "useful-tool",
+        "title": "一件被持续使用的小工具",
+        "kind": "项目",
+        "level": 2,
+        "recognized": false
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "chain": true
+}

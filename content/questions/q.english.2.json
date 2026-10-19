@@ -1,0 +1,23 @@
+{
+  "id": "q.english.2",
+  "kind": "英语",
+  "title": "A paper in one minute",
+  "text": "What is the main question of a paper you recently read?",
+  "options": [
+    {
+      "text": "It uses a method related to my project.",
+      "score": 2,
+      "response": "建立了联系，但还需要说清问题与结论。"
+    },
+    {
+      "text": "It asks whether an intervention improves transfer, not just test scores. I found the distinction useful, although the sample was small.",
+      "score": 4,
+      "response": "你交代了问题、价值和范围，而不是只复述论文标题。"
+    },
+    {
+      "text": "It is a very famous paper published in a good journal.",
+      "score": 0,
+      "response": "出版信息无法替代对研究问题的理解。"
+    }
+  ]
+}

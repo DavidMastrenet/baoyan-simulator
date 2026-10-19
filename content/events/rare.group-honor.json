@@ -1,0 +1,37 @@
+{
+  "id": "rare.group-honor",
+  "title": "团队证书不等于个人排名",
+  "category": "申请",
+  "scene": "低概率事件",
+  "body": ["队伍获得了奖项，但个人排名和负责内容还未写入证明。"],
+  "when": {
+    "from": 18,
+    "to": 40
+  },
+  "rare": true,
+  "once": true,
+  "weight": 1,
+  "choices": [
+    {
+      "label": "请负责人按实际分工确认",
+      "text": "你取得了与实际贡献相符的说明。",
+      "hint": "消耗精力，补齐申请材料，增进合作",
+      "effects": {
+        "materials": 3,
+        "network": 1,
+        "energy": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "只填写能够确认的信息",
+      "text": "你没有把团队名次当成个人排名。",
+      "hint": "补充准确材料，补齐申请材料",
+      "effects": {
+        "integrity": 2,
+        "materials": 1
+      },
+      "days": 0
+    }
+  ]
+}

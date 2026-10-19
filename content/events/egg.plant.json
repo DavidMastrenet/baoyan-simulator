@@ -1,0 +1,36 @@
+{
+  "id": "egg.plant",
+  "title": "照料实验室盆栽",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["等待实验结果时，管理员请你帮忙给盆栽浇水。"],
+  "choices": [
+    {
+      "label": "浇一点水，再回到记录",
+      "hint": "缓解压力，恢复精力",
+      "text": "你浇一点水，再回到记录。",
+      "effects": {
+        "energy": 4,
+        "stress": -6
+      },
+      "days": 1
+    },
+    {
+      "label": "叫搭档过来看一眼",
+      "hint": "缓解压力，增进合作",
+      "text": "你叫搭档过来看一眼。",
+      "effects": {
+        "network": 3,
+        "stress": -5
+      },
+      "days": 0
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}

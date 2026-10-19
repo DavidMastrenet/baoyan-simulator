@@ -1,0 +1,47 @@
+{
+  "id": "apply.multi-system",
+  "title": "补齐报名步骤",
+  "category": "申请",
+  "scene": "申请事件",
+  "body": ["学院报名页和统一报名系统都要求提交，你目前只完成了一个入口。"],
+  "choices": [
+    {
+      "label": "按说明补齐两个入口并保存回执",
+      "hint": "消耗精力，补齐申请材料",
+      "text": "你按说明补齐两个入口并保存回执。",
+      "effects": {
+        "materials": 10,
+        "energy": -3
+      },
+      "flags": ["application.tracker"],
+      "days": 0
+    },
+    {
+      "label": "向项目联系人确认当前状态",
+      "hint": "补齐申请材料，练习表达",
+      "text": "你向项目联系人确认当前状态。",
+      "effects": {
+        "materials": 7,
+        "expression": 3
+      },
+      "days": 1
+    },
+    {
+      "label": "逐项对照清单，不凭页面印象判断",
+      "hint": "补齐申请材料，准备后续安排",
+      "text": "你逐项对照清单，不凭页面印象判断。",
+      "effects": {
+        "materials": 8,
+        "backup": 3
+      },
+      "flags": ["application.tracker"],
+      "days": 0
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 32,
+    "to": 43
+  },
+  "weight": 5
+}

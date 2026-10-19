@@ -1,0 +1,57 @@
+{
+  "id": "calendar.22",
+  "title": "实习任务确认",
+  "category": "实践",
+  "scene": "实践安排",
+  "body": ["实习单位要求你完成一项任务，但数据来源和验收要求还没有说明。"],
+  "choices": [
+    {
+      "label": "先问清验收标准",
+      "hint": "增加实践经验，积累项目经验，练习表达",
+      "text": "你先问清验收标准。新增成果：一段完整的岗位实践。",
+      "effects": {
+        "practice": 5,
+        "craft": 3,
+        "expression": 2
+      },
+      "flags": ["internship.real"],
+      "award": {
+        "id": "internship",
+        "title": "一段完整的岗位实践",
+        "kind": "实践",
+        "level": 2,
+        "recognized": false
+      },
+      "days": 2
+    },
+    {
+      "label": "做最小样例，再和对方对齐",
+      "hint": "消耗精力，积累项目经验，练习表达",
+      "text": "你做最小样例，再和对方对齐。",
+      "effects": {
+        "craft": 5,
+        "expression": 3,
+        "energy": -5
+      },
+      "flags": ["internship.real"],
+      "days": 2
+    },
+    {
+      "label": "把实践转成一个观察记录",
+      "hint": "练习研究方法，增加实践经验",
+      "text": "你把实践转成一个观察记录。",
+      "effects": {
+        "research": 4,
+        "practice": 5
+      },
+      "flags": ["field.notes"],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "calendar": 22,
+  "when": {
+    "from": 22,
+    "to": 22
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "calendar.14",
+  "title": "团队进度不一致",
+  "category": "关系",
+  "scene": "同学交流",
+  "body": ["项目一周后截止，部分成员已经完成，其他成员尚未开始。"],
+  "choices": [
+    {
+      "label": "重排任务，让进度可见",
+      "hint": "缓解压力，增进合作，积累项目经验",
+      "text": "你重排任务，让进度可见。",
+      "effects": {
+        "network": 5,
+        "craft": 3,
+        "stress": -3
+      },
+      "flags": ["team.rules"],
+      "days": 1
+    },
+    {
+      "label": "把关键部分先接过来",
+      "hint": "消耗精力，积累项目经验，增加压力",
+      "text": "你把关键部分先接过来。",
+      "effects": {
+        "craft": 6,
+        "energy": -9,
+        "stress": 4
+      },
+      "flags": ["team.overload"],
+      "days": 1
+    },
+    {
+      "label": "缩小这次的目标",
+      "hint": "缓解压力，增进合作，恢复精力",
+      "text": "你缩小这次的目标。",
+      "effects": {
+        "network": 3,
+        "energy": 4,
+        "stress": -4
+      },
+      "flags": ["scope.control"],
+      "days": 1
+    }
+  ],
+  "once": true,
+  "calendar": 14,
+  "when": {
+    "from": 14,
+    "to": 14
+  }
+}

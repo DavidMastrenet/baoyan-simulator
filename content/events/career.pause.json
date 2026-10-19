@@ -1,0 +1,51 @@
+{
+  "id": "career.pause",
+  "title": "安排调整期",
+  "category": "生活",
+  "scene": "生活事件",
+  "body": ["你考虑暂缓升学，需要确定调整期的预算、时间和具体安排。"],
+  "choices": [
+    {
+      "label": "制定一段有起止与预算的调整期",
+      "hint": "缓解压力，恢复精力，准备后续安排",
+      "text": "你制定一段有起止与预算的调整期。后续准备方向：暂缓升学。",
+      "effects": {
+        "energy": 12,
+        "stress": -12,
+        "backup": 6
+      },
+      "flags": ["pause.planned"],
+      "path": "gap",
+      "days": 2
+    },
+    {
+      "label": "减少任务，但继续当前最重要的一条线",
+      "hint": "缓解压力，恢复精力，加强课程基础",
+      "text": "你减少任务，但继续当前最重要的一条线。",
+      "effects": {
+        "energy": 12,
+        "stress": -10,
+        "study": 3
+      },
+      "flags": ["recovery.kept"],
+      "days": 2
+    },
+    {
+      "label": "先和信任的人讨论真实状态",
+      "hint": "缓解压力，增进合作，恢复精力",
+      "text": "你先和信任的人讨论真实状态。",
+      "effects": {
+        "network": 5,
+        "energy": 8,
+        "stress": -9
+      },
+      "flags": ["friend.kept"],
+      "days": 2
+    }
+  ],
+  "once": true,
+  "when": {
+    "from": 28
+  },
+  "weight": 5
+}

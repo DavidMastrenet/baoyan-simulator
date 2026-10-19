@@ -1,0 +1,36 @@
+{
+  "id": "egg.progress-bar",
+  "title": "材料上传卡住",
+  "category": "偶遇",
+  "scene": "偶遇事件",
+  "body": ["上传进度长时间没有变化，需要确认文件状态，或重新提交。"],
+  "choices": [
+    {
+      "label": "检查回执，而不是只看进度条",
+      "hint": "缓解压力，补齐申请材料",
+      "text": "你检查回执，而不是只看进度条。",
+      "effects": {
+        "materials": 3,
+        "stress": -3
+      },
+      "days": 0
+    },
+    {
+      "label": "先做另一项不冲突的小事",
+      "hint": "缓解压力，恢复精力",
+      "text": "你先做另一项不冲突的小事。",
+      "effects": {
+        "energy": 4,
+        "stress": -5
+      },
+      "days": 1
+    }
+  ],
+  "once": true,
+  "egg": true,
+  "when": {
+    "from": 2,
+    "to": 47
+  },
+  "weight": 1
+}
